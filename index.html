@@ -359,7 +359,7 @@
                     Unlock deeper insights with <span class="text-black">our scale</span>
                 </h2>
                 <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                    Powered by massive datasets and continuous data ingestion for comprehensive market intelligence
+                    Powered by comprehensive, real-time market data
                 </p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mt-12">
@@ -407,9 +407,6 @@
             <h2 class="text-4xl sm:text-5xl font-bold mb-6 tracking-tight">
                 Our <span class="text-black">core intelligence</span> products
             </h2>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                Three powerful solutions designed to accelerate your research and decision-making process
-            </p>
         </div>
         <div class="flex flex-col lg:flex-row gap-8 md:gap-10 mt-12">
             <!-- AltData Product -->
@@ -467,7 +464,7 @@
                     </div>
                     <div class="flex items-start space-x-3">
                         <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
-                        <p class="text-black">Source verification & links</p>
+                        <p class="text-black">Source verification and links</p>
                     </div>
                     <div class="flex items-start space-x-3">
                         <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
@@ -666,11 +663,7 @@
                                 class="testimonial-slide opacity-0 invisible absolute top-0 left-0 w-full z-10 p-8 md:p-12 transition-opacity duration-300">
                                 <p class="text-lg sm:text-xl md:text-2xl text-black mb-6 relative z-10 leading-relaxed">
                                     <span
-                                        class="text-4xl leading-none font-serif text-black opacity-70 mr-2 align-top">❝</span>In
-                                    just our first month trialing Thurro, we're already seeing transformative potential.
-                                    The platform's ability to instantly cross-reference macroeconomic indicators with
-                                    company fundamentals is uncovering insights that typically take our junior analysts
-                                    weeks to piece together<span
+                                        class="text-4xl leading-none font-serif text-black opacity-70 mr-2 align-top">❝</span>Thurro's instant cross-referencing of macro indicators and company fundamentals reveals insights that typically take junior analysts weeks to piece together<span
                                         class="text-4xl leading-none font-serif text-black opacity-70 ml-2 align-bottom">❞</span>
                                 </p>
                                 <p class="font-semibold text-lg text-black">— Head of research, leading AMC</p>
@@ -1037,7 +1030,6 @@
                         touchEndX = e.changedTouches[0].screenX;
 
                         if (touchEndX < touchStartX - 50) {
-                            clearInterval(interval);
                             showSlide(currentSlide + 1);
                             startAutoplay();
                         } else if (touchEndX > touchStartX + 50) {
@@ -1047,13 +1039,6 @@
                         }
                     }, { passive: true });
                 }
-
-                // Auto-rotation
-                function startAutoplay() {
-                    interval = setInterval(() => showSlide(currentSlide + 1), 5000);
-                }
-
-                startAutoplay();
 
                 // Pause on hover
                 if (testimonialContainer) {
