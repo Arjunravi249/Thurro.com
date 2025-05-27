@@ -200,49 +200,98 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="py-16 md:py-20 bg-ft-pink overflow-hidden relative">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-                <!-- Left: Text Content -->
-                <div class="w-full lg:w-1/2 lg:pr-4 mb-10 lg:mb-0">
-                    <div class="text-left ml-12">
-                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4 tracking-tight">
-                            Accelerate intelligence
-                        </h2>
-                        <h1 class="text-xl sm:text-2xl lg:text-3xl text-black font-bold mb-6 tracking-tight">
-                            <span class="text-black">5x faster research,</span> 100% verified insights
-                        </h1>
-                        <p class="text-md sm:text-lg text-gray-700 mb-8 leading-relaxed">
-                            Where generic AI falls short, Thurro excels with purpose-built solutions for financial and
-                            strategic research. Uncover answers from India's deepest repository of regulatory filings, market
-                            data and alternative datasets
-                        </p>
-                        <div class="flex flex-wrap gap-6 mb-8">
-                            <a href="https://ai.thurro.com"
-                                class="px-8 py-4 rounded-md bg-black text-ft-cream font-medium hover:bg-gray-800 transition-all duration-200">Start
-                                free trial</a>
-                            <a href="demo.html"
-                                class="px-8 py-4 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Book
-                                a demo</a>
+    <section class="py-16 md:py-20 bg-ft-pink overflow-hidden">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+            <!-- Left: Text Content -->
+            <div class="w-full lg:w-2/5 lg:pr-4 mb-10 lg:mb-0">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4 tracking-tight">
+                    Accelerate intelligence
+                </h2>
+                <h1 class="text-xl sm:text-2xl lg:text-3xl text-black font-bold mb-6 tracking-tight">
+                    <span class="text-black">5x faster research,</span> 100% verified insights
+                </h1>
+                <p class="text-md sm:text-lg text-gray-700 mb-8 leading-relaxed">
+                    Where generic AI falls short, Thurro excels with purpose-built solutions for financial and
+                    strategic research. Uncover answers from India's deepest repository of regulatory filings, market
+                    data and alternative datasets
+                </p>
+                <div class="flex flex-wrap gap-6 mb-8">
+                    <a href="https://ai.thurro.com"
+                        class="px-8 py-4 rounded-md bg-black text-ft-cream font-medium hover:bg-gray-800 transition-all duration-200">Start
+                        free trial</a>
+                    <a href="demo.html"
+                        class="px-8 py-4 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Book
+                        a demo</a>
+                </div>
+            </div>
+
+            <!-- Right: Studio Display with Top-Down Perspective -->
+            <div class="w-full lg:w-3/5">
+                <div class="relative max-w-3xl mx-auto scale-80" style="transform: perspective(2000px) rotateX(8deg); transform-style: preserve-3d;">
+                    <!-- Display Frame with Dark Gray Gradient Look -->
+                    <div class="bg-gradient-to-b from-gray-700 to-gray-800 rounded-xl p-3 shadow-xl">
+                        <!-- Screen Content -->
+                        <div class="rounded-lg overflow-hidden border border-gray-600 relative">
+                            <video class="w-full h-auto" autoplay loop muted playsinline>
+                                <source src="./asserts/Video/ThurroIntro.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            
+                            <!-- Premium Glass Effect -->
+                            <div class="absolute inset-0 bg-gradient-to-b from-white to-transparent opacity-10 pointer-events-none"></div>
+                            <div class="absolute inset-0 border border-white border-opacity-5 pointer-events-none rounded-lg"></div>
+                            
+                            <!-- Subtle Corner Reflections -->
+                            <div class="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-white to-transparent opacity-5 pointer-events-none"></div>
+                            <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-white to-transparent opacity-5 pointer-events-none"></div>
+                        </div>
+                        
+                        <!-- Bottom Bar with Brand -->
+                        <div class="flex justify-center items-center mt-3">
+                            <img src="./asserts/Logo/Thurro_logo_bg_white.png" alt="Thurro Logo" class="h-4">
                         </div>
                     </div>
-                </div>
-
-                <!-- Right: Video Section -->
-                <div class="w-full lg:w-1/2">
-                    <div class="rounded-lg shadow-lg border-2 border-ft-cream overflow-hidden">
-                        <video class="w-full h-auto" autoplay loop muted playsinline>
-                            <source src="./asserts/Video/ThurroIntro.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                    
+                    <!-- Modern Stand Design -->
+                    <div class="flex flex-col items-center" style="transform: translateZ(-15px);">
+                        <!-- Stand Connector -->
+                        <div class="w-14 h-2.5 bg-gradient-to-b from-gray-600 to-gray-700 rounded-b-sm relative -mt-1">
+                            <!-- Connector Accents -->
+                            <div class="absolute left-2 right-2 top-0 h-0.5 bg-gray-500 rounded-b-full"></div>
+                        </div>
+                        
+                        <!-- Stand Column with 3D Effect -->
+                        <div class="w-8 h-12 bg-gradient-to-b from-gray-600 to-gray-700 relative">
+                            <!-- Column Side Highlights -->
+                            <div class="absolute left-0 top-0 bottom-0 w-px bg-gray-500"></div>
+                            <div class="absolute right-0 top-0 bottom-0 w-px bg-gray-800"></div>
+                            
+                            <!-- Column Front Highlight -->
+                            <div class="absolute left-1/2 top-1/3 bottom-1/3 w-4 transform -translate-x-1/2 bg-gradient-to-b from-gray-500 to-gray-600 opacity-30 rounded-full"></div>
+                        </div>
+                        
+                        <!-- Stand Base with 3D Effect -->
+                        <div class="w-44 h-4 bg-gradient-to-b from-gray-600 to-gray-700 rounded-lg relative -mt-1">
+                            <!-- Base Top Highlight -->
+                            <div class="absolute top-0 left-4 right-4 h-px bg-gray-500"></div>
+                            
+                            <!-- Base Bottom Shadow -->
+                            <div class="absolute bottom-0 left-2 right-2 h-1 bg-gray-800 rounded-b-lg"></div>
+                            
+                            <!-- Base Center Detail -->
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-1.5 bg-gradient-to-r from-transparent via-gray-600 to-transparent rounded-full"></div>
+                        </div>
+                        
+                        <!-- Realistic Shadow -->
+                        <div class="w-56 h-3 bg-black opacity-15 mx-auto rounded-full mt-2 blur-sm"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Line Divider -->
     <div class="line-divider-container"></div>
 
     <!-- Workflow Section -->
@@ -352,295 +401,307 @@
 
     <!-- Line Divider -->
     <div class="line-divider-container"></div>
-    
+
     <!-- Data Intelligence Hub Section -->
-<section class="py-16 md:py-24 bg-ft-pink">
-    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12 md:mb-16">
-            <h2 class="text-4xl sm:text-5xl font-bold mb-6 tracking-tight">
-                Unlock deeper insights with <span class="text-black">our scale</span>
-            </h2>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                Powered by comprehensive, real-time market data
-            </p>
+    <section class="py-16 md:py-24 bg-ft-pink">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-6 tracking-tight">
+                    Unlock deeper insights with <span class="text-black">our scale</span>
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Powered by comprehensive, real-time market data
+                </p>
+            </div>
+
+            <!-- Mobile Statistics (Stacked) -->
+            <div class="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-ft-cream rounded-lg p-6 text-center shadow-sm">
+                    <div class="text-black text-3xl font-bold mb-2">25-35M</div>
+                    <div class="text-black text-base">new data points added daily</div>
+                </div>
+                <div class="bg-ft-cream rounded-lg p-6 text-center shadow-sm">
+                    <div class="text-black text-3xl font-bold mb-2">800+</div>
+                    <div class="text-black text-base">alternate data sources</div>
+                </div>
+                <div class="bg-ft-cream rounded-lg p-6 text-center shadow-sm">
+                    <div class="text-black text-3xl font-bold mb-2">5,000+</div>
+                    <div class="text-black text-base">listed companies</div>
+                </div>
+                <div class="bg-ft-cream rounded-lg p-6 text-center shadow-sm">
+                    <div class="text-black text-3xl font-bold mb-2">1,000s</div>
+                    <div class="text-black text-base">of conference call transcripts</div>
+                </div>
+                <div class="bg-ft-cream rounded-lg p-6 text-center shadow-sm">
+                    <div class="text-black text-3xl font-bold mb-2">Millions</div>
+                    <div class="text-black text-base">of regulatory filings</div>
+                </div>
+                <div class="bg-ft-cream rounded-lg p-6 text-center shadow-sm">
+                    <div class="text-black text-3xl font-bold mb-2">5-10</div>
+                    <div class="text-black text-base">years of data history</div>
+                </div>
+            </div>
+
+            <!-- Desktop Data Intelligence Hub -->
+            <div class="hidden md:block relative">
+                <style>
+                    .hub-container {
+                        position: relative;
+                        width: 960px;
+                        height: 600px;
+                        margin: 0 auto;
+                    }
+
+                    .center-circle {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 180px;
+                        height: 180px;
+                        border-radius: 50%;
+                        background-color: #FFF8F0;
+                        /* ft-cream color */
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 5;
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+                    }
+
+                    .stat-card {
+                        position: absolute;
+                        width: 180px;
+                        border-radius: 8px;
+                        padding: 20px 15px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        z-index: 5;
+                    }
+
+                    .connector {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        height: 1px;
+                        background-color: rgba(0, 0, 0, 1);
+                        transform-origin: 0 0;
+                        z-index: 1;
+                    }
+                </style>
+
+                <div class="hub-container">
+                    <!-- Lines first (lower z-index) -->
+                    <!-- Top line -->
+                    <div class="connector" style="width: 140px; transform: translateY(-1px) rotate(-90deg);"></div>
+
+                    <!-- Top Right line -->
+                    <div class="connector" style="width: 140px; transform: translateY(-1px) rotate(-30deg);"></div>
+
+                    <!-- Bottom Right line -->
+                    <div class="connector" style="width: 140px; transform: translateY(-1px) rotate(30deg);"></div>
+
+                    <!-- Bottom line -->
+                    <div class="connector" style="width: 140px; transform: translateY(-1px) rotate(90deg);"></div>
+
+                    <!-- Bottom Left line -->
+                    <div class="connector" style="width: 140px; transform: translateY(-1px) rotate(150deg);"></div>
+
+                    <!-- Top Left line -->
+                    <div class="connector" style="width: 140px; transform: translateY(-1px) rotate(210deg);"></div>
+
+                    <!-- Central Hub (above lines) -->
+                    <div class="center-circle">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 12H4V21H2V12Z" fill="black" />
+                            <path d="M6 8H8V21H6V8Z" fill="black" />
+                            <path d="M10 4H12V21H10V4Z" fill="black" />
+                            <path d="M14 8H16V21H14V8Z" fill="black" />
+                            <path d="M18 2H20V21H18V2Z" fill="black" />
+                            <path d="M2 22H20V24H2V22Z" fill="black" />
+                        </svg>
+                        <p class="text-base font-medium mt-3">Data Intelligence</p>
+                    </div>
+
+                    <!-- Top Stat Card -->
+                    <div class="stat-card" style="top: 40px; left: 50%; transform: translateX(-50%);">
+                        <div class="text-black text-4xl font-bold mb-2">25-35M</div>
+                        <div class="text-black text-sm">new data points<br>added daily</div>
+                    </div>
+
+                    <!-- Top Right Stat Card -->
+                    <div class="stat-card" style="top: 150px; right: 140px;">
+                        <div class="text-black text-4xl font-bold mb-2">800+</div>
+                        <div class="text-black text-sm">alternate data sources</div>
+                    </div>
+
+                    <!-- Bottom Right Stat Card -->
+                    <div class="stat-card" style="bottom: 150px; right: 140px;">
+                        <div class="text-black text-4xl font-bold mb-2">5,000+</div>
+                        <div class="text-black text-sm">listed companies</div>
+                    </div>
+
+                    <!-- Bottom Stat Card -->
+                    <div class="stat-card" style="bottom: 40px; left: 50%; transform: translateX(-50%);">
+                        <div class="text-black text-4xl font-bold mb-2">1,000s</div>
+                        <div class="text-black text-sm">of conference call<br>transcripts</div>
+                    </div>
+
+                    <!-- Bottom Left Stat Card -->
+                    <div class="stat-card" style="bottom: 150px; left: 140px;">
+                        <div class="text-black text-4xl font-bold mb-2">Millions</div>
+                        <div class="text-black text-sm">of regulatory filings</div>
+                    </div>
+
+                    <!-- Top Left Stat Card -->
+                    <div class="stat-card" style="top: 150px; left: 140px;">
+                        <div class="text-black text-4xl font-bold mb-2">5-10</div>
+                        <div class="text-black text-sm">years of data history</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <!-- Mobile Statistics (Stacked) -->
-        <div class="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div class="bg-ft-cream rounded-lg p-6 text-center shadow-sm">
-                <div class="text-black text-3xl font-bold mb-2">25-35M</div>
-                <div class="text-black text-base">new data points added daily</div>
-            </div>
-            <div class="bg-ft-cream rounded-lg p-6 text-center shadow-sm">
-                <div class="text-black text-3xl font-bold mb-2">800+</div>
-                <div class="text-black text-base">alternate data sources</div>
-            </div>
-            <div class="bg-ft-cream rounded-lg p-6 text-center shadow-sm">
-                <div class="text-black text-3xl font-bold mb-2">5,000+</div>
-                <div class="text-black text-base">listed companies</div>
-            </div>
-            <div class="bg-ft-cream rounded-lg p-6 text-center shadow-sm">
-                <div class="text-black text-3xl font-bold mb-2">1,000s</div>
-                <div class="text-black text-base">of conference call transcripts</div>
-            </div>
-            <div class="bg-ft-cream rounded-lg p-6 text-center shadow-sm">
-                <div class="text-black text-3xl font-bold mb-2">Millions</div>
-                <div class="text-black text-base">of regulatory filings</div>
-            </div>
-            <div class="bg-ft-cream rounded-lg p-6 text-center shadow-sm">
-                <div class="text-black text-3xl font-bold mb-2">5-10</div>
-                <div class="text-black text-base">years of data history</div>
-            </div>
-        </div>
-        
-        <!-- Desktop Data Intelligence Hub -->
-        <div class="hidden md:block relative">
-            <style>
-                .hub-container {
-                    position: relative;
-                    width: 960px;
-                    height: 600px;
-                    margin: 0 auto;
-                }
-                
-                .center-circle {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 180px;
-                    height: 180px;
-                    border-radius: 50%;
-                    background-color: #FFF8F0; /* ft-cream color */
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    z-index: 5;
-                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-                }
-                
-                .stat-card {
-                    position: absolute;
-                    width: 180px;
-                    background-color: #FFF8F0; /* ft-cream color */
-                    border-radius: 8px;
-                    padding: 20px 15px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
-                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-                    z-index: 5;
-                }
-                
-                .connector {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    height: 1px;
-                    background-color: rgba(0, 0, 0, 0.07);
-                    transform-origin: 0 0;
-                    z-index: 1;
-                }
-            </style>
-            
-            <div class="hub-container">
-                <!-- Lines first (lower z-index) -->
-                <!-- Top line -->
-                <div class="connector" style="width: 140px; transform: translateY(-1px) rotate(-90deg);"></div>
-                
-                <!-- Top Right line -->
-                <div class="connector" style="width: 140px; transform: translateY(-1px) rotate(-30deg);"></div>
-                
-                <!-- Bottom Right line -->
-                <div class="connector" style="width: 140px; transform: translateY(-1px) rotate(30deg);"></div>
-                
-                <!-- Bottom line -->
-                <div class="connector" style="width: 140px; transform: translateY(-1px) rotate(90deg);"></div>
-                
-                <!-- Bottom Left line -->
-                <div class="connector" style="width: 140px; transform: translateY(-1px) rotate(150deg);"></div>
-                
-                <!-- Top Left line -->
-                <div class="connector" style="width: 140px; transform: translateY(-1px) rotate(210deg);"></div>
-                
-                <!-- Central Hub (above lines) -->
-                <div class="center-circle">
-                    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 12H4V21H2V12Z" fill="black"/>
-                        <path d="M6 8H8V21H6V8Z" fill="black"/>
-                        <path d="M10 4H12V21H10V4Z" fill="black"/>
-                        <path d="M14 8H16V21H14V8Z" fill="black"/>
-                        <path d="M18 2H20V21H18V2Z" fill="black"/>
-                        <path d="M2 22H20V24H2V22Z" fill="black"/>
-                    </svg>
-                    <p class="text-base font-medium mt-3">Data Intelligence</p>
-                </div>
-                
-                <!-- Top Stat Card -->
-                <div class="stat-card" style="top: 40px; left: 50%; transform: translateX(-50%);">
-                    <div class="text-black text-4xl font-bold mb-2">25-35M</div>
-                    <div class="text-black text-sm">new data points<br>added daily</div>
-                </div>
-                
-                <!-- Top Right Stat Card -->
-                <div class="stat-card" style="top: 150px; right: 140px;">
-                    <div class="text-black text-4xl font-bold mb-2">800+</div>
-                    <div class="text-black text-sm">alternate data sources</div>
-                </div>
-                
-                <!-- Bottom Right Stat Card -->
-                <div class="stat-card" style="bottom: 150px; right: 140px;">
-                    <div class="text-black text-4xl font-bold mb-2">5,000+</div>
-                    <div class="text-black text-sm">listed companies</div>
-                </div>
-                
-                <!-- Bottom Stat Card -->
-                <div class="stat-card" style="bottom: 40px; left: 50%; transform: translateX(-50%);">
-                    <div class="text-black text-4xl font-bold mb-2">1,000s</div>
-                    <div class="text-black text-sm">of conference call<br>transcripts</div>
-                </div>
-                
-                <!-- Bottom Left Stat Card -->
-                <div class="stat-card" style="bottom: 150px; left: 140px;">
-                    <div class="text-black text-4xl font-bold mb-2">Millions</div>
-                    <div class="text-black text-sm">of regulatory filings</div>
-                </div>
-                
-                <!-- Top Left Stat Card -->
-                <div class="stat-card" style="top: 150px; left: 140px;">
-                    <div class="text-black text-4xl font-bold mb-2">5-10</div>
-                    <div class="text-black text-sm">years of data history</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <div class="line-divider-container"></div>
 
     <!-- Products Section -->
     <!-- Updated Products Section with New Copy -->
-<section id="products" class="py-16 md:py-20 bg-ft-pink">
-    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12 md:mb-16">
-            <h2 class="text-4xl sm:text-5xl font-bold mb-6 tracking-tight">
-                Our <span class="text-black">core intelligence</span> products
-            </h2>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-8 md:gap-10 mt-12">
-            <!-- AltData Product -->
-            <div class="bg-ft-cream rounded-lg p-8 md:p-10 shadow-sm border border-black border-opacity-10 hover:translate-y-[-10px] transition-all duration-300 flex-1 flex flex-col">
-                <div class="text-center mb-8">
-                    <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <rect x="7" y="8" width="10" height="8" rx="1" ry="1"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-6 text-black">AltData</h3>
-                    <p class="text-xl text-black mb-8 leading-relaxed">Explore visualised alternate data from 800+ sources</p>
-                </div>
-                <div class="mb-8 space-y-4">
-                    <div class="flex items-start space-x-3">
-                        <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
-                        <p class="text-black">Intuitive search</p>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
-                        <p class="text-black">Personalised dashboards</p>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
-                        <p class="text-black">Seamless team collaboration</p>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
-                        <p class="text-black">Flexible data export</p>
-                    </div>
-                </div>
-                <div class="mt-auto text-center">
-                    <a href="https://ai.thurro.com"
-                        class="inline-block px-8 py-4 rounded-md bg-black text-ft-cream font-medium hover:bg-gray-800 transition-all duration-200">Start
-                        free trial</a>
-                </div>
+    <section id="products" class="py-16 md:py-20 bg-ft-pink">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-6 tracking-tight">
+                    Our <span class="text-black">core intelligence</span> products
+                </h2>
             </div>
+            <div class="flex flex-col lg:flex-row gap-8 md:gap-10 mt-12">
+                <!-- AltData Product -->
+                <div
+                    class="bg-ft-cream rounded-lg p-8 md:p-10 shadow-sm border border-black border-opacity-10 hover:translate-y-[-10px] transition-all duration-300 flex-1 flex flex-col">
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                <rect x="7" y="8" width="10" height="8" rx="1" ry="1" />
+                            </svg>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-6 text-black">AltData</h3>
+                        <p class="text-xl text-black mb-8 leading-relaxed">Explore visualised alternate data from 800+
+                            sources</p>
+                    </div>
+                    <div class="mb-8 space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
+                            <p class="text-black">Intuitive search</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
+                            <p class="text-black">Personalised dashboards</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
+                            <p class="text-black">Seamless team collaboration</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
+                            <p class="text-black">Flexible data export</p>
+                        </div>
+                    </div>
+                    <div class="mt-auto text-center">
+                        <a href="https://ai.thurro.com"
+                            class="inline-block px-8 py-4 rounded-md bg-black text-ft-cream font-medium hover:bg-gray-800 transition-all duration-200">Start
+                            free trial</a>
+                    </div>
+                </div>
 
-            <!-- Answers Product -->
-            <div class="bg-ft-cream rounded-lg p-8 md:p-10 shadow-sm border border-black border-opacity-10 hover:translate-y-[-10px] transition-all duration-300 flex-1 flex flex-col">
-                <div class="text-center mb-8">
-                    <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-                        </svg>
+                <!-- Answers Product -->
+                <div
+                    class="bg-ft-cream rounded-lg p-8 md:p-10 shadow-sm border border-black border-opacity-10 hover:translate-y-[-10px] transition-all duration-300 flex-1 flex flex-col">
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-6 text-black">Answers</h3>
+                        <p class="text-xl text-black mb-8 leading-relaxed">Ask. Get data-backed insights and analysis
+                        </p>
                     </div>
-                    <h3 class="text-3xl font-bold mb-6 text-black">Answers</h3>
-                    <p class="text-xl text-black mb-8 leading-relaxed">Ask. Get data-backed insights and analysis</p>
+                    <div class="mb-8 space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
+                            <p class="text-black">Holistic, unified insights</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
+                            <p class="text-black">Source verification and links</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
+                            <p class="text-black">Real-time data refresh</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
+                            <p class="text-black">Collaborative sharing</p>
+                        </div>
+                    </div>
+                    <div class="mt-auto text-center">
+                        <a href="https://ai.thurro.com"
+                            class="inline-block px-8 py-4 rounded-md bg-black text-ft-cream font-medium hover:bg-gray-800 transition-all duration-200">Start
+                            free trial</a>
+                    </div>
                 </div>
-                <div class="mb-8 space-y-4">
-                    <div class="flex items-start space-x-3">
-                        <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
-                        <p class="text-black">Holistic, unified insights</p>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
-                        <p class="text-black">Source verification and links</p>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
-                        <p class="text-black">Real-time data refresh</p>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
-                        <p class="text-black">Collaborative sharing</p>
-                    </div>
-                </div>
-                <div class="mt-auto text-center">
-                    <a href="https://ai.thurro.com"
-                        class="inline-block px-8 py-4 rounded-md bg-black text-ft-cream font-medium hover:bg-gray-800 transition-all duration-200">Start
-                        free trial</a>
-                </div>
-            </div>
 
-            <!-- NowCast Product -->
-            <div class="bg-ft-cream rounded-lg p-8 md:p-10 shadow-sm border border-black border-opacity-10 hover:translate-y-[-10px] transition-all duration-300 flex-1 flex flex-col">
-                <div class="text-center mb-8">
-                    <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                        </svg>
+                <!-- NowCast Product -->
+                <div
+                    class="bg-ft-cream rounded-lg p-8 md:p-10 shadow-sm border border-black border-opacity-10 hover:translate-y-[-10px] transition-all duration-300 flex-1 flex flex-col">
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-6 text-black">NowCast</h3>
+                        <p class="text-xl text-black mb-8 leading-relaxed">Predict company performance weeks ahead,
+                            real-time</p>
                     </div>
-                    <h3 class="text-3xl font-bold mb-6 text-black">NowCast</h3>
-                    <p class="text-xl text-black mb-8 leading-relaxed">Predict company performance weeks ahead, real-time</p>
-                </div>
-                <div class="mb-8 space-y-4">
-                    <div class="flex items-start space-x-3">
-                        <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
-                        <p class="text-black">Powered by unique datasets</p>
+                    <div class="mb-8 space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
+                            <p class="text-black">Powered by unique datasets</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
+                            <p class="text-black">Evolving prediction models</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
+                            <p class="text-black">70% Accurate, within +/-2%</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
+                            <p class="text-black">Independent and publicly sourced</p>
+                        </div>
                     </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
-                        <p class="text-black">Evolving prediction models</p>
+                    <div class="mt-auto text-center">
+                        <a href="nowcast.html"
+                            class="inline-block px-8 py-4 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Learn
+                            more</a>
                     </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
-                        <p class="text-black">70% Accurate, within +/-2%</p>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-2 h-2 bg-black rounded-full mt-2"></div>
-                        <p class="text-black">Independent and publicly sourced</p>
-                    </div>
-                </div>
-                <div class="mt-auto text-center">
-                    <a href="nowcast.html"
-                        class="inline-block px-8 py-4 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Learn
-                        more</a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Line Divider -->
     <div class="line-divider-container"></div>
@@ -660,7 +721,7 @@
                 <div class="flex flex-wrap justify-center gap-12 md:gap-16 mt-8">
                     <div class="flex flex-col items-center">
                         <div
-                            class="w-20 h-20 bg-ft-cream rounded-lg border border-black border-opacity-10 flex items-center justify-center mb-6 hover:bg-ft-pink-darker transition-colors duration-200">
+                            class="w-20 h-20 rounded-lg border border-black border-opacity-10 flex items-center justify-center mb-6 hover:bg-ft-pink-darker transition-colors duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="text-black">
@@ -675,7 +736,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <div
-                            class="w-20 h-20 bg-ft-cream rounded-lg border border-black border-opacity-10 flex items-center justify-center mb-6 hover:bg-ft-pink-darker transition-colors duration-200">
+                            class="w-20 h-20 rounded-lg border border-black border-opacity-10 flex items-center justify-center mb-6 hover:bg-ft-pink-darker transition-colors duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="text-black">
@@ -690,7 +751,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <div
-                            class="w-20 h-20 bg-ft-cream rounded-lg border border-black border-opacity-10 flex items-center justify-center mb-6 hover:bg-ft-pink-darker transition-colors duration-200">
+                            class="w-20 h-20 rounded-lg border border-black border-opacity-10 flex items-center justify-center mb-6 hover:bg-ft-pink-darker transition-colors duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="text-black">
@@ -709,39 +770,39 @@
 
     <!-- Solutions Section -->
     <section id="solutions" class="py-16 md:py-20 bg-ft-pink">
-    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12 md:mb-16">
-            <h2 class="text-4xl sm:text-5xl font-bold mb-6 tracking-tight">
-                Built for <span class="text-black">how you work</span>
-            </h2>
-            <p class="text-xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">Whether you're deep in equity
-                research or navigating corporate strategy, our AI-powered intelligence platform adapts to your
-                workflow
-                — and your data</p>
-        </div>
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-6 tracking-tight">
+                    Built for <span class="text-black">how you work</span>
+                </h2>
+                <p class="text-xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">Whether you're deep in equity
+                    research or navigating corporate strategy, our AI-powered intelligence platform adapts to your
+                    workflow
+                    — and your data</p>
+            </div>
 
-        <!-- Solution Categories -->
-        <div class="flex flex-wrap justify-center gap-4 mb-12">
-            <button id="investment-btn"
-                class="solution-tab px-6 py-3 bg-ft-cream border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Investment
-                management</button>
-            <button id="financial-btn"
-                class="solution-tab px-6 py-3 bg-ft-cream border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Financial
-                services</button>
-            <button id="consultants-btn"
-                class="solution-tab px-6 py-3 bg-ft-cream border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Consultants
-                and corporate</button>
-            <button id="govt-btn"
-                class="solution-tab px-6 py-3 bg-ft-cream border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Govt.
-                and regulatory bodies</button>
-        </div>
+            <!-- Solution Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button id="investment-btn"
+                    class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Investment
+                    management</button>
+                <button id="financial-btn"
+                    class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Financial
+                    services</button>
+                <button id="consultants-btn"
+                    class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Consultants
+                    and corporate</button>
+                <button id="govt-btn"
+                    class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Govt.
+                    and regulatory bodies</button>
+            </div>
 
-        <!-- Solution Content Container (empty) -->
-        <div class="max-w-6xl mx-auto">
-            <!-- All solution content removed as requested -->
+            <!-- Solution Content Container (empty) -->
+            <div class="max-w-6xl mx-auto">
+                <!-- All solution content removed as requested -->
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Line Divider -->
     <div class="line-divider-container"></div>
@@ -764,33 +825,43 @@
                     <div id="testimonial-container" class="relative">
                         <div class="min-h-48 md:min-h-56">
                             <!-- Testimonial 1 -->
-                            <div class="testimonial-slide opacity-100 visible relative z-10 p-8 md:p-12 transition-opacity duration-300">
+                            <div
+                                class="testimonial-slide opacity-100 visible relative z-10 p-8 md:p-12 transition-opacity duration-300">
                                 <p class="text-lg sm:text-xl md:text-2xl mb-6 relative z-10 leading-relaxed">
-                                    <span class="text-4xl leading-none font-serif opacity-70 mr-2 align-top">❝</span>Thurro
+                                    <span
+                                        class="text-4xl leading-none font-serif opacity-70 mr-2 align-top">❝</span>Thurro
                                     has been instrumental in helping us visualise and track alternative datasets,
                                     such as the traffic movement across 800+ toll plazas in India, which has now become
-                                    a regular feature in our research<span class="text-4xl leading-none font-serif opacity-70 ml-2 align-bottom">❞</span>
+                                    a regular feature in our research<span
+                                        class="text-4xl leading-none font-serif opacity-70 ml-2 align-bottom">❞</span>
                                 </p>
                                 <p class="font-semibold text-lg">— Economist, Alternative Investment Fund</p>
                             </div>
 
                             <!-- Testimonial 2 -->
-                            <div class="testimonial-slide opacity-0 invisible absolute top-0 left-0 w-full z-10 p-8 md:p-12 transition-opacity duration-300">
+                            <div
+                                class="testimonial-slide opacity-0 invisible absolute top-0 left-0 w-full z-10 p-8 md:p-12 transition-opacity duration-300">
                                 <p class="text-lg sm:text-xl md:text-2xl mb-6 relative z-10 leading-relaxed">
-                                    <span class="text-4xl leading-none font-serif opacity-70 mr-2 align-top">❝</span>Thurro's instant cross-referencing of macro indicators and company fundamentals reveals insights that typically take junior analysts weeks to piece together<span class="text-4xl leading-none font-serif opacity-70 ml-2 align-bottom">❞</span>
+                                    <span
+                                        class="text-4xl leading-none font-serif opacity-70 mr-2 align-top">❝</span>Thurro's
+                                    instant cross-referencing of macro indicators and company fundamentals reveals
+                                    insights that typically take junior analysts weeks to piece together<span
+                                        class="text-4xl leading-none font-serif opacity-70 ml-2 align-bottom">❞</span>
                                 </p>
                                 <p class="font-semibold text-lg">— Head of research, leading AMC</p>
                             </div>
 
                             <!-- Testimonial 3 -->
-                            <div class="testimonial-slide opacity-0 invisible absolute top-0 left-0 w-full z-10 p-8 md:p-12 transition-opacity duration-300">
+                            <div
+                                class="testimonial-slide opacity-0 invisible absolute top-0 left-0 w-full z-10 p-8 md:p-12 transition-opacity duration-300">
                                 <p class="text-lg sm:text-xl md:text-2xl mb-6 relative z-10 leading-relaxed">
                                     <span class="text-4xl leading-none font-serif opacity-70 mr-2 align-top">❝</span>As
                                     one of Thurro's earliest adopters, we've relied on its comprehensive macroeconomic
                                     and company data for years. The platform's expanding datasets have become
                                     indispensable to our research workflow. What truly sets Thurro apart is its
                                     responsive team—they promptly address data queries and consistently deliver on
-                                    custom requests<span class="text-4xl leading-none font-serif opacity-70 ml-2 align-bottom">❞</span>
+                                    custom requests<span
+                                        class="text-4xl leading-none font-serif opacity-70 ml-2 align-bottom">❞</span>
                                 </p>
                                 <p class="font-semibold text-lg">— Investor</p>
                             </div>
@@ -799,14 +870,19 @@
                 </div>
 
                 <!-- Navigation Buttons - REMOVED COLORS AND BORDERS -->
-                <div class="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-4 sm:px-8 z-20 pointer-events-none">
-                    <button id="prev-btn" class="rounded-full w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center focus:outline-none z-30 pointer-events-auto" aria-label="Previous testimonial" type="button">
+                <div
+                    class="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-4 sm:px-8 z-20 pointer-events-none">
+                    <button id="prev-btn"
+                        class="rounded-full w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center focus:outline-none z-30 pointer-events-auto"
+                        aria-label="Previous testimonial" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
                     </button>
-                    <button id="next-btn" class="rounded-full w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center focus:outline-none z-30 pointer-events-auto" aria-label="Next testimonial" type="button">
+                    <button id="next-btn"
+                        class="rounded-full w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center focus:outline-none z-30 pointer-events-auto"
+                        aria-label="Next testimonial" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="9 18 15 12 9 6"></polyline>
@@ -816,9 +892,15 @@
 
                 <!-- Dots Navigation - REMOVED COLORS -->
                 <div class="flex justify-center mt-8 gap-4 relative z-30">
-                    <button class="w-4 h-4 rounded-full focus:outline-none transition-colors duration-200 pointer-events-auto" type="button" aria-label="Go to slide 1"></button>
-                    <button class="w-4 h-4 rounded-full focus:outline-none transition-colors duration-200 pointer-events-auto" type="button" aria-label="Go to slide 2"></button>
-                    <button class="w-4 h-4 rounded-full focus:outline-none transition-colors duration-200 pointer-events-auto" type="button" aria-label="Go to slide 3"></button>
+                    <button
+                        class="w-4 h-4 rounded-full focus:outline-none transition-colors duration-200 pointer-events-auto"
+                        type="button" aria-label="Go to slide 1"></button>
+                    <button
+                        class="w-4 h-4 rounded-full focus:outline-none transition-colors duration-200 pointer-events-auto"
+                        type="button" aria-label="Go to slide 2"></button>
+                    <button
+                        class="w-4 h-4 rounded-full focus:outline-none transition-colors duration-200 pointer-events-auto"
+                        type="button" aria-label="Go to slide 3"></button>
                 </div>
             </div>
         </div>
@@ -832,15 +914,20 @@
         <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div class="p-8 md:p-10 lg:p-12">
                 <!-- Mobile and Desktop Layout with improved spacing -->
-                <div class="flex flex-col lg:flex-row justify-between items-center lg:items-center space-y-8 lg:space-y-0">
+                <div
+                    class="flex flex-col lg:flex-row justify-between items-center lg:items-center space-y-8 lg:space-y-0">
                     <div class="lg:pr-12 text-center lg:text-left lg:flex-1">
                         <h3 class="text-xl md:text-2xl font-semibold mb-3 tracking-tight">Stay informed</h3>
-                        <p class="text-base lg:text-lg max-w-md mx-auto lg:mx-0 leading-relaxed">Get high-frequency market insights, data stories, and research drops delivered straight to your inbox</p>
+                        <p class="text-base lg:text-lg max-w-md mx-auto lg:mx-0 leading-relaxed">Get high-frequency
+                            market insights, data stories, and research drops delivered straight to your inbox</p>
                     </div>
                     <div class="w-full lg:w-auto lg:ml-8">
                         <div class="flex flex-col sm:flex-row gap-4 items-center max-w-md mx-auto lg:mx-0">
-                            <input type="email" placeholder="Enter your email" class="w-full bg-ft-cream border sm:w-72 px-5 py-3.5 rounded-md focus:outline-none text-base placeholder-opacity-70">
-                            <a href="newsletter.html" class="px-5 py-2.5 lg:px-6 lg:py-3 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Get updates</a>
+                            <input type="email" placeholder="Enter your email"
+                                class="w-full bg-ft-cream border border-black sm:w-72 px-5 py-3.5 rounded-md focus:outline-none text-base placeholder-opacity-70">
+                            <a href="newsletter.html"
+                                class="px-5 py-2.5 lg:px-6 lg:py-3 rounded-md text-white bg-black border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Get
+                                updates</a>
                         </div>
                     </div>
                 </div>
@@ -860,9 +947,10 @@
                 </h2>
             </div>
             <div class="max-w-6xl mx-auto text-center">
-                <p class="text-2xl leading-relaxed mb-6">Benefit from 75+ years of collective expertise of
-                    our founding team of ex-analysts, quants and engineers who built Thurro to solve problems they lived
-                    firsthand. This deep understanding ensures the execution maturity and timely structured intelligence
+                <p class="text-xl leading-relaxed mb-6">Benefit from 75+ years of collective expertise of
+                    our founding team of fund managers, ex-analysts, quants and engineers who built Thurro to solve
+                    problems they lived firsthand. This deep understanding ensures the execution maturity and timely
+                    structured intelligence
                     our high-profile clients rely on</p>
             </div>
         </div>
@@ -886,63 +974,73 @@
         </div>
     </section>
 
-    <footer class="bg-black text-gray-300 py-10">
-    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row items-center justify-between">
-            <!-- Left: Logo -->
-            <div class="mb-6 md:mb-0">
-                <img src="./asserts/Logo/thurro.png" alt="Thurro Logo" class="h-8">
+    <footer class="bg-black text-gray-300 py-6">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <!-- Top Row: Logo, Made with Love, Social Icons -->
+            <div class="flex flex-col md:flex-row items-center justify-between mb-6">
+                <!-- Left: Logo -->
+                <div class="mb-6 md:mb-0">
+                    <img src="./asserts/Logo/Thurro_logo_bg_white.png" alt="Thurro Logo" class="h-8">
+                </div>
+
+                <!-- Right: Social Icons -->
+                <div class="flex items-center space-x-4">
+                    <a href="linkedin.html" class="text-gray-400 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="youtube.html" class="text-gray-400 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                            <path d="M10 9l5 3-5 3V9z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://x.com" class="text-gray-400 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 1200 1227"
+                            fill="currentColor">
+                            <path
+                                d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
-            
-            <!-- Center: Made in India, Copyright and Legal Links -->
-            <div class="text-center mb-6 md:mb-0">
-                <p class="text-xs text-gray-500 mb-3">
-                    Made with <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-3 w-3 text-red-500" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                    </svg> in India
-                </p>
-                <p class="text-xs text-gray-500 mb-3">
-                    Copyright © 2025 ADQVEST CAPITAL ADVISORS PVT LTD.
-                </p>
-                
-                <!-- Legal Links -->
-                <div class="flex justify-center space-x-6">
-                    <a href="https://thurro.com/privacy-policy/" class="text-xs text-gray-500 hover:text-white transition-colors">
+
+            <!-- Horizontal Line -->
+            <hr class="border-gray-800 mb-6">
+
+            <!-- Bottom Row: Copyright and Legal Links -->
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <!-- Left: Copyright -->
+                <div class="mb-4 md:mb-0">
+                    <p class="text-xs text-gray-500">
+                        Copyright © 2025 ADQVEST CAPITAL ADVISORS PVT LTD.
+                    </p>
+                </div>
+
+                <!-- Right: Legal Links -->
+                <div class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
+                    <a href="https://thurro.com/privacy-policy/"
+                        class="text-xs text-gray-500 hover:text-white transition-colors">
                         PRIVACY POLICY
                     </a>
-                    <a href="https://thurro.com/terms-conditions/" class="text-xs text-gray-500 hover:text-white transition-colors">
+                    <a href="https://thurro.com/terms-conditions/"
+                        class="text-xs text-gray-500 hover:text-white transition-colors">
                         TERMS AND CONDITIONS
                     </a>
-                    <a href="https://thurro.com/contact-us/" class="text-xs text-gray-500 hover:text-white transition-colors">
+                    <a href="https://thurro.com/contact-us/"
+                        class="text-xs text-gray-500 hover:text-white transition-colors">
                         CONTACT
                     </a>
                 </div>
             </div>
-            
-            <!-- Right: Social Icons -->
-            <div class="flex items-center space-x-4">
-                <a href="linkedin.html" class="text-gray-400 hover:text-white transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                        <rect x="2" y="9" width="4" height="12"></rect>
-                        <circle cx="4" cy="4" r="2"></circle>
-                    </svg>
-                </a>
-                <a href="youtube.html" class="text-gray-400 hover:text-white transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
-                        <path d="M10 9l5 3-5 3V9z"></path>
-                    </svg>
-                </a>
-                <a href="https://x.com" class="text-gray-400 hover:text-white transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 1200 1227" fill="currentColor">
-                        <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
-                    </svg>
-                </a>
-            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
