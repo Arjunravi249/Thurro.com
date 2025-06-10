@@ -1036,21 +1036,23 @@
         <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div class="p-8 md:p-10 lg:p-12">
                 <!-- Mobile and Desktop Layout with improved spacing -->
-                <div
-                    class="flex flex-col lg:flex-row justify-between items-center lg:items-center space-y-8 lg:space-y-0">
+                <div class="flex flex-col lg:flex-row justify-between items-center lg:items-center space-y-8 lg:space-y-0">
                     <div class="lg:pr-12 text-center lg:text-left lg:flex-1">
                         <h3 class="text-xl md:text-2xl font-semibold mb-3 tracking-tight">Stay informed</h3>
-                        <p class="text-base lg:text-lg max-w-md mx-auto lg:mx-0 leading-relaxed">Get high-frequency
-                            market insights, data stories, and research drops delivered straight to your inbox</p>
+                        <p class="text-base lg:text-lg max-w-md mx-auto lg:mx-0 leading-relaxed">
+                            Get high-frequency market insights, data stories, and research drops delivered straight to your inbox
+                        </p>
                     </div>
                     <div class="w-full lg:w-auto lg:ml-8">
-                        <div class="flex flex-col sm:flex-row gap-4 items-center max-w-md mx-auto lg:mx-0">
-                            <input type="email" placeholder="Enter your email"
+                        <form name="newsletter" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-4 items-center max-w-md mx-auto lg:mx-0">
+                            <input type="hidden" name="form-name" value="newsletter">
+                            <input type="email" name="email" required placeholder="Enter your email"
                                 class="w-full bg-ft-cream border border-black sm:w-72 px-5 py-3.5 rounded-md focus:outline-none text-base placeholder-opacity-70">
-                            <a href="newsletter.html"
-                                class="px-5 py-2.5 lg:px-6 lg:py-3 rounded-md text-white bg-black border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Get
-                                updates</a>
-                        </div>
+                            <button type="submit"
+                                class="px-5 py-2.5 lg:px-6 lg:py-3 rounded-md text-white bg-black border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">
+                                Get updates
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
