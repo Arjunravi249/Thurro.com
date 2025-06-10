@@ -219,41 +219,6 @@
                 }
             });
 
-            // FAQ functionality
-            const faqItems = document.querySelectorAll('.faq-item');
-            
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                
-                question.addEventListener('click', () => {
-                    // Close all other FAQs
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                    
-                    // Toggle current FAQ
-                    item.classList.toggle('active');
-                });
-            });
-
-            // Function to create a clean line divider
-            function createLineDivider() {
-                const containers = document.querySelectorAll('.line-divider-container');
-                containers.forEach(container => {
-                    const divider = document.createElement('div');
-                    divider.className = 'line-divider';
-                    const inner = document.createElement('div');
-                    inner.className = 'line-divider-inner';
-                    divider.appendChild(inner);
-                    container.appendChild(divider);
-                });
-            }
-
-            // Initialize line dividers
-            createLineDivider();
-
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -326,8 +291,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                             <!-- Dropdown Menu -->
                             <div id="products-dropdown" class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-ft-cream rounded-lg shadow-lg opacity-0 invisible transition-all duration-300 -translate-y-4 z-50 overflow-hidden border border-black border-opacity-5">
-                                <!-- Thurro Answers -->
-                                <a href="answers.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5">
+                                <!-- Thurro Answers - Now showing as selected with bg-ft-pink-darker -->
+                                <a href="answers.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5 bg-ft-pink-darker">
                                     <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
                                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
@@ -440,7 +405,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             </svg>
                         </button>
                         <div id="mobile-products-menu" class="hidden mt-2 ml-4 space-y-3">
-                            <a href="answers.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro Answers</a>
+                            <!-- Also highlighting the Answers link in mobile menu -->
+                            <a href="answers.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-30 transition-colors">Thurro Answers</a>
                             <a href="altdata.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro AltData</a>
                             <a href="nowcast.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro NowCast</a>
                             <a href="customization.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Customization</a>
@@ -472,6 +438,9 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </section>
+
+<!-- Line Divider -->
+<div class="line-divider-container"></div>
 
 <!-- Research Edge Section (styled like "Ask complex questions..." section) -->
 <section class="py-20 bg-ft-pink">
@@ -554,6 +523,9 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </section>
+
+<!-- Line Divider -->
+<div class="line-divider-container"></div>
 
     <!-- Key Features Section with Button Navigation -->
 <section class="py-20 bg-ft-pink">
@@ -713,6 +685,9 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 </section>
 
+<!-- Line Divider -->
+<div class="line-divider-container"></div>
+
     <!-- FAQ Section -->
     <section class="py-20 bg-ft-pink">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -813,6 +788,9 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </section>
 
+    <!-- Line Divider -->
+    <div class="line-divider-container"></div>
+
     <!-- CTA Section -->
     <section class="py-16 md:py-20 bg-black text-ft-cream text-center">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -894,7 +872,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </footer>
 
-    <script>
+<script>
         document.addEventListener('DOMContentLoaded', function () {
             // Function to create a clean line divider
             function createLineDivider() {
@@ -983,6 +961,36 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             });
+
+            // Feature tabs functionality
+            const featureBtns = document.querySelectorAll('.feature-btn');
+            const featureContents = document.querySelectorAll('.feature-content');
+            const featureImages = document.querySelectorAll('.feature-image');
+            
+            if (featureBtns.length > 0) {
+                featureBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // Reset all buttons
+                        featureBtns.forEach(b => {
+                            b.classList.remove('bg-black', 'text-white');
+                            b.classList.add('border', 'border-black', 'border-opacity-20');
+                        });
+                        
+                        // Activate clicked button
+                        btn.classList.add('bg-black', 'text-white');
+                        btn.classList.remove('border', 'border-black', 'border-opacity-20');
+                        
+                        // Hide all content and images
+                        featureContents.forEach(content => content.classList.add('hidden'));
+                        featureImages.forEach(image => image.classList.add('hidden'));
+                        
+                        // Show relevant content and image
+                        const featureId = btn.id.replace('-btn', '');
+                        document.getElementById(`${featureId}-content`).classList.remove('hidden');
+                        document.getElementById(`${featureId}-image`).classList.remove('hidden');
+                    });
+                });
+            }
         });
     </script>
 </body>
