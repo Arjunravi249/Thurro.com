@@ -268,6 +268,37 @@
                 });
             });
         });
+
+        // JavaScript for the feature tabs functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Feature tabs functionality
+    const featureBtns = document.querySelectorAll('.feature-btn');
+    const featureContents = document.querySelectorAll('.feature-content');
+    const featureImages = document.querySelectorAll('.feature-image');
+    
+    featureBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Reset all buttons
+            featureBtns.forEach(b => {
+                b.classList.remove('bg-black', 'text-white');
+                b.classList.add('border', 'border-black', 'border-opacity-20');
+            });
+            
+            // Activate clicked button
+            btn.classList.add('bg-black', 'text-white');
+            btn.classList.remove('border', 'border-black', 'border-opacity-20');
+            
+            // Hide all content and images
+            featureContents.forEach(content => content.classList.add('hidden'));
+            featureImages.forEach(image => image.classList.add('hidden'));
+            
+            // Show relevant content and image
+            const featureId = btn.id.replace('-btn', '');
+            document.getElementById(`${featureId}-content`).classList.remove('hidden');
+            document.getElementById(`${featureId}-image`).classList.remove('hidden');
+        });
+    });
+});
     </script>
 </head>
 
@@ -428,325 +459,259 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-gradient text-white py-20 md:py-24">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Thurro Answers</h1>
-                <p class="text-xl md:text-2xl mb-8">Real-time insights grounded in regulatory data</p>
-                <div class="bg-white bg-opacity-10 rounded-xl p-6 mb-10 backdrop-blur-sm border border-white border-opacity-10">
-                    <p class="text-lg md:text-xl">Ask complex questions and get precise, source-backed answers from regulatory filings, market data, and alternative datasets</p>
-                </div>
-                <a href="#demo" class="inline-block px-8 py-4 bg-white text-black rounded-md font-medium hover:bg-opacity-90 transition-all duration-200 shadow-lg">Start Free Trial</a>
+    <!-- Hero Section with ft-pink background -->
+<section class="bg-ft-pink text-black py-20 md:py-24">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Thurro Answers</h1>
+            <p class="text-xl md:text-2xl mb-8">Real-time insights grounded in regulatory data</p>
+            <div class="bg-ft-cream rounded-xl p-6 mb-10 shadow-md">
+                <p class="text-lg md:text-xl">Ask complex questions and get precise, source-backed answers from regulatory filings, market data, and alternative datasets</p>
             </div>
-
-            <!-- Research Edge Section -->
-            <div class="mt-24 max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-12">The research edge</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Unified Intelligence -->
-                    <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-10">
-                        <h3 class="text-xl font-bold mb-4">Unified intelligence</h3>
-                        <p>Query our vast DataLakehouse of curated documents and datasets alongside your own files.</p>
-                    </div>
-                    
-                    <!-- Source Verification -->
-                    <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-10">
-                        <h3 class="text-xl font-bold mb-4">Source verification</h3>
-                        <p>Every answer comes with direct links to source documents, ensuring transparency and enabling deeper investigation.</p>
-                    </div>
-                    
-                    <!-- Save Time -->
-                    <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-10">
-                        <h3 class="text-xl font-bold mb-4">Save time</h3>
-                        <p>Eliminate manual searching—get crucial insights delivered directly and efficiently.</p>
-                    </div>
-                    
-                    <!-- Deep Analysis -->
-                    <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-10">
-                        <h3 class="text-xl font-bold mb-4">Deep analysis</h3>
-                        <p>Leverage sophisticated data exploration capabilities for precise answers and advanced insights.</p>
-                    </div>
-                    
-                    <!-- Connected Insights -->
-                    <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-10">
-                        <h3 class="text-xl font-bold mb-4">Connected insights</h3>
-                        <p>Discover hidden connections across companies, sectors, and time periods with advanced relationship mapping.</p>
-                    </div>
-                    
-                    <!-- Context-Aware Analysis -->
-                    <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-10">
-                        <h3 class="text-xl font-bold mb-4">Context-aware analysis</h3>
-                        <p>AI that understands financial context and provides insights tailored to your specific research needs.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Key Features Section -->
-            <div class="mt-28 max-w-6xl mx-auto">
-                <div class="bg-white bg-opacity-5 rounded-2xl p-10 md:p-16 backdrop-blur-sm border border-white border-opacity-10">
-                    <h2 class="text-3xl font-bold text-center mb-14">Key features</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-                        <!-- Notebooks -->
-                        <div>
-                            <h3 class="text-2xl font-bold mb-4">Notebooks</h3>
-                            <p class="text-base md:text-lg leading-relaxed">Every question creates a shareable Notebook—a dedicated thread for exploring topics in depth. Use suggested questions after each answer to dig deeper and uncover hidden connections.</p>
-                        </div>
-                        
-                        <!-- Tasks -->
-                        <div>
-                            <h3 class="text-2xl font-bold mb-4">Tasks</h3>
-                            <p class="text-base md:text-lg leading-relaxed">Run deep research across multiple companies or themes with a single click. Define your research questions once, and Tasks automatically generates structured reports—transforming hours of manual research into streamlined, repeatable workflows.</p>
-                        </div>
-                        
-                        <!-- Real-time data refresh -->
-                        <div>
-                            <h3 class="text-2xl font-bold mb-4">Real-time data refresh</h3>
-                            <p class="text-base md:text-lg leading-relaxed">One-click updates keep your analysis current with the latest filings, earnings calls, and market data while preserving historical context.</p>
-                        </div>
-                        
-                        <!-- Sharing -->
-                        <div>
-                            <h3 class="text-2xl font-bold mb-4">Sharing</h3>
-                            <p class="text-base md:text-lg leading-relaxed">Generate shareable links for any Notebook. Recipients with Thurro accounts can view and create editable copies in their workspace to continue the analysis. Share insights across teams while maintaining independent workspaces.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <a href="#demo" class="inline-block px-8 py-4 bg-black text-ft-cream rounded-md font-medium hover:bg-gray-800 transition-all duration-200 shadow-lg">Start Free Trial</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Thurro Answers in Action Section -->
-    <section class="py-20 bg-ft-cream">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Thurro Answers in action</h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-4">
-                    See how professionals across sectors use Thurro to solve complex research problems — faster, deeper, and with full traceability.
-                </p>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-4">
-                    From financial analysis to competitive intelligence, market shifts to strategic planning — Thurro is built for real use cases, not generic demos.
-                </p>
-                <p class="text-lg font-medium text-gray-800 max-w-3xl mx-auto mb-8">
-                    Browse real Notebooks and explore the research behind the results.
-                </p>
-                <a href="#notebooks" class="inline-block px-8 py-4 bg-black text-ft-cream rounded-md font-medium hover:bg-gray-800 transition-all duration-200">Explore Notebooks library</a>
-            </div>
+<!-- Research Edge Section (styled like "Ask complex questions..." section) -->
+<section class="py-20 bg-ft-pink">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                The Research Edge
+            </h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                Intelligent research, simplified with AI-powered insights that transform how you discover and analyze financial data.
+            </p>
         </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="py-20 bg-ft-pink">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                    Ask complex questions and get precise, source-backed answers from regulatory filings, market data, and alternative datasets
-                </h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                    Intelligent research, simplified with AI-powered insights that transform how you discover and analyze financial data.
-                </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Unified Intelligence -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Unified intelligence</h3>
+                <p class="text-gray-700">Query our vast DataLakehouse of curated documents and datasets alongside your own files.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Natural Language Queries -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
-                    <div class="w-14 h-14 bg-ft-pink rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Natural Language Queries</h3>
-                    <p class="text-gray-700">Ask questions in plain English and get intelligent responses backed by actual data sources, not generic AI responses.</p>
+            <!-- Source Verification -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                 </div>
-                
-                <!-- Source Verification -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
-                    <div class="w-14 h-14 bg-ft-pink rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Source Verification</h3>
-                    <p class="text-gray-700">Every answer comes with direct links to source documents, ensuring transparency and enabling deeper investigation.</p>
-                </div>
-                
-                <!-- Real-time Data -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
-                    <div class="w-14 h-14 bg-ft-pink rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Real-time Data</h3>
-                    <p class="text-gray-700">Access continuously updated datasets with real-time market intelligence and regulatory changes.</p>
-                </div>
-                
-                <!-- Secure & Compliant -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
-                    <div class="w-14 h-14 bg-ft-pink rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Secure & Compliant</h3>
-                    <p class="text-gray-700">UPSI/MNPI-free public data repository with advanced encryption ensuring secure, private research.</p>
-                </div>
-                
-                <!-- Context-Aware Analysis -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
-                    <div class="w-14 h-14 bg-ft-pink rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Context-Aware Analysis</h3>
-                    <p class="text-gray-700">AI that understands financial context and provides insights tailored to your specific research needs.</p>
-                </div>
-                
-                <!-- Connected Insights -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
-                    <div class="w-14 h-14 bg-ft-pink rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Connected Insights</h3>
-                    <p class="text-gray-700">Discover hidden connections across companies, sectors, and time periods with advanced relationship mapping.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Demo Section -->
-    <section id="demo" class="py-20 bg-ft-cream">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold mb-6">See Thurro Answers in Action</h2>
-                    <p class="text-lg text-gray-700 mb-8">Experience how natural language queries unlock deep insights from complex financial data, saving hours of manual research.</p>
-                    
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Ask questions about company performance, regulatory changes, or market trends</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Get instant access to relevant filing excerpts and data points</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Cross-reference information across multiple sources automatically</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Export findings with full source attribution for reports</span>
-                        </li>
-                    </ul>
-                    
-                    <a href="#" class="inline-block px-8 py-4 bg-black text-ft-cream rounded-md font-medium hover:bg-gray-800 transition-all duration-200">Try Interactive Demo</a>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
-                    <div class="bg-ft-pink rounded-lg p-6 mb-6">
-                        <div class="bg-white border border-gray-200 rounded-md p-4 mb-4">
-                            <p class="text-gray-600">What were Reliance's capex trends in FY24?</p>
-                        </div>
-                        <div class="bg-ft-cream rounded-md p-5 border-l-4 border-black border-opacity-20">
-                            <p class="text-xs font-semibold text-black mb-2">Annual Report FY24 • Reliance Industries</p>
-                            <p class="text-gray-800">Reliance's capital expenditure increased by 23% to ₹87,519 crores in FY24, primarily driven by expansion in petrochemicals and digital infrastructure. The company allocated ₹35,000 crores to Jio platforms and ₹28,500 crores to O2C business...</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <div class="flex items-center space-x-3">
-                            <button class="p-2 rounded-full hover:bg-gray-100">
-                                <svg class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
-                                </svg>
-                            </button>
-                            <button class="p-2 rounded-full hover:bg-gray-100">
-                                <svg class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                                </svg>
-                            </button>
-                            <button class="p-2 rounded-full hover:bg-gray-100">
-                                <svg class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div>
-                            <button class="text-sm font-medium text-black hover:text-gray-800">View sources</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Use Cases Section -->
-    <section class="py-20 bg-ft-pink">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Built for Every Research Need</h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">From equity research to strategic planning, Thurro Answers adapts to your workflow</p>
+                <h3 class="text-xl font-bold mb-4">Source verification</h3>
+                <p class="text-gray-700">Every answer comes with direct links to source documents, ensuring transparency and enabling deeper investigation.</p>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Equity Research -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-ft-cream rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="h-8 w-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            <!-- Save Time -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Save time</h3>
+                <p class="text-gray-700">Eliminate manual searching—get crucial insights delivered directly and efficiently.</p>
+            </div>
+            
+            <!-- Deep Analysis -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Deep analysis</h3>
+                <p class="text-gray-700">Leverage sophisticated data exploration capabilities for precise answers and advanced insights.</p>
+            </div>
+            
+            <!-- Connected Insights -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Connected insights</h3>
+                <p class="text-gray-700">Discover hidden connections across companies, sectors, and time periods with advanced relationship mapping.</p>
+            </div>
+            
+            <!-- Context-Aware Analysis -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Context-aware analysis</h3>
+                <p class="text-gray-700">AI that understands financial context and provides insights tailored to your specific research needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Key Features Section with Button Navigation -->
+<section class="py-20 bg-ft-pink">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Key features</h2>
+        
+        <!-- Feature Navigation Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button id="notebooks-btn" class="feature-btn px-6 py-3 bg-black text-white rounded-lg font-medium transition-all duration-200 text-base">Notebooks</button>
+            <button id="tasks-btn" class="feature-btn px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Tasks</button>
+            <button id="realtime-btn" class="feature-btn px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Real-time data refresh</button>
+            <button id="sharing-btn" class="feature-btn px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Sharing</button>
+        </div>
+        
+        <!-- Feature Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left: Feature Description -->
+            <div class="feature-content" id="notebooks-content">
+                <h3 class="text-2xl font-bold mb-6">Notebooks</h3>
+                <p class="text-lg mb-6">Every question creates a shareable Notebook—a dedicated thread for exploring topics in depth. Use suggested questions after each answer to dig deeper and uncover hidden connections.</p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Equity Research</h3>
-                    <p class="text-gray-700">Analyze company fundamentals, track management commentary, and identify investment opportunities with comprehensive data coverage.</p>
+                        <span>Create dedicated research threads for any topic</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Follow suggested questions to explore deeper</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Save and organize your research for future reference</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="feature-content hidden" id="tasks-content">
+                <h3 class="text-2xl font-bold mb-6">Tasks</h3>
+                <p class="text-lg mb-6">Run deep research across multiple companies or themes with a single click. Define your research parameters once, and Tasks automatically generates structured reports—transforming hours of manual research into streamlined, repeatable workflows.</p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Automate complex research workflows</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Generate structured reports across multiple companies</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Transform hours of manual research into minutes</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="feature-content hidden" id="realtime-content">
+                <h3 class="text-2xl font-bold mb-6">Real-time data refresh</h3>
+                <p class="text-lg mb-6">One-click updates keep your analysis current with the latest filings, earnings calls, and market data while preserving historical context.</p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Keep analysis current with latest filings</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Preserve historical context while updating</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Never miss critical new information</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="feature-content hidden" id="sharing-content">
+                <h3 class="text-2xl font-bold mb-6">Sharing</h3>
+                <p class="text-lg mb-6">Generate shareable links for any Notebook. Recipients with Thurro accounts can view and create editable copies in their workspace to continue the analysis. Share insights across teams while maintaining independent workspaces.</p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Generate shareable links for any research</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Team members can create editable copies</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Maintain independent workspaces while collaborating</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Right: Feature Videos -->
+            <div class="rounded-lg shadow-lg  border border-black overflow-hidden">
+                <!-- Notebook Feature Video -->
+                <div class="feature-image" id="notebooks-image">
+                    <video class="w-full h-full" autoplay loop muted playsinline>
+                        <source src="./asserts/Video/new notebook.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 
-                <!-- Corporate Strategy -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-ft-cream rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="h-8 w-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Corporate Strategy</h3>
-                    <p class="text-gray-700">Benchmark against competitors, monitor regulatory changes, and make informed strategic decisions with market intelligence.</p>
+                <!-- Tasks Feature Video -->
+                <div class="feature-image hidden" id="tasks-image">
+                    <video class="w-full h-auto" autoplay loop muted playsinline>
+                        <source src="./asserts/Video/tasks.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 
-                <!-- Compliance & Risk -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-ft-cream rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="h-8 w-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Compliance & Risk</h3>
-                    <p class="text-gray-700">Stay updated on regulatory changes, monitor compliance requirements, and assess regulatory risks across your portfolio.</p>
+                <!-- Real-time Data Feature Video -->
+                <div class="feature-image hidden" id="realtime-image">
+                    <video class="w-full h-auto" autoplay loop muted playsinline>
+                        <source src="./asserts/Video/realtime.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 
-                <!-- Investment Banking -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-ft-cream rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="h-8 w-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Investment Banking</h3>
-                    <p class="text-gray-700">Conduct due diligence, prepare pitch books, and support M&A activities with comprehensive company and market analysis.</p>
+                <!-- Sharing Feature Video -->
+                <div class="feature-image hidden" id="sharing-image">
+                    <video class="w-full h-auto" autoplay loop muted playsinline>
+                        <source src="./asserts/Video/sharing.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- FAQ Section -->
     <section class="py-20 bg-ft-cream">
