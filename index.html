@@ -125,36 +125,66 @@
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Desktop dropdown functionality
-            const dropdownBtn = document.getElementById('products-dropdown-btn');
-            const dropdown = document.getElementById('products-dropdown');
-            const chevron = document.getElementById('dropdown-chevron');
+            /// Desktop dropdown functionality for Products
+            const productsDropdownBtn = document.getElementById('products-dropdown-btn');
+            const productsDropdown = document.getElementById('products-dropdown');
+            const productsChevron = document.getElementById('dropdown-chevron');
             
-            if (dropdownBtn && dropdown) {
-                dropdownBtn.addEventListener('click', function(e) {
+            if (productsDropdownBtn && productsDropdown) {
+                productsDropdownBtn.addEventListener('click', function(e) {
                     e.stopPropagation();
                     
                     // Toggle dropdown visibility
-                    if (dropdown.classList.contains('opacity-0')) {
-                        dropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
-                        dropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
-                        chevron.classList.add('rotate-180');
+                    if (productsDropdown.classList.contains('opacity-0')) {
+                        productsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
+                        productsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                        productsChevron.classList.add('rotate-180');
                     } else {
-                        dropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
-                        dropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                        chevron.classList.remove('rotate-180');
-                    }
-                });
-                
-                // Close dropdown when clicking elsewhere
-                document.addEventListener('click', function(e) {
-                    if (!dropdownBtn.contains(e.target) && !dropdown.contains(e.target)) {
-                        dropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
-                        dropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                        chevron.classList.remove('rotate-180');
+                        productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                        productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        productsChevron.classList.remove('rotate-180');
                     }
                 });
             }
+            
+            // Desktop dropdown functionality for Solutions
+            const solutionsDropdownBtn = document.getElementById('solutions-dropdown-btn');
+            const solutionsDropdown = document.getElementById('solutions-dropdown');
+            const solutionsChevron = document.getElementById('solutions-dropdown-chevron');
+            
+            if (solutionsDropdownBtn && solutionsDropdown) {
+                solutionsDropdownBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Toggle dropdown visibility
+                    if (solutionsDropdown.classList.contains('opacity-0')) {
+                        solutionsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
+                        solutionsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                        solutionsChevron.classList.add('rotate-180');
+                    } else {
+                        solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                        solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        solutionsChevron.classList.remove('rotate-180');
+                    }
+                });
+            }
+            
+            // Close dropdowns when clicking elsewhere
+            document.addEventListener('click', function(e) {
+                // Close products dropdown
+                if (productsDropdownBtn && productsDropdown && !productsDropdownBtn.contains(e.target) && !productsDropdown.contains(e.target)) {
+                    productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                    productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    productsChevron.classList.remove('rotate-180');
+                }
+                
+                // Close solutions dropdown
+                if (solutionsDropdownBtn && solutionsDropdown && !solutionsDropdownBtn.contains(e.target) && !solutionsDropdown.contains(e.target)) {
+                    solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                    solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    solutionsChevron.classList.remove('rotate-180');
+                }
+            });
             
             // Mobile menu functionality
             const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -276,7 +306,7 @@
                                     </div>
                                 </a>
                                 
-                                <!-- Data in Thurro -->
+                                <!-- Data at Thurro -->
                                 <a href="data.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200">
                                     <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
                                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -286,14 +316,60 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <div class="font-semibold text-sm">Data in Thurro</div>
+                                        <div class="font-semibold text-sm">Data at Thurro</div>
                                         <div class="text-xs text-black text-opacity-60">Explore our comprehensive data sources</div>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         
-                        <a href="#solutions" class="font-medium hover:text-gray-600 transition-colors duration-200">Solutions</a>
+                        <!-- Solutions Dropdown -->
+                        <div class="relative group">
+                            <button id="solutions-dropdown-btn" class="flex items-center font-medium text-black transition-colors duration-200 focus:outline-none">
+                                <span>Solutions</span>
+                                <svg id="solutions-dropdown-chevron" class="ml-2 w-4 h-4 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            
+                            <!-- Solutions Dropdown Menu -->
+                            <div id="solutions-dropdown" class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-ft-cream rounded-lg shadow-lg opacity-0 invisible transition-all duration-300 -translate-y-4 z-50 overflow-hidden border border-black border-opacity-5">
+                                <!-- Investment Management -->
+                                <a href="solutions.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5 bg-ft-pink-darker">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Investment Management</div>
+                                        <div class="text-xs text-black text-opacity-60">Data-driven investing solutions</div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Financial Services (Coming Soon) -->
+                                <div class="flex items-center p-4 border-b border-black border-opacity-5 opacity-60 cursor-not-allowed">
+                                            <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+                                        </svg>
+                                </div>
+                                
+                                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <!-- Government & Regulatory (Coming Soon) -->
+                                <div class="flex items-center p-4 opacity-60 cursor-not-allowed">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Government & Regulatory</div>
+                                        <div class="text-xs text-black text-opacity-60">Coming soon</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <a href="#resources" class="font-medium hover:text-gray-600 transition-colors duration-200">Resources</a>
                         <a href="#about" class="font-medium hover:text-gray-600 transition-colors duration-200">About Us</a>
                     </div>
@@ -331,7 +407,7 @@
                     <div>
                         <button id="mobile-products-btn" class="flex items-center justify-between w-full py-3 font-medium text-lg">
                             <span>Products</span>
-                            <svg id="mobile-chevron" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg id="mobile-products-chevron" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
@@ -340,10 +416,26 @@
                             <a href="altdata.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro AltData</a>
                             <a href="nowcast.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro NowCast</a>
                             <a href="customization.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Customization</a>
-                            <a href="data.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Data in Thurro</a>
+                            <a href="data.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Data at Thurro</a>
                         </div>
                     </div>
-                    <a href="#solutions" class="py-3 font-medium text-lg">Solutions</a>
+                    
+                    <!-- Mobile Solutions Dropdown -->
+                    <div>
+                        <button id="mobile-solutions-btn" class="flex items-center justify-between w-full py-3 font-medium text-lg">
+                            <span>Solutions</span>
+                            <svg id="mobile-solutions-chevron" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="mobile-solutions-menu" class="hidden mt-2 ml-4 space-y-3">
+                            <a href="solutions.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-30 transition-colors">Investment Management</a>
+                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Financial Services (Coming soon)</span>
+                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Consultants & Corporate (Coming soon)</span>
+                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Government & Regulatory (Coming soon)</span>
+                        </div>
+                    </div>
+                    
                     <a href="#resources" class="py-3 font-medium text-lg">Resources</a>
                     <a href="#about" class="py-3 font-medium text-lg">About Us</a>
                 </div>

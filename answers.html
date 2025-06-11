@@ -147,124 +147,6 @@
             max-height: 500px;
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Desktop dropdown functionality
-            const dropdownBtn = document.getElementById('products-dropdown-btn');
-            const dropdown = document.getElementById('products-dropdown');
-            const chevron = document.getElementById('dropdown-chevron');
-            
-            if (dropdownBtn && dropdown) {
-                dropdownBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    
-                    // Toggle dropdown visibility
-                    if (dropdown.classList.contains('opacity-0')) {
-                        dropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
-                        dropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
-                        chevron.classList.add('rotate-180');
-                    } else {
-                        dropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
-                        dropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                        chevron.classList.remove('rotate-180');
-                    }
-                });
-                
-                // Close dropdown when clicking elsewhere
-                document.addEventListener('click', function(e) {
-                    if (!dropdownBtn.contains(e.target) && !dropdown.contains(e.target)) {
-                        dropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
-                        dropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                        chevron.classList.remove('rotate-180');
-                    }
-                });
-            }
-            
-            // Mobile menu functionality
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const closeMenuButton = document.getElementById('close-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (mobileMenuButton && closeMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.remove('-translate-x-full');
-                    document.body.classList.add('overflow-hidden');
-                });
-                
-                closeMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.add('-translate-x-full');
-                    document.body.classList.remove('overflow-hidden');
-                });
-            }
-            
-            // Mobile products dropdown
-            const mobileProductsBtn = document.getElementById('mobile-products-btn');
-            const mobileProductsMenu = document.getElementById('mobile-products-menu');
-            const mobileChevron = document.getElementById('mobile-chevron');
-            
-            if (mobileProductsBtn && mobileProductsMenu) {
-                mobileProductsBtn.addEventListener('click', function() {
-                    mobileProductsMenu.classList.toggle('hidden');
-                    mobileChevron.classList.toggle('rotate-180');
-                });
-            }
-            
-            // Header shadow on scroll
-            window.addEventListener('scroll', function() {
-                const header = document.getElementById('header');
-                if (window.scrollY > 10) {
-                    header.classList.add('shadow-md');
-                } else {
-                    header.classList.remove('shadow-md');
-                }
-            });
-
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-
-        // JavaScript for the feature tabs functionality
-document.addEventListener('DOMContentLoaded', function() {
-    // Feature tabs functionality
-    const featureBtns = document.querySelectorAll('.feature-btn');
-    const featureContents = document.querySelectorAll('.feature-content');
-    const featureImages = document.querySelectorAll('.feature-image');
-    
-    featureBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Reset all buttons
-            featureBtns.forEach(b => {
-                b.classList.remove('bg-black', 'text-white');
-                b.classList.add('border', 'border-black', 'border-opacity-20');
-            });
-            
-            // Activate clicked button
-            btn.classList.add('bg-black', 'text-white');
-            btn.classList.remove('border', 'border-black', 'border-opacity-20');
-            
-            // Hide all content and images
-            featureContents.forEach(content => content.classList.add('hidden'));
-            featureImages.forEach(image => image.classList.add('hidden'));
-            
-            // Show relevant content and image
-            const featureId = btn.id.replace('-btn', '');
-            document.getElementById(`${featureId}-content`).classList.remove('hidden');
-            document.getElementById(`${featureId}-image`).classList.remove('hidden');
-        });
-    });
-});
-    </script>
 </head>
 
 <body class="bg-ft-pink text-black">
@@ -291,8 +173,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                             <!-- Dropdown Menu -->
                             <div id="products-dropdown" class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-ft-cream rounded-lg shadow-lg opacity-0 invisible transition-all duration-300 -translate-y-4 z-50 overflow-hidden border border-black border-opacity-5">
-                                <!-- Thurro Answers - Now showing as selected with bg-ft-pink-darker -->
-                                <a href="answers.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5 bg-ft-pink-darker">
+                                <!-- Thurro Answers -->
+                                <a href="answers.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5">
                                     <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
                                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
@@ -345,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     </div>
                                 </a>
                                 
-                                <!-- Data in Thurro -->
+                                <!-- Data at Thurro -->
                                 <a href="data.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200">
                                     <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
                                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -355,14 +237,82 @@ document.addEventListener('DOMContentLoaded', function() {
                                         </svg>
                                     </div>
                                     <div>
-                                        <div class="font-semibold text-sm">Data in Thurro</div>
+                                        <div class="font-semibold text-sm">Data at Thurro</div>
                                         <div class="text-xs text-black text-opacity-60">Explore our comprehensive data sources</div>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         
-                        <a href="#solutions" class="font-medium hover:text-gray-600 transition-colors duration-200">Solutions</a>
+                        <!-- Solutions Dropdown -->
+                        <div class="relative group">
+                            <button id="solutions-dropdown-btn" class="flex items-center font-medium text-black transition-colors duration-200 focus:outline-none">
+                                <span>Solutions</span>
+                                <svg id="solutions-dropdown-chevron" class="ml-2 w-4 h-4 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            
+                            <!-- Solutions Dropdown Menu -->
+                            <div id="solutions-dropdown" class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-ft-cream rounded-lg shadow-lg opacity-0 invisible transition-all duration-300 -translate-y-4 z-50 overflow-hidden border border-black border-opacity-5">
+                                <!-- Investment Management -->
+                                <a href="solutions.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5 bg-ft-pink-darker">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Investment Management</div>
+                                        <div class="text-xs text-black text-opacity-60">Data-driven investing solutions</div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Financial Services (Coming Soon) -->
+                                <div class="flex items-center p-4 border-b border-black border-opacity-5 opacity-60 cursor-not-allowed">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+                                            <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Financial Services</div>
+                                        <div class="text-xs text-black text-opacity-60">Coming soon</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Consultants & Corporate (Coming Soon) -->
+                                <div class="flex items-center p-4 border-b border-black border-opacity-5 opacity-60 cursor-not-allowed">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Consultants & Corporate</div>
+                                        <div class="text-xs text-black text-opacity-60">Coming soon</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Government & Regulatory (Coming Soon) -->
+                                <div class="flex items-center p-4 opacity-60 cursor-not-allowed">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Government & Regulatory</div>
+                                        <div class="text-xs text-black text-opacity-60">Coming soon</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <a href="#resources" class="font-medium hover:text-gray-600 transition-colors duration-200">Resources</a>
                         <a href="#about" class="font-medium hover:text-gray-600 transition-colors duration-200">About Us</a>
                     </div>
@@ -400,20 +350,35 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div>
                         <button id="mobile-products-btn" class="flex items-center justify-between w-full py-3 font-medium text-lg">
                             <span>Products</span>
-                            <svg id="mobile-chevron" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg id="mobile-products-chevron" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
                         <div id="mobile-products-menu" class="hidden mt-2 ml-4 space-y-3">
-                            <!-- Also highlighting the Answers link in mobile menu -->
-                            <a href="answers.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-30 transition-colors">Thurro Answers</a>
+                            <a href="answers.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro Answers</a>
                             <a href="altdata.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro AltData</a>
                             <a href="nowcast.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro NowCast</a>
                             <a href="customization.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Customization</a>
-                            <a href="data.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Data in Thurro</a>
+                            <a href="data.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Data at Thurro</a>
                         </div>
                     </div>
-                    <a href="#solutions" class="py-3 font-medium text-lg">Solutions</a>
+                    
+                    <!-- Mobile Solutions Dropdown -->
+                    <div>
+                        <button id="mobile-solutions-btn" class="flex items-center justify-between w-full py-3 font-medium text-lg">
+                            <span>Solutions</span>
+                            <svg id="mobile-solutions-chevron" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="mobile-solutions-menu" class="hidden mt-2 ml-4 space-y-3">
+                            <a href="solutions.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-30 transition-colors">Investment Management</a>
+                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Financial Services (Coming soon)</span>
+                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Consultants & Corporate (Coming soon)</span>
+                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Government & Regulatory (Coming soon)</span>
+                        </div>
+                    </div>
+                    
                     <a href="#resources" class="py-3 font-medium text-lg">Resources</a>
                     <a href="#about" class="py-3 font-medium text-lg">About Us</a>
                 </div>
@@ -425,8 +390,9 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </header>
 
-    <!-- Hero Section with ft-pink background -->
-<section class="bg-ft-pink text-black py-20 md:py-24">
+
+<!-- Hero Section with ft-pink background -->
+<section class="bg-ft-pink text-black py-16 md:py-20">
     <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Thurro Answers</h1>
@@ -442,10 +408,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Line Divider -->
 <div class="line-divider-container"></div>
 
-<!-- Research Edge Section (styled like "Ask complex questions..." section) -->
-<section class="py-20 bg-ft-pink">
+<!-- Research Edge Section -->
+<section class="py-16 md:py-20 bg-ft-pink">
     <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
+        <div class="text-center mb-12 md:mb-16">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">
                 The Research Edge
             </h2>
@@ -527,8 +493,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Line Divider -->
 <div class="line-divider-container"></div>
 
-    <!-- Key Features Section with Button Navigation -->
-<section class="py-20 bg-ft-pink">
+<!-- Key Features Section with Button Navigation -->
+<section class="py-16 md:py-20 bg-ft-pink">
     <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Key features</h2>
         
@@ -648,7 +614,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             
             <!-- Right: Feature Videos -->
-            <div class="rounded-lg shadow-lg  border border-black overflow-hidden">
+            <div class="rounded-lg shadow-lg border border-black overflow-hidden">
                 <!-- Notebook Feature Video -->
                 <div class="feature-image" id="notebooks-image">
                     <video class="w-full h-full" autoplay loop muted playsinline>
@@ -688,310 +654,386 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Line Divider -->
 <div class="line-divider-container"></div>
 
-    <!-- FAQ Section -->
-    <section class="py-20 bg-ft-pink">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Everything you need to know about Thurro Answers</p>
+<!-- FAQ Section -->
+<section class="py-16 md:py-20 bg-ft-pink">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto">Everything you need to know about Thurro Answers</p>
+        </div>
+        
+        <div class="max-w-3xl mx-auto">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">What types of questions can I ask Thurro Answers?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">You can ask complex, open-ended questions about Indian companies, markets, and regulatory matters. Examples include financial performance analysis, competitive benchmarking, regulatory compliance questions, market trend analysis, and strategic research queries. Our AI understands context and provides detailed, source-backed responses.</p>
+                </div>
             </div>
             
-            <div class="max-w-3xl mx-auto">
-                <!-- FAQ Item 1 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">What types of questions can I ask Thurro Answers?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">You can ask complex, open-ended questions about Indian companies, markets, and regulatory matters. Examples include financial performance analysis, competitive benchmarking, regulatory compliance questions, market trend analysis, and strategic research queries. Our AI understands context and provides detailed, source-backed responses.</p>
-                    </div>
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">How accurate and reliable are the answers?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
                 </div>
-                
-                <!-- FAQ Item 2 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">How accurate and reliable are the answers?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Thurro Answers maintains 95% accuracy by grounding all responses in verified regulatory filings, official company documents, and curated datasets. Every answer includes direct source links, allowing you to verify information and dive deeper into the original documents.</p>
-                    </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Thurro Answers maintains 95% accuracy by grounding all responses in verified regulatory filings, official company documents, and curated datasets. Every answer includes direct source links, allowing you to verify information and dive deeper into the original documents.</p>
                 </div>
-                
-                <!-- FAQ Item 3 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">What data sources does Thurro Answers access?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Our platform accesses 800+ data sources including regulatory filings, annual reports, earnings transcripts, market data, alternative datasets, and real-time news. We focus on India's deepest repository of corporate and financial data, all UPSI/MNPI-free and continuously updated.</p>
-                    </div>
+            </div>
+            
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">What data sources does Thurro Answers access?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
                 </div>
-                
-                <!-- FAQ Item 4 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">How do Notebooks work?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Every question automatically creates a Notebook—a dedicated research thread. You can follow suggested questions to explore topics deeper, add your own queries, and build comprehensive research narratives. Notebooks are shareable and allow collaborative research with full version history.</p>
-                    </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Our platform accesses 800+ data sources including regulatory filings, annual reports, earnings transcripts, market data, alternative datasets, and real-time news. We focus on India's deepest repository of corporate and financial data, all UPSI/MNPI-free and continuously updated.</p>
                 </div>
-                
-                <!-- FAQ Item 5 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">What are Tasks and how do they save time?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Tasks automate repetitive research workflows. Define your research parameters once, and Tasks will automatically generate structured reports across multiple companies or themes. This transforms hours of manual research into streamlined, repeatable processes perfect for regular market monitoring or comparative analysis.</p>
-                    </div>
+            </div>
+            
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">How do Notebooks work?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
                 </div>
-                
-                <!-- FAQ Item 6 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">Is my research data secure and private?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Yes, absolutely. We use advanced encryption and maintain strict data privacy standards. Your research queries, Notebooks, and insights remain private to your account. We operate an UPSI/MNPI-free environment and ensure all data handling meets financial industry compliance requirements.</p>
-                    </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Every question automatically creates a Notebook—a dedicated research thread. You can follow suggested questions to explore topics deeper, add your own queries, and build comprehensive research narratives. Notebooks are shareable and allow collaborative research with full version history.</p>
                 </div>
-                
-                <!-- FAQ Item 7 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">Can I integrate Thurro Answers with my existing workflow?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Yes, Thurro Answers is designed for seamless integration. You can export findings with full source attribution, share Notebooks with team members, and access our platform alongside your existing research tools. We also offer API access for custom integrations with enterprise workflows.</p>
-                    </div>
+            </div>
+            
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">What are Tasks and how do they save time?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
                 </div>
-                
-                <!-- FAQ Item 8 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">How often is the data updated?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Our data is continuously updated in real-time. New regulatory filings, earnings announcements, and market data are processed and indexed as they become available. You can refresh any analysis with one click to incorporate the latest information while preserving historical context.</p>
-                    </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Tasks automate repetitive research workflows. Define your research parameters once, and Tasks will automatically generate structured reports across multiple companies or themes. This transforms hours of manual research into streamlined, repeatable processes perfect for regular market monitoring or comparative analysis.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">Is my research data secure and private?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Yes, absolutely. We use advanced encryption and maintain strict data privacy standards. Your research queries, Notebooks, and insights remain private to your account. We operate an UPSI/MNPI-free environment and ensure all data handling meets financial industry compliance requirements.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 7 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">Can I integrate Thurro Answers with my existing workflow?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Yes, Thurro Answers is designed for seamless integration. You can export findings with full source attribution, share Notebooks with team members, and access our platform alongside your existing research tools. We also offer API access for custom integrations with enterprise workflows.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 8 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">How often is the data updated?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Our data is continuously updated in real-time. New regulatory filings, earnings announcements, and market data are processed and indexed as they become available. You can refresh any analysis with one click to incorporate the latest information while preserving historical context.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Line Divider -->
-    <div class="line-divider-container"></div>
+<!-- Line Divider -->
+<div class="line-divider-container"></div>
 
-    <!-- CTA Section -->
-    <section class="py-16 md:py-20 bg-black text-ft-cream text-center">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl sm:text-5xl font-bold mb-8 tracking-tight">Ready to transform your research?</h2>
-            <p class="text-xl max-w-3xl mx-auto mb-10 opacity-90 leading-relaxed">Experience how you can seamlessly integrate our insights into your existing workflows. Empower your team with data-driven decision-making</p>
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="https://ai.thurro.com" class="px-10 py-4 rounded-md bg-ft-cream text-black font-medium hover:bg-ft-pink transition-all duration-200">Start free trial</a>
-                <a href="demo.html" class="px-10 py-4 rounded-md border border-ft-cream border-opacity-50 text-ft-cream font-medium hover:bg-ft-cream hover:bg-opacity-10 transition-all duration-200">Book a demo</a>
+<!-- CTA Section -->
+<section class="py-16 md:py-20 bg-black text-ft-cream text-center">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-8 tracking-tight">Ready to transform your research?</h2>
+        <p class="text-xl max-w-3xl mx-auto mb-10 opacity-90 leading-relaxed">Experience how you can seamlessly integrate our insights into your existing workflows. Empower your team with data-driven decision-making</p>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="https://ai.thurro.com" class="px-10 py-4 rounded-md bg-ft-cream text-black font-medium hover:bg-ft-pink transition-all duration-200">Start free trial</a>
+            <a href="demo.html" class="px-10 py-4 rounded-md border border-ft-cream border-opacity-50 text-ft-cream font-medium hover:bg-ft-cream hover:bg-opacity-10 transition-all duration-200">Book a demo</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-gray-300 py-6">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Top Row: Logo, Made with Love, Social Icons -->
+        <div class="flex flex-col md:flex-row items-center justify-between mb-6">
+            <!-- Left: Logo -->
+            <div class="mb-6 md:mb-0">
+                <img src="./asserts/Logo/Thurro_logo_bg_white.png" alt="Thurro Logo" class="h-8">
+            </div>
+
+            <!-- Right: Social Icons -->
+            <div class="flex items-center space-x-4">
+                <a href="linkedin.html" class="text-gray-400 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                        </path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="youtube.html" class="text-gray-400 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                        <path d="M10 9l5 3-5 3V9z"></path>
+                    </svg>
+                </a>
+                <a href="https://x.com" class="text-gray-400 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 1200 1227"
+                        fill="currentColor">
+                        <path
+                            d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
+                    </svg>
+                </a>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-black text-gray-300 py-6">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <!-- Top Row: Logo, Made with Love, Social Icons -->
-            <div class="flex flex-col md:flex-row items-center justify-between mb-6">
-                <!-- Left: Logo -->
-                <div class="mb-6 md:mb-0">
-                    <img src="./asserts/Logo/Thurro_logo_bg_white.png" alt="Thurro Logo" class="h-8">
-                </div>
+        <!-- Horizontal Line -->
+        <hr class="border-gray-800 mb-6">
 
-                <!-- Right: Social Icons -->
-                <div class="flex items-center space-x-4">
-                    <a href="linkedin.html" class="text-gray-400 hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
-                    <a href="youtube.html" class="text-gray-400 hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
-                            <path d="M10 9l5 3-5 3V9z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://x.com" class="text-gray-400 hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 1200 1227"
-                            fill="currentColor">
-                            <path
-                                d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
-                        </svg>
-                    </a>
-                </div>
+        <!-- Bottom Row: Copyright and Legal Links -->
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <!-- Left: Copyright -->
+            <div class="mb-4 md:mb-0">
+                <p class="text-xs text-gray-500">
+                    Copyright © 2025 ADQVEST CAPITAL ADVISORS PVT LTD.
+                </p>
             </div>
 
-            <!-- Horizontal Line -->
-            <hr class="border-gray-800 mb-6">
-
-            <!-- Bottom Row: Copyright and Legal Links -->
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <!-- Left: Copyright -->
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xs text-gray-500">
-                        Copyright © 2025 ADQVEST CAPITAL ADVISORS PVT LTD.
-                    </p>
-                </div>
-
-                <!-- Right: Legal Links -->
-                <div class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
-                    <a href="https://thurro.com/privacy-policy/"
-                        class="text-xs text-gray-500 hover:text-white transition-colors">
-                        PRIVACY POLICY
-                    </a>
-                    <a href="https://thurro.com/terms-conditions/"
-                        class="text-xs text-gray-500 hover:text-white transition-colors">
-                        TERMS AND CONDITIONS
-                    </a>
-                    <a href="https://thurro.com/contact-us/"
-                        class="text-xs text-gray-500 hover:text-white transition-colors">
-                        CONTACT
-                    </a>
-                </div>
+            <!-- Right: Legal Links -->
+            <div class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
+                <a href="https://thurro.com/privacy-policy/"
+                    class="text-xs text-gray-500 hover:text-white transition-colors">
+                    PRIVACY POLICY
+                </a>
+                <a href="https://thurro.com/terms-conditions/"
+                    class="text-xs text-gray-500 hover:text-white transition-colors">
+                    TERMS AND CONDITIONS
+                </a>
+                <a href="https://thurro.com/contact-us/"
+                    class="text-xs text-gray-500 hover:text-white transition-colors">
+                    CONTACT
+                </a>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
 <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Function to create a clean line divider
-            function createLineDivider() {
-                const containers = document.querySelectorAll('.line-divider-container');
-                containers.forEach(container => {
-                    const divider = document.createElement('div');
-                    divider.className = 'line-divider';
-                    const inner = document.createElement('div');
-                    inner.className = 'line-divider-inner';
-                    divider.appendChild(inner);
-                    container.appendChild(divider);
-                });
-            }
-
-            // Initialize line dividers
-            createLineDivider();
-
-            // Mobile menu functionality
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const closeMenuButton = document.getElementById('close-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            if (mobileMenuButton && closeMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.remove('-translate-x-full');
-                    document.body.style.overflow = 'hidden';
-                });
-
-                closeMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.add('-translate-x-full');
-                    document.body.style.overflow = '';
-                });
-
-                // Close mobile menu when clicking on navigation links
-                const mobileNavLinks = mobileMenu.querySelectorAll('a[href^="#"]');
-                mobileNavLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.remove('active');
-                        document.body.style.overflow = '';
-                    });
-                });
-            }
-
-            // FAQ functionality
-            const faqItems = document.querySelectorAll('.faq-item');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Desktop dropdown functionality for Products
+            const productsDropdownBtn = document.getElementById('products-dropdown-btn');
+            const productsDropdown = document.getElementById('products-dropdown');
+            const productsChevron = document.getElementById('dropdown-chevron');
             
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                
-                question.addEventListener('click', () => {
-                    // Close all other FAQs
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
+            if (productsDropdownBtn && productsDropdown) {
+                productsDropdownBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
                     
-                    // Toggle current FAQ
-                    item.classList.toggle('active');
-                });
-            });
-
-            // Header shadow on scroll
-            const header = document.querySelector('header');
-            function toggleHeaderShadow() {
-                if (window.scrollY > 10) {
-                    header.classList.add('shadow-on-scroll');
-                } else {
-                    header.classList.remove('shadow-on-scroll');
-                }
-            }
-
-            window.addEventListener('scroll', toggleHeaderShadow);
-            toggleHeaderShadow();
-
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
+                    // Toggle dropdown visibility
+                    if (productsDropdown.classList.contains('opacity-0')) {
+                        productsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
+                        productsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                        productsChevron.classList.add('rotate-180');
+                    } else {
+                        productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                        productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        productsChevron.classList.remove('rotate-180');
                     }
                 });
-            });
-
-            // Feature tabs functionality
-            const featureBtns = document.querySelectorAll('.feature-btn');
-            const featureContents = document.querySelectorAll('.feature-content');
-            const featureImages = document.querySelectorAll('.feature-image');
+            }
             
-            if (featureBtns.length > 0) {
-                featureBtns.forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        // Reset all buttons
-                        featureBtns.forEach(b => {
-                            b.classList.remove('bg-black', 'text-white');
-                            b.classList.add('border', 'border-black', 'border-opacity-20');
-                        });
-                        
-                        // Activate clicked button
-                        btn.classList.add('bg-black', 'text-white');
-                        btn.classList.remove('border', 'border-black', 'border-opacity-20');
-                        
-                        // Hide all content and images
-                        featureContents.forEach(content => content.classList.add('hidden'));
-                        featureImages.forEach(image => image.classList.add('hidden'));
-                        
-                        // Show relevant content and image
-                        const featureId = btn.id.replace('-btn', '');
-                        document.getElementById(`${featureId}-content`).classList.remove('hidden');
-                        document.getElementById(`${featureId}-image`).classList.remove('hidden');
-                    });
+            // Desktop dropdown functionality for Solutions
+            const solutionsDropdownBtn = document.getElementById('solutions-dropdown-btn');
+            const solutionsDropdown = document.getElementById('solutions-dropdown');
+            const solutionsChevron = document.getElementById('solutions-dropdown-chevron');
+            
+            if (solutionsDropdownBtn && solutionsDropdown) {
+                solutionsDropdownBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Toggle dropdown visibility
+                    if (solutionsDropdown.classList.contains('opacity-0')) {
+                        solutionsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
+                        solutionsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                        solutionsChevron.classList.add('rotate-180');
+                    } else {
+                        solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                        solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        solutionsChevron.classList.remove('rotate-180');
+                    }
                 });
             }
+            
+            // Close dropdowns when clicking elsewhere
+            document.addEventListener('click', function(e) {
+                // Close products dropdown
+                if (productsDropdownBtn && productsDropdown && !productsDropdownBtn.contains(e.target) && !productsDropdown.contains(e.target)) {
+                    productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                    productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    productsChevron.classList.remove('rotate-180');
+                }
+                
+                // Close solutions dropdown
+                if (solutionsDropdownBtn && solutionsDropdown && !solutionsDropdownBtn.contains(e.target) && !solutionsDropdown.contains(e.target)) {
+                    solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                    solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    solutionsChevron.classList.remove('rotate-180');
+                }
+            });
+            
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && closeMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('-translate-x-full');
+                document.body.classList.add('overflow-hidden');
+            });
+            
+            closeMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.add('-translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
+        }
+        
+        // Mobile products dropdown
+        const mobileProductsBtn = document.getElementById('mobile-products-btn');
+        const mobileProductsMenu = document.getElementById('mobile-products-menu');
+        const mobileChevron = document.getElementById('mobile-chevron');
+        
+        if (mobileProductsBtn && mobileProductsMenu) {
+            mobileProductsBtn.addEventListener('click', function() {
+                mobileProductsMenu.classList.toggle('hidden');
+                mobileChevron.classList.toggle('rotate-180');
+            });
+        }
+        
+        // Header shadow on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
         });
-    </script>
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
+
+    // JavaScript for the feature tabs functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        // Function to create a clean line divider
+        function createLineDivider() {
+            const containers = document.querySelectorAll('.line-divider-container');
+            containers.forEach(container => {
+                const divider = document.createElement('div');
+                divider.className = 'line-divider';
+                const inner = document.createElement('div');
+                inner.className = 'line-divider-inner';
+                divider.appendChild(inner);
+                container.appendChild(divider);
+            });
+        }
+
+        // Initialize line dividers
+        createLineDivider();
+
+        // Feature tabs functionality
+        const featureBtns = document.querySelectorAll('.feature-btn');
+        const featureContents = document.querySelectorAll('.feature-content');
+        const featureImages = document.querySelectorAll('.feature-image');
+        
+        featureBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Reset all buttons
+                featureBtns.forEach(b => {
+                    b.classList.remove('bg-black', 'text-white');
+                    b.classList.add('border', 'border-black', 'border-opacity-20');
+                });
+                
+                // Activate clicked button
+                btn.classList.add('bg-black', 'text-white');
+                btn.classList.remove('border', 'border-black', 'border-opacity-20');
+                
+                // Hide all content and images
+                featureContents.forEach(content => content.classList.add('hidden'));
+                featureImages.forEach(image => image.classList.add('hidden'));
+                
+                // Show relevant content and image
+                const featureId = btn.id.replace('-btn', '');
+                document.getElementById(`${featureId}-content`).classList.remove('hidden');
+                document.getElementById(`${featureId}-image`).classList.remove('hidden');
+            });
+        });
+        
+        // FAQ functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other FAQs
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current FAQ
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Initialize videos
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            // Try to play videos automatically
+            video.play().catch(function(error) {
+                console.error('Video autoplay failed:', error);
+                
+                // If autoplay fails, try again when user interacts with the page
+                document.addEventListener('click', function() {
+                    video.play().catch(() => {});
+                }, { once: true });
+            });
+        });
+    });
+</script>
 </body>
 </html>

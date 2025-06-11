@@ -4,30 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customization | Thurro</title>
+    <title>Customisation | Thurro</title>
 
     <!-- Meta Tags for SEO -->
     <meta name="description"
         content="Customize Thurro's AI-powered intelligence platform to your specific needs. From custom datasets to white labelling, we offer tailored solutions for your business.">
     <meta name="keywords"
-        content="financial intelligence customization, AI research customization, investment insights, financial analytics, custom datasets, custom reports, API integration">
+        content="financial intelligence Customisation, AI research Customisation, investment insights, financial analytics, custom datasets, custom reports, API integration">
     <meta name="author" content="Thurro">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
 
     <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Customization | Thurro">
+    <meta property="og:title" content="Customisation | Thurro">
     <meta property="og:description"
         content="Customize Thurro's AI-powered financial intelligence platform with tailored datasets, reports, and API feeds to meet your specific business needs.">
-    <meta property="og:url" content="https://thurro.com/customization">
+    <meta property="og:url" content="https://thurro.com/Customisation">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Thurro">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Customization | Thurro">
+    <meta name="twitter:title" content="Customisation | Thurro">
     <meta name="twitter:description"
         content="Customize Thurro's AI-powered financial intelligence platform with tailored datasets, reports, and API feeds to meet your specific business needs.">
     <meta name="twitter:site" content="@thurro">
@@ -177,95 +177,6 @@
             }
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Desktop dropdown functionality
-            const dropdownBtn = document.getElementById('products-dropdown-btn');
-            const dropdown = document.getElementById('products-dropdown');
-            const chevron = document.getElementById('dropdown-chevron');
-            
-            if (dropdownBtn && dropdown) {
-                dropdownBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    
-                    // Toggle dropdown visibility
-                    if (dropdown.classList.contains('opacity-0')) {
-                        dropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
-                        dropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
-                        chevron.classList.add('rotate-180');
-                    } else {
-                        dropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
-                        dropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                        chevron.classList.remove('rotate-180');
-                    }
-                });
-                
-                // Close dropdown when clicking elsewhere
-                document.addEventListener('click', function(e) {
-                    if (!dropdownBtn.contains(e.target) && !dropdown.contains(e.target)) {
-                        dropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
-                        dropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                        chevron.classList.remove('rotate-180');
-                    }
-                });
-            }
-            
-            // Mobile menu functionality
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const closeMenuButton = document.getElementById('close-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (mobileMenuButton && closeMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.remove('-translate-x-full');
-                    document.body.classList.add('overflow-hidden');
-                });
-                
-                closeMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.add('-translate-x-full');
-                    document.body.classList.remove('overflow-hidden');
-                });
-            }
-            
-            // Mobile products dropdown
-            const mobileProductsBtn = document.getElementById('mobile-products-btn');
-            const mobileProductsMenu = document.getElementById('mobile-products-menu');
-            const mobileChevron = document.getElementById('mobile-chevron');
-            
-            if (mobileProductsBtn && mobileProductsMenu) {
-                mobileProductsBtn.addEventListener('click', function() {
-                    mobileProductsMenu.classList.toggle('hidden');
-                    mobileChevron.classList.toggle('rotate-180');
-                });
-            }
-            
-            // Header shadow on scroll
-            window.addEventListener('scroll', function() {
-                const header = document.getElementById('header');
-                if (window.scrollY > 10) {
-                    header.classList.add('shadow-md');
-                } else {
-                    header.classList.remove('shadow-md');
-                }
-            });
-
-            // Function to create a clean line divider
-            function createLineDivider() {
-                const containers = document.querySelectorAll('.line-divider-container');
-                containers.forEach(container => {
-                    const divider = document.createElement('div');
-                    divider.className = 'line-divider';
-                    const inner = document.createElement('div');
-                    inner.className = 'line-divider-inner';
-                    divider.appendChild(inner);
-                    container.appendChild(divider);
-                });
-            }
-
-            // Initialize line dividers
-            createLineDivider();
-        });
-    </script>
 </head>
 
 <body class="bg-ft-pink text-black">
@@ -333,7 +244,7 @@
                                 </a>
                                 
                                 <!-- Customization -->
-                                <a href="customization.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5 bg-ft-pink-darker">
+                                <a href="customization.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5">
                                     <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
                                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M12 20h9"></path>
@@ -346,7 +257,7 @@
                                     </div>
                                 </a>
                                 
-                                <!-- Data in Thurro -->
+                                <!-- Data at Thurro -->
                                 <a href="data.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200">
                                     <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
                                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -356,14 +267,82 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <div class="font-semibold text-sm">Data in Thurro</div>
+                                        <div class="font-semibold text-sm">Data at Thurro</div>
                                         <div class="text-xs text-black text-opacity-60">Explore our comprehensive data sources</div>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         
-                        <a href="#solutions" class="font-medium hover:text-gray-600 transition-colors duration-200">Solutions</a>
+                        <!-- Solutions Dropdown -->
+                        <div class="relative group">
+                            <button id="solutions-dropdown-btn" class="flex items-center font-medium text-black transition-colors duration-200 focus:outline-none">
+                                <span>Solutions</span>
+                                <svg id="solutions-dropdown-chevron" class="ml-2 w-4 h-4 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            
+                            <!-- Solutions Dropdown Menu -->
+                            <div id="solutions-dropdown" class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-ft-cream rounded-lg shadow-lg opacity-0 invisible transition-all duration-300 -translate-y-4 z-50 overflow-hidden border border-black border-opacity-5">
+                                <!-- Investment Management -->
+                                <a href="solutions.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5 bg-ft-pink-darker">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Investment Management</div>
+                                        <div class="text-xs text-black text-opacity-60">Data-driven investing solutions</div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Financial Services (Coming Soon) -->
+                                <div class="flex items-center p-4 border-b border-black border-opacity-5 opacity-60 cursor-not-allowed">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+                                            <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Financial Services</div>
+                                        <div class="text-xs text-black text-opacity-60">Coming soon</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Consultants & Corporate (Coming Soon) -->
+                                <div class="flex items-center p-4 border-b border-black border-opacity-5 opacity-60 cursor-not-allowed">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Consultants & Corporate</div>
+                                        <div class="text-xs text-black text-opacity-60">Coming soon</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Government & Regulatory (Coming Soon) -->
+                                <div class="flex items-center p-4 opacity-60 cursor-not-allowed">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Government & Regulatory</div>
+                                        <div class="text-xs text-black text-opacity-60">Coming soon</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <a href="#resources" class="font-medium hover:text-gray-600 transition-colors duration-200">Resources</a>
                         <a href="#about" class="font-medium hover:text-gray-600 transition-colors duration-200">About Us</a>
                     </div>
@@ -401,7 +380,7 @@
                     <div>
                         <button id="mobile-products-btn" class="flex items-center justify-between w-full py-3 font-medium text-lg">
                             <span>Products</span>
-                            <svg id="mobile-chevron" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg id="mobile-products-chevron" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
@@ -409,11 +388,27 @@
                             <a href="answers.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro Answers</a>
                             <a href="altdata.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro AltData</a>
                             <a href="nowcast.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro NowCast</a>
-                            <a href="customization.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-30 transition-colors">Customization</a>
-                            <a href="data.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Data in Thurro</a>
+                            <a href="customization.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Customization</a>
+                            <a href="data.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Data at Thurro</a>
                         </div>
                     </div>
-                    <a href="#solutions" class="py-3 font-medium text-lg">Solutions</a>
+                    
+                    <!-- Mobile Solutions Dropdown -->
+                    <div>
+                        <button id="mobile-solutions-btn" class="flex items-center justify-between w-full py-3 font-medium text-lg">
+                            <span>Solutions</span>
+                            <svg id="mobile-solutions-chevron" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="mobile-solutions-menu" class="hidden mt-2 ml-4 space-y-3">
+                            <a href="solutions.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-30 transition-colors">Investment Management</a>
+                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Financial Services (Coming soon)</span>
+                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Consultants & Corporate (Coming soon)</span>
+                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Government & Regulatory (Coming soon)</span>
+                        </div>
+                    </div>
+                    
                     <a href="#resources" class="py-3 font-medium text-lg">Resources</a>
                     <a href="#about" class="py-3 font-medium text-lg">About Us</a>
                 </div>
@@ -425,175 +420,175 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="py-16 md:py-24 bg-ft-pink overflow-hidden">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Customized intelligence for your success</h1>
-                <p class="text-xl md:text-2xl mb-8">Our customization services offer a strategic partnership, ensuring Thurro delivers the exact intelligence you need to achieve your business goals</p>
-            </div>
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="https://ai.thurro.com" class="text-center rounded-md bg-black text-ft-cream font-medium px-10 py-4 rounded-md transition-all duration-200 ">Start your custom journey</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Line Divider -->
-    <div class="line-divider-container"></div>
-
-    <!-- Core Services Section -->
-    <section class="py-16 md:py-20 bg-ft-pink">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Core services</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                <!-- Custom Datasets -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-                    <div class="mb-6 text-black">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-black">Custom datasets</h3>
-                    <p class="text-black text-lg leading-relaxed mb-6">Collaborate with us to tailor the data sets that you need to ensure accuracy and relevance for your research and analysis. Our expert team works closely with you to identify, curate, and structure data that aligns perfectly with your specific requirements.</p>
-                </div>
-                
-                <!-- Custom Data Reports -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-                    <div class="mb-6 text-black">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <polyline points="10 9 9 9 8 9"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-black">Custom data reports</h3>
-                    <p class="text-black text-lg leading-relaxed mb-6">Work with our experts to design reports that provide the specific insights you require. Automate the delivery of custom reports to receive timely, tailored insights directly to your inbox, ensuring you never miss critical information.</p>
-                </div>
-                
-                <!-- Custom API Feed -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-                    <div class="mb-6 text-black">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="16 18 22 12 16 6"></polyline>
-                            <polyline points="8 6 2 12 8 18"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-black">Custom API feed</h3>
-                    <p class="text-black text-lg leading-relaxed mb-6">Leverage our team's expertise for custom research projects, delivering actionable intelligence through seamless API integration. Access real-time data feeds tailored to your business needs with reliable, scalable solutions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Line Divider -->
-    <div class="line-divider-container"></div>
-
-    <!-- Success Story Section -->
-    <section class="py-16 md:py-20 bg-ft-pink">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Success Story</h2>
-            </div>
-            
-            <div class="bg-ft-cream rounded-lg shadow-md overflow-hidden">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                    <!-- Left: Text Content -->
-                    <div class="p-8 md:p-12">
-                        <h3 class="text-2xl font-bold mb-6">Custom Report for NIIF</h3>
-                        <p class="text-lg leading-relaxed mb-6">
-                            The toll plazas in India collect tolls via a digital process. Indian Highways Management Corporation Limited releases data on the number of vehicles and tolls collected at each location. For the National Investment and Infrastructure Fund (NIIF), Thurro visualised the toll plazas on the map of India with colour coding showing the level of growth at each particular plaza.
-                        </p>
-                        <p class="text-lg leading-relaxed mb-8">
-                            Such granular data is extremely useful to understand the location of economic activity and growth. Creative analytics like these allow asset managers, investors, and policy makers a quick snapshot of the underlying infrastructure assets, enabling informed decision-making and strategic planning.
-                        </p>
-                        <a href="https://dpbt9h452fgde.cloudfront.net/wp-content/uploads/2024/05/NIIF-Research-2405-HeatMaps-Toll-Roads.pdf" class="inline-flex items-center px-6 py-3 bg-black text-ft-cream rounded-md font-medium hover:bg-gray-800 transition-all duration-200" target="_blank">
-                            View full report
-                            <svg class="ml-2 w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                        </a>
-                    </div>
-                    
-                    <!-- Right: Image -->
-                    <div class="bg-ft-cream flex items-center justify-center p-8 md:p-0">
-                        <img src="./asserts/Image/india image for niif.png" alt="NIIF Toll Plaza Visualization" class="max-w-full h-auto">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Line Divider -->
-    <div class="line-divider-container"></div>
-
-    <!-- Customization Possibilities Section -->
-<section class="py-16 md:py-24 bg-ft-pink">
+<!-- Hero Section -->
+<section class="py-16 md:py-20 bg-ft-pink overflow-hidden">
     <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
+        <div class="text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Customised intelligence for your success</h1>
+            <p class="text-xl md:text-2xl mb-8">Our Customisation services offer a strategic partnership, ensuring Thurro delivers the exact intelligence you need to achieve your business goals</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 mt-10">
+            <a href="https://ai.thurro.com" class="text-center rounded-md bg-black text-ft-cream font-medium px-10 py-4 rounded-md transition-all duration-200 hover:bg-gray-800">Start your custom journey</a>
+        </div>
+    </div>
+</section>
+
+<!-- Line Divider -->
+<div class="line-divider-container"></div>
+
+<!-- Core Services Section -->
+<section class="py-16 md:py-20 bg-ft-pink">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Core services</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <!-- Custom Datasets -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div class="mb-6 text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-black">Custom datasets</h3>
+                <p class="text-black text-lg leading-relaxed">Collaborate with us to tailor the data sets that you need to ensure accuracy and relevance for your research and analysis. Our expert team works closely with you to identify, curate, and structure data that aligns perfectly with your specific requirements.</p>
+            </div>
+            
+            <!-- Custom Data Reports -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div class="mb-6 text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-black">Custom data reports</h3>
+                <p class="text-black text-lg leading-relaxed">Work with our experts to design reports that provide the specific insights you require. Automate the delivery of custom reports to receive timely, tailored insights directly to your inbox, ensuring you never miss critical information.</p>
+            </div>
+            
+            <!-- Custom API Feed -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div class="mb-6 text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-black">Custom API feed</h3>
+                <p class="text-black text-lg leading-relaxed">Leverage our team's expertise for custom research projects, delivering actionable intelligence through seamless API integration. Access real-time data feeds tailored to your business needs with reliable, scalable solutions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Line Divider -->
+<div class="line-divider-container"></div>
+
+<!-- Success Story Section -->
+<section class="py-16 md:py-20 bg-ft-pink">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Success story</h2>
+        </div>
+        
+        <div class="bg-ft-cream rounded-lg shadow-md overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                <!-- Left: Text Content -->
+                <div class="p-8 md:p-12">
+                    <h3 class="text-2xl font-bold mb-6">Custom report for NIIF</h3>
+                    <p class="text-lg leading-relaxed mb-6">
+                        The toll plazas in India collect tolls via a digital process. Indian Highways Management Corporation Limited releases data on the number of vehicles and tolls collected at each location. For the National Investment and Infrastructure Fund (NIIF), Thurro visualised the toll plazas on the map of India with colour coding showing the level of growth at each particular plaza.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-8">
+                        Such granular data is extremely useful to understand the location of economic activity and growth. Creative analytics like these allow asset managers, investors, and policy makers a quick snapshot of the underlying infrastructure assets, enabling informed decision-making and strategic planning.
+                    </p>
+                    <a href="https://dpbt9h452fgde.cloudfront.net/wp-content/uploads/2024/05/NIIF-Research-2405-HeatMaps-Toll-Roads.pdf" class="inline-flex items-center px-6 py-3 bg-black text-ft-cream rounded-md font-medium hover:bg-gray-800 transition-all duration-200" target="_blank">
+                        View full report
+                        <svg class="ml-2 w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Right: Image -->
+                <div class="bg-ft-cream flex items-center justify-center p-8 md:p-0">
+                    <img src="./asserts/Image/india image for niif.png" alt="NIIF Toll Plaza Visualization" class="max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Line Divider -->
+<div class="line-divider-container"></div>
+
+<!-- Customisation Possibilities Section -->
+<section class="py-16 md:py-20 bg-ft-pink">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16">
             <span class="inline-block px-4 py-1.5 bg-black text-ft-cream rounded-full text-sm font-medium mb-4">Flexible Options</span>
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Various possibilities of customization</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Various possibilities of Customisation</h2>
             <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                Tailor Thurro products to your specific business needs with our comprehensive customization options
+                Tailor Thurro products to your specific business needs with our comprehensive Customisation options
             </p>
         </div>
         
-        <!-- Desktop Table (Hidden on Mobile) - Enhanced with better spacing and visual hierarchy -->
+        <!-- Desktop Table (Hidden on Mobile) -->
         <div class="hidden lg:block overflow-x-auto mb-10">
-            <div class="bg-ft-cream rounded-xl shadow-md p-6 mb-8">
+            <div class="bg-ft-cream/80 rounded-xl shadow-outline p-6 mb-8">
                 <table class="w-full">
                     <tbody>
                         <!-- Row 1 -->
                         <tr class="grid grid-cols-3 gap-4 mb-4">
                             <td class="col-span-1">
-                                <div class="rounded-lg p-5 bg-white shadow-sm border border-black border-opacity-5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                                <div class="rounded-lg p-5 bg-ft-pink-darker/80 shadow-sm border border-black/5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                     <div class="flex items-start">
-                                        <div class="bg-ft-pink rounded-md p-2 mr-4 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div class="bg-ft-cream rounded-md p-2 mr-4 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 class="font-semibold text-lg mb-1">Immediate AI responses</h3>
-                                            <p class="text-sm text-gray-600">Custom AI generated notes in seconds for newsbreaks like inflation releases</p>
+                                            <h3 class="font-semibold text-lg mb-1 text-black/90">Immediate AI responses</h3>
+                                            <p class="text-sm text-black/70">Custom AI generated notes in seconds for newsbreaks like inflation releases</p>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                             <td class="col-span-1">
-                                <div class="rounded-lg p-5 bg-white shadow-sm border border-black border-opacity-5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                                <div class="rounded-lg p-5 bg-ft-pink-darker/90 shadow-sm border border-black/5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                     <div class="flex items-start">
-                                        <div class="bg-ft-pink rounded-md p-2 mr-4 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div class="bg-ft-cream rounded-md p-2 mr-4 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 class="font-semibold text-lg mb-1">Customization of reports</h3>
-                                            <p class="text-sm text-gray-600">With prompts, fonts, tables, charts, and branding of your organization</p>
+                                            <h3 class="font-semibold text-lg mb-1 text-black/90">Customisation of reports</h3>
+                                            <p class="text-sm text-black/70">With prompts, fonts, tables, charts, and branding of your organization</p>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                             <td class="col-span-1">
-                                <div class="rounded-lg p-5 bg-white shadow-sm border border-black border-opacity-5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                                <div class="rounded-lg p-5 bg-ft-pink-darker/80 shadow-sm border border-black/5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                     <div class="flex items-start">
-                                        <div class="bg-ft-pink rounded-md p-2 mr-4 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div class="bg-ft-cream rounded-md p-2 mr-4 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 class="font-semibold text-lg mb-1">White labelling</h3>
-                                            <p class="text-sm text-gray-600">URL of the AI platform to reflect client's portal along with Thurro</p>
+                                            <h3 class="font-semibold text-lg mb-1 text-black/90">White labelling</h3>
+                                            <p class="text-sm text-black/70">URL of the AI platform to reflect client's portal along with Thurro</p>
                                         </div>
                                     </div>
                                 </div>
@@ -603,46 +598,46 @@
                         <!-- Row 2 -->
                         <tr class="grid grid-cols-3 gap-4 mb-4">
                             <td class="col-span-1">
-                                <div class="rounded-lg p-5 bg-white shadow-sm border border-black border-opacity-5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                                <div class="rounded-lg p-5 bg-ft-pink-darker/90 shadow-sm border border-black/5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                     <div class="flex items-start">
-                                        <div class="bg-ft-pink rounded-md p-2 mr-4 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div class="bg-ft-cream rounded-md p-2 mr-4 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 class="font-semibold text-lg mb-1">Proprietary data bundles</h3>
-                                            <p class="text-sm text-gray-600">Exclusive datasets for which Thurro has proprietary access</p>
+                                            <h3 class="font-semibold text-lg mb-1 text-black/90">Proprietary data bundles</h3>
+                                            <p class="text-sm text-black/70">Exclusive datasets for which Thurro has proprietary access</p>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                             <td class="col-span-1">
-                                <div class="rounded-lg p-5 bg-white shadow-sm border border-black border-opacity-5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                                <div class="rounded-lg p-5 bg-ft-pink-darker/80 shadow-sm border border-black/5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                     <div class="flex items-start">
-                                        <div class="bg-ft-pink rounded-md p-2 mr-4 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div class="bg-ft-cream rounded-md p-2 mr-4 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 class="font-semibold text-lg mb-1">Adding new sources</h3>
-                                            <p class="text-sm text-gray-600">Expand Thurro Answers with additional media and DataLakehouses</p>
+                                            <h3 class="font-semibold text-lg mb-1 text-black/90">Adding new sources</h3>
+                                            <p class="text-sm text-black/70">Expand Thurro Answers with additional media and DataLakehouses</p>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                             <td class="col-span-1">
-                                <div class="rounded-lg p-5 bg-white shadow-sm border border-black border-opacity-5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                                <div class="rounded-lg p-5 bg-ft-pink-darker/90 shadow-sm border border-black/5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                     <div class="flex items-start">
-                                        <div class="bg-ft-pink rounded-md p-2 mr-4 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div class="bg-ft-cream rounded-md p-2 mr-4 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 class="font-semibold text-lg mb-1">Client integration</h3>
-                                            <p class="text-sm text-gray-600">Layer Thurro AI on your institutional data for personalized insights</p>
+                                            <h3 class="font-semibold text-lg mb-1 text-black/90">Client integration</h3>
+                                            <p class="text-sm text-black/70">Layer Thurro AI on your institutional data for personalized insights</p>
                                         </div>
                                     </div>
                                 </div>
@@ -652,46 +647,46 @@
                         <!-- Row 3 -->
                         <tr class="grid grid-cols-3 gap-4 mb-4">
                             <td class="col-span-1">
-                                <div class="rounded-lg p-5 bg-white shadow-sm border border-black border-opacity-5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                                <div class="rounded-lg p-5 bg-ft-pink-darker/80 shadow-sm border border-black/5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                     <div class="flex items-start">
-                                        <div class="bg-ft-pink rounded-md p-2 mr-4 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div class="bg-ft-cream rounded-md p-2 mr-4 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 class="font-semibold text-lg mb-1">Custom reports</h3>
-                                            <p class="text-sm text-gray-600">District level indicators, portfolio analysis, and competitive reports</p>
+                                            <h3 class="font-semibold text-lg mb-1 text-black/90">Custom reports</h3>
+                                            <p class="text-sm text-black/70">District level indicators, portfolio analysis, and competitive reports</p>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                             <td class="col-span-1">
-                                <div class="rounded-lg p-5 bg-white shadow-sm border border-black border-opacity-5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                                <div class="rounded-lg p-5 bg-ft-pink-darker/90 shadow-sm border border-black/5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                     <div class="flex items-start">
-                                        <div class="bg-ft-pink rounded-md p-2 mr-4 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div class="bg-ft-cream rounded-md p-2 mr-4 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 class="font-semibold text-lg mb-1">Tailored NowCast</h3>
-                                            <p class="text-sm text-gray-600">Custom prediction models created specifically for your needs</p>
+                                            <h3 class="font-semibold text-lg mb-1 text-black/90">Tailored NowCast</h3>
+                                            <p class="text-sm text-black/70">Custom prediction models created specifically for your needs</p>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                             <td class="col-span-1">
-                                <div class="rounded-lg p-5 bg-white shadow-sm border border-black border-opacity-5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                                <div class="rounded-lg p-5 bg-ft-pink-darker/80 shadow-sm border border-black/5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                     <div class="flex items-start">
-                                        <div class="bg-ft-pink rounded-md p-2 mr-4 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div class="bg-ft-cream rounded-md p-2 mr-4 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 class="font-semibold text-lg mb-1">NowCast insights</h3>
-                                            <p class="text-sm text-gray-600">Deep understanding of our prediction models and methodologies</p>
+                                            <h3 class="font-semibold text-lg mb-1 text-black/90">NowCast insights</h3>
+                                            <p class="text-sm text-black/70">Deep understanding of our prediction models and methodologies</p>
                                         </div>
                                     </div>
                                 </div>
@@ -701,46 +696,46 @@
                         <!-- Row 4 -->
                         <tr class="grid grid-cols-3 gap-4">
                             <td class="col-span-1">
-                                <div class="rounded-lg p-5 bg-white shadow-sm border border-black border-opacity-5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                                <div class="rounded-lg p-5 bg-ft-pink-darker/90 shadow-sm border border-black/5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                     <div class="flex items-start">
-                                        <div class="bg-ft-pink rounded-md p-2 mr-4 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div class="bg-ft-cream rounded-md p-2 mr-4 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 class="font-semibold text-lg mb-1">Branded reports</h3>
-                                            <p class="text-sm text-gray-600">Download analyses with your watermark without Thurro references</p>
+                                            <h3 class="font-semibold text-lg mb-1 text-black/90">Branded reports</h3>
+                                            <p class="text-sm text-black/70">Download analyses with your watermark without Thurro references</p>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                             <td class="col-span-1">
-                                <div class="rounded-lg p-5 bg-white shadow-sm border border-black border-opacity-5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                                <div class="rounded-lg p-5 bg-ft-pink-darker/80 shadow-sm border border-black/5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                     <div class="flex items-start">
-                                        <div class="bg-ft-pink rounded-md p-2 mr-4 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div class="bg-ft-cream rounded-md p-2 mr-4 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 class="font-semibold text-lg mb-1">API access</h3>
-                                            <p class="text-sm text-gray-600">Seamlessly integrate Thurro data and analyses into your systems</p>
+                                            <h3 class="font-semibold text-lg mb-1 text-black/90">API access</h3>
+                                            <p class="text-sm text-black/70">Seamlessly integrate Thurro data and analyses into your systems</p>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                             <td class="col-span-1">
-                                <div class="rounded-lg p-5 bg-white shadow-sm border border-black border-opacity-5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                                <div class="rounded-lg p-5 bg-ft-pink-darker/90 shadow-sm border border-black/5 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                     <div class="flex items-start">
-                                        <div class="bg-ft-pink rounded-md p-2 mr-4 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div class="bg-ft-cream rounded-md p-2 mr-4 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 class="font-semibold text-lg mb-1">Custom solutions</h3>
-                                            <p class="text-sm text-gray-600">Have other ideas? We're happy to explore additional customizations</p>
+                                            <h3 class="font-semibold text-lg mb-1 text-black/90">Custom solutions</h3>
+                                            <p class="text-sm text-black/70">Have other ideas? We're happy to explore additional Customisations</p>
                                         </div>
                                     </div>
                                 </div>
@@ -751,51 +746,51 @@
             </div>
         </div>
         
-        <!-- Mobile Grid View (Visible only on Mobile) - Enhanced with better visuals -->
+        <!-- Mobile Grid View (Visible only on Mobile) -->
         <div class="lg:hidden space-y-6">
-            <!-- Category header: Core Customizations -->
+            <!-- Category header: Core Customisations -->
             <div class="bg-black text-ft-cream px-4 py-2 rounded-lg font-medium text-center mb-4">
-                Core Customizations
+                Core Customisations
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <!-- Card 1 -->
-                <div class="bg-white rounded-lg shadow-sm border border-black border-opacity-5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="bg-ft-pink px-4 py-2">
-                        <h3 class="font-semibold">Immediate AI responses</h3>
+                <div class="bg-ft-pink-darker/80 rounded-lg shadow-sm border border-black/5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="bg-ft-cream/70 px-4 py-2 border-b border-black/10">
+                        <h3 class="font-semibold text-black/90">Immediate AI responses</h3>
                     </div>
                     <div class="p-4">
-                        <p class="text-sm text-gray-700">Custom AI generated note in seconds for newsbreaks like inflation release</p>
+                        <p class="text-sm text-black/80">Custom AI generated notes in seconds for newsbreaks like inflation releases</p>
                     </div>
                 </div>
                 
                 <!-- Card 2 -->
-                <div class="bg-white rounded-lg shadow-sm border border-black border-opacity-5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="bg-ft-pink px-4 py-2">
-                        <h3 class="font-semibold">Customization of reports</h3>
+                <div class="bg-ft-pink-darker/90 rounded-lg shadow-sm border border-black/5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="bg-ft-cream/70 px-4 py-2 border-b border-black/10">
+                        <h3 class="font-semibold text-black/90">Customisation of reports</h3>
                     </div>
                     <div class="p-4">
-                        <p class="text-sm text-gray-700">With prompts, fonts, tables, charts, branding, etc. of the organization</p>
+                        <p class="text-sm text-black/80">With prompts, fonts, tables, charts, and branding of your organization</p>
                     </div>
                 </div>
                 
                 <!-- Card 3 -->
-                <div class="bg-white rounded-lg shadow-sm border border-black border-opacity-5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="bg-ft-pink px-4 py-2">
-                        <h3 class="font-semibold">White labelling</h3>
+                <div class="bg-ft-pink-darker/80 rounded-lg shadow-sm border border-black/5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="bg-ft-cream/70 px-4 py-2 border-b border-black/10">
+                        <h3 class="font-semibold text-black/90">White labelling</h3>
                     </div>
                     <div class="p-4">
-                        <p class="text-sm text-gray-700">URL of the AI platform to reflect client's portal along with Thurro</p>
+                        <p class="text-sm text-black/80">URL of the AI platform to reflect client's portal along with Thurro</p>
                     </div>
                 </div>
                 
                 <!-- Card 4 -->
-                <div class="bg-white rounded-lg shadow-sm border border-black border-opacity-5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="bg-ft-pink px-4 py-2">
-                        <h3 class="font-semibold">Proprietary data bundles</h3>
+                <div class="bg-ft-pink-darker/90 rounded-lg shadow-sm border border-black/5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="bg-ft-cream/70 px-4 py-2 border-b border-black/10">
+                        <h3 class="font-semibold text-black/90">Proprietary data bundles</h3>
                     </div>
                     <div class="p-4">
-                        <p class="text-sm text-gray-700">Datasets for which Thurro has proprietary access</p>
+                        <p class="text-sm text-black/80">Exclusive datasets for which Thurro has proprietary access</p>
                     </div>
                 </div>
             </div>
@@ -807,42 +802,42 @@
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <!-- Card 5 -->
-                <div class="bg-white rounded-lg shadow-sm border border-black border-opacity-5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="bg-ft-pink px-4 py-2">
-                        <h3 class="font-semibold">Adding new sources</h3>
+                <div class="bg-ft-pink-darker/80 rounded-lg shadow-sm border border-black/5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="bg-ft-cream/70 px-4 py-2 border-b border-black/10">
+                        <h3 class="font-semibold text-black/90">Adding new sources</h3>
                     </div>
                     <div class="p-4">
-                        <p class="text-sm text-gray-700">Adding new DataLakehouses to Thurro Answers</p>
+                        <p class="text-sm text-black/80">Expand Thurro Answers with additional media and DataLakehouses</p>
                     </div>
                 </div>
                 
                 <!-- Card 6 -->
-                <div class="bg-white rounded-lg shadow-sm border border-black border-opacity-5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="bg-ft-pink px-4 py-2">
-                        <h3 class="font-semibold">Client integration</h3>
+                <div class="bg-ft-pink-darker/90 rounded-lg shadow-sm border border-black/5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="bg-ft-cream/70 px-4 py-2 border-b border-black/10">
+                        <h3 class="font-semibold text-black/90">Client integration</h3>
                     </div>
                     <div class="p-4">
-                        <p class="text-sm text-gray-700">Layer of Thurro AI on your institutional data</p>
+                        <p class="text-sm text-black/80">Layer Thurro AI on your institutional data for personalized insights</p>
                     </div>
                 </div>
                 
                 <!-- Card 7 -->
-                <div class="bg-white rounded-lg shadow-sm border border-black border-opacity-5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="bg-ft-pink px-4 py-2">
-                        <h3 class="font-semibold">Custom reports</h3>
+                <div class="bg-ft-pink-darker/80 rounded-lg shadow-sm border border-black/5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="bg-ft-cream/70 px-4 py-2 border-b border-black/10">
+                        <h3 class="font-semibold text-black/90">Custom reports</h3>
                     </div>
                     <div class="p-4">
-                        <p class="text-sm text-gray-700">District level indicators, portfolio analysis, and competitive reports</p>
+                        <p class="text-sm text-black/80">District level indicators, portfolio analysis, and competitive reports</p>
                     </div>
                 </div>
                 
                 <!-- Card 8 -->
-                <div class="bg-white rounded-lg shadow-sm border border-black border-opacity-5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="bg-ft-pink px-4 py-2">
-                        <h3 class="font-semibold">API access</h3>
+                <div class="bg-ft-pink-darker/90 rounded-lg shadow-sm border border-black/5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="bg-ft-cream/70 px-4 py-2 border-b border-black/10">
+                        <h3 class="font-semibold text-black/90">API access</h3>
                     </div>
                     <div class="p-4">
-                        <p class="text-sm text-gray-700">Access Thurro data and analyses via API</p>
+                        <p class="text-sm text-black/80">Seamlessly integrate Thurro data and analyses into your systems</p>
                     </div>
                 </div>
             </div>
@@ -854,42 +849,42 @@
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <!-- Card 9 -->
-                <div class="bg-white rounded-lg shadow-sm border border-black border-opacity-5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="bg-ft-pink px-4 py-2">
-                        <h3 class="font-semibold">Tailored NowCast</h3>
+                <div class="bg-ft-pink-darker/80 rounded-lg shadow-sm border border-black/5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="bg-ft-cream/70 px-4 py-2 border-b border-black/10">
+                        <h3 class="font-semibold text-black/90">Tailored NowCast</h3>
                     </div>
                     <div class="p-4">
-                        <p class="text-sm text-gray-700">Creating specific NowCast models for your needs</p>
+                        <p class="text-sm text-black/80">Custom prediction models created specifically for your needs</p>
                     </div>
                 </div>
                 
                 <!-- Card 10 -->
-                <div class="bg-white rounded-lg shadow-sm border border-black border-opacity-5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="bg-ft-pink px-4 py-2">
-                        <h3 class="font-semibold">NowCast insights</h3>
+                <div class="bg-ft-pink-darker/90 rounded-lg shadow-sm border border-black/5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="bg-ft-cream/70 px-4 py-2 border-b border-black/10">
+                        <h3 class="font-semibold text-black/90">NowCast insights</h3>
                     </div>
                     <div class="p-4">
-                        <p class="text-sm text-gray-700">Understanding detailed working behind our NowCasts models</p>
+                        <p class="text-sm text-black/80">Deep understanding of our prediction models and methodologies</p>
                     </div>
                 </div>
                 
                 <!-- Card 11 -->
-                <div class="bg-white rounded-lg shadow-sm border border-black border-opacity-5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="bg-ft-pink px-4 py-2">
-                        <h3 class="font-semibold">Branded reports</h3>
+                <div class="bg-ft-pink-darker/80 rounded-lg shadow-sm border border-black/5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="bg-ft-cream/70 px-4 py-2 border-b border-black/10">
+                        <h3 class="font-semibold text-black/90">Branded reports</h3>
                     </div>
                     <div class="p-4">
-                        <p class="text-sm text-gray-700">Download analyses with your watermark without Thurro references</p>
+                        <p class="text-sm text-black/80">Download analyses with your watermark without Thurro references</p>
                     </div>
                 </div>
                 
                 <!-- Card 12 -->
-                <div class="bg-white rounded-lg shadow-sm border border-black border-opacity-5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="bg-ft-pink px-4 py-2">
-                        <h3 class="font-semibold">Custom solutions</h3>
+                <div class="bg-ft-pink-darker/90 rounded-lg shadow-sm border border-black/5 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="bg-ft-cream/70 px-4 py-2 border-b border-black/10">
+                        <h3 class="font-semibold text-black/90">Custom solutions</h3>
                     </div>
                     <div class="p-4">
-                        <p class="text-sm text-gray-700">Have other ideas? We're happy to explore additional customizations</p>
+                        <p class="text-sm text-black/80">Have other ideas? We're happy to explore additional Customisations</p>
                     </div>
                 </div>
             </div>
@@ -898,7 +893,7 @@
         <!-- Call to Action -->
         <div class="mt-16 text-center">
             <a href="#custom-journey" class="inline-block px-8 py-4 bg-black text-ft-cream rounded-md font-medium hover:bg-gray-800 transition-all duration-200 shadow-md">
-                Discuss your customization needs
+                Discuss your Customisation needs
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                 </svg>
@@ -908,7 +903,7 @@
 </section>
 
 <style>
-/* Additional styles for the customization section */
+/* Additional styles for the Customisation section */
 .custom-table {
     border-collapse: separate;
     border-spacing: 0;
@@ -933,143 +928,305 @@
 }
 </style>
 
-    <!-- CTA Section with Updated Content -->
-    <section id="custom-journey" class="py-16 md:py-20 bg-black text-ft-cream text-center">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl sm:text-5xl font-bold mb-8 tracking-tight">Ready to transform your intelligence?</h2>
-            <p class="text-xl max-w-3xl mx-auto mb-10 opacity-90 leading-relaxed">Let us discuss how Thurro can create the perfect customised solution for your business needs</p>
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="demo.html" class="px-10 py-4 rounded-md bg-ft-cream text-black font-medium hover:bg-ft-pink transition-all duration-200">Start your custom journey</a>
-                <a href="mailto:contact@thurro.com" class="px-10 py-4 rounded-md border border-ft-cream border-opacity-50 text-ft-cream font-medium hover:bg-ft-cream hover:bg-opacity-10 transition-all duration-200">Contact our team</a>
+<!-- CTA Section with Updated Content -->
+<section id="custom-journey" class="py-16 md:py-20 bg-black text-ft-cream text-center">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-8 tracking-tight">Ready to transform your intelligence?</h2>
+        <p class="text-xl max-w-3xl mx-auto mb-10 opacity-90 leading-relaxed">Let us discuss how Thurro can create the perfect customised solution for your business needs</p>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="demo.html" class="px-10 py-4 rounded-md bg-ft-cream text-black font-medium hover:bg-ft-pink transition-all duration-200">Start your custom journey</a>
+            <a href="mailto:contact@thurro.com" class="px-10 py-4 rounded-md border border-ft-cream border-opacity-50 text-ft-cream font-medium hover:bg-ft-cream hover:bg-opacity-10 transition-all duration-200">Contact our team</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-gray-300 py-6">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Top Row: Logo, Made with Love, Social Icons -->
+        <div class="flex flex-col md:flex-row items-center justify-between mb-6">
+            <!-- Left: Logo -->
+            <div class="mb-6 md:mb-0">
+                <img src="./asserts/Logo/Thurro_logo_bg_white.png" alt="Thurro Logo" class="h-8">
+            </div>
+
+            <!-- Right: Social Icons -->
+            <div class="flex items-center space-x-4">
+                <a href="linkedin.html" class="text-gray-400 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                        </path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="youtube.html" class="text-gray-400 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                        <path d="M10 9l5 3-5 3V9z"></path>
+                    </svg>
+                </a>
+                <a href="https://x.com" class="text-gray-400 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 1200 1227"
+                        fill="currentColor">
+                        <path
+                            d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
+                    </svg>
+                </a>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-black text-gray-300 py-6">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <!-- Top Row: Logo, Made with Love, Social Icons -->
-            <div class="flex flex-col md:flex-row items-center justify-between mb-6">
-                <!-- Left: Logo -->
-                <div class="mb-6 md:mb-0">
-                    <img src="./asserts/Logo/Thurro_logo_bg_white.png" alt="Thurro Logo" class="h-8">
-                </div>
+        <!-- Horizontal Line -->
+        <hr class="border-gray-800 mb-6">
 
-                <!-- Right: Social Icons -->
-                <div class="flex items-center space-x-4">
-                    <a href="linkedin.html" class="text-gray-400 hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
-                    <a href="youtube.html" class="text-gray-400 hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
-                            <path d="M10 9l5 3-5 3V9z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://x.com" class="text-gray-400 hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 1200 1227"
-                            fill="currentColor">
-                            <path
-                                d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
-                        </svg>
-                    </a>
-                </div>
+        <!-- Bottom Row: Copyright and Legal Links -->
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <!-- Left: Copyright -->
+            <div class="mb-4 md:mb-0">
+                <p class="text-xs text-gray-500">
+                    Copyright © 2025 ADQVEST CAPITAL ADVISORS PVT LTD.
+                </p>
             </div>
 
-            <!-- Horizontal Line -->
-            <hr class="border-gray-800 mb-6">
-
-            <!-- Bottom Row: Copyright and Legal Links -->
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <!-- Left: Copyright -->
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xs text-gray-500">
-                        Copyright © 2025 ADQVEST CAPITAL ADVISORS PVT LTD.
-                    </p>
-                </div>
-
-                <!-- Right: Legal Links -->
-                <div class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
-                    <a href="https://thurro.com/privacy-policy/"
-                        class="text-xs text-gray-500 hover:text-white transition-colors">
-                        PRIVACY POLICY
-                    </a>
-                    <a href="https://thurro.com/terms-conditions/"
-                        class="text-xs text-gray-500 hover:text-white transition-colors">
-                        TERMS AND CONDITIONS
-                    </a>
-                    <a href="https://thurro.com/contact-us/"
-                        class="text-xs text-gray-500 hover:text-white transition-colors">
-                        CONTACT
-                    </a>
-                </div>
+            <!-- Right: Legal Links -->
+            <div class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
+                <a href="https://thurro.com/privacy-policy/"
+                    class="text-xs text-gray-500 hover:text-white transition-colors">
+                    PRIVACY POLICY
+                </a>
+                <a href="https://thurro.com/terms-conditions/"
+                    class="text-xs text-gray-500 hover:text-white transition-colors">
+                    TERMS AND CONDITIONS
+                </a>
+                <a href="https://thurro.com/contact-us/"
+                    class="text-xs text-gray-500 hover:text-white transition-colors">
+                    CONTACT
+                </a>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-
-            // Mobile menu functionality
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const closeMenuButton = document.getElementById('close-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            if (mobileMenuButton && closeMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.remove('-translate-x-full');
-                    document.body.style.overflow = 'hidden';
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Desktop dropdown functionality for Products
+            const productsDropdownBtn = document.getElementById('products-dropdown-btn');
+            const productsDropdown = document.getElementById('products-dropdown');
+            const productsChevron = document.getElementById('dropdown-chevron');
+            
+            if (productsDropdownBtn && productsDropdown) {
+                productsDropdownBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Toggle dropdown visibility
+                    if (productsDropdown.classList.contains('opacity-0')) {
+                        productsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
+                        productsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                        productsChevron.classList.add('rotate-180');
+                    } else {
+                        productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                        productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        productsChevron.classList.remove('rotate-180');
+                    }
                 });
+            }
+            
+            // Desktop dropdown functionality for Solutions
+            const solutionsDropdownBtn = document.getElementById('solutions-dropdown-btn');
+            const solutionsDropdown = document.getElementById('solutions-dropdown');
+            const solutionsChevron = document.getElementById('solutions-dropdown-chevron');
+            
+            if (solutionsDropdownBtn && solutionsDropdown) {
+                solutionsDropdownBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Toggle dropdown visibility
+                    if (solutionsDropdown.classList.contains('opacity-0')) {
+                        solutionsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
+                        solutionsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                        solutionsChevron.classList.add('rotate-180');
+                    } else {
+                        solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                        solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        solutionsChevron.classList.remove('rotate-180');
+                    }
+                });
+            }
+            
+            // Close dropdowns when clicking elsewhere
+            document.addEventListener('click', function(e) {
+                // Close products dropdown
+                if (productsDropdownBtn && productsDropdown && !productsDropdownBtn.contains(e.target) && !productsDropdown.contains(e.target)) {
+                    productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                    productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    productsChevron.classList.remove('rotate-180');
+                }
+                
+                // Close solutions dropdown
+                if (solutionsDropdownBtn && solutionsDropdown && !solutionsDropdownBtn.contains(e.target) && !solutionsDropdown.contains(e.target)) {
+                    solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                    solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    solutionsChevron.classList.remove('rotate-180');
+                }
+            });
+        
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && closeMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('-translate-x-full');
+                document.body.classList.add('overflow-hidden');
+            });
+            
+            closeMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.add('-translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
+        }
+        
+        // Mobile products dropdown
+        const mobileProductsBtn = document.getElementById('mobile-products-btn');
+        const mobileProductsMenu = document.getElementById('mobile-products-menu');
+        const mobileChevron = document.getElementById('mobile-chevron');
+        
+        if (mobileProductsBtn && mobileProductsMenu) {
+            mobileProductsBtn.addEventListener('click', function() {
+                mobileProductsMenu.classList.toggle('hidden');
+                mobileChevron.classList.toggle('rotate-180');
+            });
+        }
+        
+        // Header shadow on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
 
-                closeMenuButton.addEventListener('click', () => {
+        // Function to create a clean line divider
+        function createLineDivider() {
+            const containers = document.querySelectorAll('.line-divider-container');
+            containers.forEach(container => {
+                const divider = document.createElement('div');
+                divider.className = 'line-divider';
+                const inner = document.createElement('div');
+                inner.className = 'line-divider-inner';
+                divider.appendChild(inner);
+                container.appendChild(divider);
+            });
+        }
+
+        // Initialize line dividers
+        createLineDivider();
+
+        // Mobile menu functionality
+        if (mobileMenuButton && closeMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.remove('-translate-x-full');
+                document.body.style.overflow = 'hidden';
+            });
+
+            closeMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-x-full');
+                document.body.style.overflow = '';
+            });
+
+            // Close mobile menu when clicking on navigation links
+            const mobileNavLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
                     mobileMenu.classList.add('-translate-x-full');
                     document.body.style.overflow = '';
                 });
+            });
+        }
 
-                // Close mobile menu when clicking on navigation links
-                const mobileNavLinks = mobileMenu.querySelectorAll('a[href^="#"]');
-                mobileNavLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('-translate-x-full');
-                        document.body.style.overflow = '';
+        // Header shadow on scroll
+        const header = document.querySelector('header');
+        function toggleHeaderShadow() {
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-on-scroll');
+            } else {
+                header.classList.remove('shadow-on-scroll');
+            }
+        }
+
+        window.addEventListener('scroll', toggleHeaderShadow);
+        toggleHeaderShadow();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
-                });
-            }
-
-            // Header shadow on scroll
-            const header = document.querySelector('header');
-            function toggleHeaderShadow() {
-                if (window.scrollY > 10) {
-                    header.classList.add('shadow-on-scroll');
-                } else {
-                    header.classList.remove('shadow-on-scroll');
                 }
-            }
+            });
+        });
 
-            window.addEventListener('scroll', toggleHeaderShadow);
-            toggleHeaderShadow();
+        // Card hover animations for Customisation cards
+        const customCards = document.querySelectorAll('.rounded-lg.p-5');
+        if (customCards.length > 0) {
+            customCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.classList.add('transform', 'shadow-md');
+                    this.style.transform = 'translateY(-8px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.classList.remove('shadow-md');
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        }
 
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
+        // Initialize any videos that may be present
+        const videos = document.querySelectorAll('video');
+        if (videos.length > 0) {
+            videos.forEach(video => {
+                // Initial play attempt
+                video.play().catch(function (error) {
+                    console.error('Video autoplay error:', error);
+
+                    // If autoplay fails, try playing again when user interacts with the page
+                    document.body.addEventListener('click', function () {
+                        video.play().catch(() => {});
+                    }, { once: true });
+                });
+            });
+        }
+
+        // Mobile category accordions (for Customisation categories on mobile)
+        const categoryHeaders = document.querySelectorAll('.bg-black.text-ft-cream.px-4.py-2');
+        if (categoryHeaders.length > 0) {
+            categoryHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const targetGrid = this.nextElementSibling;
+                    if (targetGrid) {
+                        if (targetGrid.style.display === 'none') {
+                            targetGrid.style.display = 'grid';
+                            this.classList.add('active');
+                        } else {
+                            targetGrid.style.display = 'none';
+                            this.classList.remove('active');
+                        }
                     }
                 });
             });
-        });
-    </script>
+        }
+    });
+</script>
 </body>
 </html>

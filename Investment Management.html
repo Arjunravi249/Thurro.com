@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions | Thurro</title>
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description"
+        content="Thurro's AI-powered solutions for investment management, financial services, corporations, and government agencies. Get real-time, data-backed intelligence from 800+ sources.">
+    <meta name="keywords"
+        content="financial intelligence, investment management solutions, financial services AI, corporate intelligence, regulatory data, market insights, data analytics">
+    <meta name="author" content="Thurro">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Solutions | Thurro">
+    <meta property="og:description"
+        content="Tailored intelligence solutions for investment management, financial services, consultants, corporations, and government agencies.">
+    <meta property="og:url" content="https://thurro.com/solutions">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Thurro">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solutions | Thurro">
+    <meta name="twitter:description"
+        content="Tailored intelligence solutions for investment management, financial services, consultants, corporations, and government agencies.">
+    <meta name="twitter:site" content="@thurro">
+    <meta name="twitter:creator" content="@thurro">
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="./asserts/favicon.ico">
+    <link rel="icon" type="image/png" href="./asserts/favicon.png">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ft-pink': '#FFF1E5',
+                        'ft-pink-darker': '#f0e1d3',
+                        'ft-cream': '#FFF8F0',
+                        'ft-positive': '#3C763D',
+                        'ft-negative': '#A52A2A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFF1E5;
+            scroll-behavior: smooth;
+        }
+
+        /* Clean line divider styles */
+        .line-divider {
+            padding: 8px 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .line-divider-inner {
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #000 20%, #000 80%, transparent);
+            opacity: 0.3;
+        }
+
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Header shadow transition */
+        .header-shadow {
+            transition: box-shadow 0.3s ease;
+        }
+
+        .shadow-on-scroll {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Scroll offset for anchor links */
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        /* Solutions tabs styles */
+        .solution-tab {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .solution-tab.active {
+            background-color: #000;
+            color: #FFF1E5;
+        }
+
+        .solution-tab:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            width: 30%;
+            height: 3px;
+            background-color: #000;
+            transition: transform 0.3s ease;
+        }
+
+        .solution-tab.active:after {
+            transform: translateX(-50%) scale(1);
+        }
+
+        .solution-content {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.5s ease;
+            display: none;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .solution-content.active {
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+            height: auto;
+            overflow: visible;
+        }
+
+        /* Solution card hover effect */
+        .solution-card {
+            transition: all 0.3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Fade in animation for content */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+    </style>
+</head>
+
+<body class="bg-ft-pink text-black">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-ft-pink border-b border-black border-opacity-10 transition-shadow duration-300" id="header">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <nav class="flex justify-between items-center py-4 md:py-5">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="./asserts/Logo/thurro.png" alt="Thurro Logo" class="h-12">
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center">
+                    <div class="flex space-x-8 lg:space-x-12 mr-8">
+                        <!-- Products Dropdown -->
+                        <div class="relative group">
+                            <button id="products-dropdown-btn" class="flex items-center font-medium hover:text-gray-600 transition-colors duration-200 focus:outline-none">
+                                <span>Products</span>
+                                <svg id="dropdown-chevron" class="ml-2 w-4 h-4 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            
+                            <!-- Dropdown Menu -->
+                            <div id="products-dropdown" class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-ft-cream rounded-lg shadow-lg opacity-0 invisible transition-all duration-300 -translate-y-4 z-50 overflow-hidden border border-black border-opacity-5">
+                                <!-- Thurro Answers -->
+                                <a href="answers.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Thurro Answers</div>
+                                        <div class="text-xs text-black text-opacity-60">Get data-backed insights and analysis</div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Thurro AltData -->
+                                <a href="altdata.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                            <rect x="7" y="8" width="10" height="8" rx="1" ry="1"></rect>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Thurro AltData</div>
+                                        <div class="text-xs text-black text-opacity-60">Visualized alternate data from 800+ sources</div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Thurro NowCast -->
+                                <a href="nowcast.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Thurro NowCast</div>
+                                        <div class="text-xs text-black text-opacity-60">Predict company performance in real-time</div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Customization -->
+                                <a href="customization.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 20h9"></path>
+                                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Customization</div>
+                                        <div class="text-xs text-black text-opacity-60">Tailor Thurro to your specific needs</div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Data at Thurro -->
+                                <a href="data.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Data at Thurro</div>
+                                        <div class="text-xs text-black text-opacity-60">Explore our comprehensive data sources</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Solutions Dropdown -->
+                        <div class="relative group">
+                            <button id="solutions-dropdown-btn" class="flex items-center font-medium text-black transition-colors duration-200 focus:outline-none">
+                                <span>Solutions</span>
+                                <svg id="solutions-dropdown-chevron" class="ml-2 w-4 h-4 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            
+                            <!-- Solutions Dropdown Menu -->
+                            <div id="solutions-dropdown" class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-ft-cream rounded-lg shadow-lg opacity-0 invisible transition-all duration-300 -translate-y-4 z-50 overflow-hidden border border-black border-opacity-5">
+                                <!-- Investment Management -->
+                                <a href="solutions.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5 bg-ft-pink-darker">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Investment Management</div>
+                                        <div class="text-xs text-black text-opacity-60">Data-driven investing solutions</div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Financial Services (Coming Soon) -->
+                                <div class="flex items-center p-4 border-b border-black border-opacity-5 opacity-60 cursor-not-allowed">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+                                            <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Financial Services</div>
+                                        <div class="text-xs text-black text-opacity-60">Coming soon</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Consultants & Corporate (Coming Soon) -->
+                                <div class="flex items-center p-4 border-b border-black border-opacity-5 opacity-60 cursor-not-allowed">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Consultants & Corporate</div>
+                                        <div class="text-xs text-black text-opacity-60">Coming soon</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Government & Regulatory (Coming Soon) -->
+                                <div class="flex items-center p-4 opacity-60 cursor-not-allowed">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">Government & Regulatory</div>
+                                        <div class="text-xs text-black text-opacity-60">Coming soon</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#resources" class="font-medium hover:text-gray-600 transition-colors duration-200">Resources</a>
+                        <a href="#about" class="font-medium hover:text-gray-600 transition-colors duration-200">About Us</a>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="https://ai.thurro.com" class="px-5 py-2.5 lg:px-6 lg:py-3 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Log In</a>
+                        <a href="https://ai.thurro.com" class="px-5 py-2.5 lg:px-6 lg:py-3 rounded-md bg-black text-ft-cream font-medium hover:bg-gray-800 transition-all duration-200">Start free trial</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 focus:outline-none" aria-label="Toggle mobile menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="fixed inset-0 bg-ft-pink z-50 md:hidden transform -translate-x-full transition-transform duration-300">
+            <div class="flex flex-col h-full">
+                <div class="flex justify-between items-center p-4 border-b border-black border-opacity-10">
+                    <a href="index.html" class="flex items-center">
+                        <img src="./asserts/Logo/thurro.png" alt="Thurro Logo" class="h-9">
+                    </a>
+                    <button id="close-menu-button" class="p-2 focus:outline-none" aria-label="Close mobile menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col p-6 space-y-6">
+                    <!-- Mobile Products Dropdown -->
+                    <div>
+                        <button id="mobile-products-btn" class="flex items-center justify-between w-full py-3 font-medium text-lg">
+                            <span>Products</span>
+                            <svg id="mobile-products-chevron" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="mobile-products-menu" class="hidden mt-2 ml-4 space-y-3">
+                            <a href="answers.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro Answers</a>
+                            <a href="altdata.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro AltData</a>
+                            <a href="nowcast.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro NowCast</a>
+                            <a href="customization.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Customization</a>
+                            <a href="data.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Data at Thurro</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Solutions Dropdown -->
+                    <div>
+                        <button id="mobile-solutions-btn" class="flex items-center justify-between w-full py-3 font-medium text-lg">
+                            <span>Solutions</span>
+                            <svg id="mobile-solutions-chevron" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="mobile-solutions-menu" class="hidden mt-2 ml-4 space-y-3">
+                            <a href="solutions.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-30 transition-colors">Investment Management</a>
+                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Financial Services (Coming soon)</span>
+                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Consultants & Corporate (Coming soon)</span>
+                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Government & Regulatory (Coming soon)</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#resources" class="py-3 font-medium text-lg">Resources</a>
+                    <a href="#about" class="py-3 font-medium text-lg">About Us</a>
+                </div>
+                <div class="mt-auto p-6 space-y-4">
+                    <a href="https://ai.thurro.com" class="block w-full py-4 text-center rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all">Log In</a>
+                    <a href="https://ai.thurro.com" class="block w-full py-4 text-center rounded-md bg-black text-ft-cream font-medium hover:bg-gray-800">Start free trial</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="investment-management" class="py-16 md:py-20 bg-ft-pink">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Investment management</h1>
+                    <p class="text-xl md:text-2xl font-medium mb-8">From blind spots to bold calls. Thurro powers data-driven investing in India</p>
+                    <div class="bg-ft-cream rounded-xl p-6 md:p-8 shadow-sm">
+                        <p class="text-lg">No more waiting on earnings calls or sifting through PDFs. Thurro provides investment teams with verified, real-time, India-specific intelligence, helping you track performance, identify opportunities, and reduce blind spots whether you're managing legacy capital or chasing alpha.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line-divider-container"></div>
+
+        <!-- AI-powered Platform Section -->
+        <section class="py-16 md:py-20 bg-ft-pink">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">AI-powered intelligence platform</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Thurro Answers -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                        <div class="mb-6 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-black text-center">Thurro Answers</h3>
+                        <p class="text-black text-lg text-center mb-6">Ask questions, get instant data-backed responses from millions of documents</p>
+                        <div class="mt-auto text-center">
+                            <a href="answers.html" class="inline-block px-6 py-3 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Learn more</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Thurro AltData -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                        <div class="mb-6 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <rect x="7" y="8" width="10" height="8" rx="1" ry="1"></rect>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-black text-center">Thurro AltData</h3>
+                        <p class="text-black text-lg text-center mb-6">Pre-built visualizations from 800+ alternative data sources</p>
+                        <div class="mt-auto text-center">
+                            <a href="altdata.html" class="inline-block px-6 py-3 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Learn more</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Thurro NowCast -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                        <div class="mb-6 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-black text-center">Thurro NowCast</h3>
+                        <p class="text-black text-lg text-center mb-6">Revenue forecasts 15-90 days before official reporting with 70% accuracy</p>
+                        <div class="mt-auto text-center">
+                            <a href="nowcast.html" class="inline-block px-6 py-3 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Services -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                    <!-- Institutional Intelligence -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                        <h3 class="text-2xl font-bold mb-4 text-black">Institutional Intelligence</h3>
+                        <p class="text-black text-lg">Add your own data to get context-aware AI responses that integrate seamlessly with your existing research processes</p>
+                    </div>
+                    
+                    <!-- Custom Intelligence -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                        <h3 class="text-2xl font-bold mb-4 text-black">Custom Intelligence</h3>
+                        <p class="text-black text-lg">Dashboards, API feeds, and analyst-grade reports tailored to your specific investment strategy and portfolio needs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line-divider-container"></div>
+
+        <!-- Solutions for Investment Management Section -->
+        <section class="py-16 md:py-20 bg-ft-pink">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Solutions for investment management</h2>
+                </div>
+                
+                <!-- Solution Categories -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button id="endowment-btn" class="solution-tab px-6 py-3 bg-black text-white rounded-lg font-medium transition-all duration-200 text-base">Endowment funds</button>
+                    <button id="public-market-btn" class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Public market fund managers</button>
+                    <button id="private-equity-btn" class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Private equity firms</button>
+                    <button id="venture-capital-btn" class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Venture Capital</button>
+                </div>
+                
+                <!-- Solution Content -->
+                <div class="bg-ft-cream rounded-lg p-8 md:p-10 shadow-sm">
+                    <!-- Endowment Funds Content -->
+                    <div id="endowment-content" class="solution-content active">
+                        <h3 class="text-2xl font-bold mb-6">Endowment funds</h3>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Predict macro shifts & sector risks with alternative data tracking 800+ unconventional indicators</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Get early warnings on inflation & slowdowns via NowCast models</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Build conviction with custom analysis of district-level trends, real estate, or education indicators</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Strengthen ESG analytics using cross-referenced sustainability data</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Monitor and assess risks across diverse holdings through operational metrics</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Public Market Fund Managers Content -->
+                    <div id="public-market-content" class="solution-content">
+                        <h3 class="text-2xl font-bold mb-6">Public market fund managers</h3>
+                        <p class="text-lg font-semibold mb-4">Alpha lives in the details—and the timing</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Gain unparalleled informational advantage in Indian equities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Eliminate research drudgery with AI-powered, cited insights</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Pre-empt earnings surprises & beat consensus by weeks</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Access real-time data, predictive NowCasts, and alternate data</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Construct high-performing portfolios & execute timely trades</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Private Equity Firms Content -->
+                    <div id="private-equity-content" class="solution-content">
+                        <h3 class="text-2xl font-bold mb-6">Private equity firms</h3>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Unmatched depth for private investment identification & monitoring</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>360-degree view of targets via vast alternate data & registrations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Conduct deeper due diligence and uncover hidden value</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Identify demand signals and gain deal sourcing edge</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Monitor portfolio companies with real-time operational insights</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Exit strategy optimization based on market trends and valuation metrics</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Venture Capital Content -->
+                    <div id="venture-capital-content" class="solution-content">
+                        <h3 class="text-2xl font-bold mb-6">Venture Capital</h3>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Navigate India's startup ecosystem with clarity</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Identify promising ventures & assess true market fit</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Spot disruption and emerging trends before they go public</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Access real-world indicators: app engagement, hiring velocity, pricing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Gain an edge in competitive intelligence monitoring</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Comprehensive economic environment analysis for opportunity mapping</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line-divider-container"></div>
+
+        <!-- CTA Section -->
+        <section class="py-16 md:py-20 bg-ft-pink">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">Ready to transform your investment intelligence?</h2>
+                    <p class="text-xl mb-10">Choose your path:</p>
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="demo.html" class="px-10 py-4 rounded-md bg-black text-ft-cream font-medium hover:bg-gray-800 transition-all duration-200">Book a demo</a>
+                        <a href="https://ai.thurro.com" class="px-10 py-4 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Start free trial</a>
+                        <a href="mailto:contact@thurro.com" class="px-10 py-4 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Contact sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Placeholder sections for other solutions categories -->
+        <section id="financial-services" class="py-16 md:py-20 bg-ft-pink hidden">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Financial services</h2>
+                    <p class="text-xl mb-8">Content for financial services solutions will be added here.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="consultants-corporate" class="py-16 md:py-20 bg-ft-pink hidden">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Consultants and corporate</h2>
+                    <p class="text-xl mb-8">Content for consultants and corporate solutions will be added here.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="government-regulatory" class="py-16 md:py-20 bg-ft-pink hidden">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Government and regulatory bodies</h2>
+                    <p class="text-xl mb-8">Content for government and regulatory solutions will be added here.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-300 py-6">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <!-- Top Row: Logo, Made with Love, Social Icons -->
+            <div class="flex flex-col md:flex-row items-center justify-between mb-6">
+                <!-- Left: Logo -->
+                <div class="mb-6 md:mb-0">
+                    <img src="./asserts/Logo/Thurro_logo_bg_white.png" alt="Thurro Logo" class="h-8">
+                </div>
+
+                <!-- Right: Social Icons -->
+                <div class="flex items-center space-x-4">
+                    <a href="linkedin.html" class="text-gray-400 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="youtube.html" class="text-gray-400 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                            <path d="M10 9l5 3-5 3V9z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://x.com" class="text-gray-400 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 1200 1227"
+                            fill="currentColor">
+                            <path
+                                d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Horizontal Line -->
+            <hr class="border-gray-800 mb-6">
+
+            <!-- Bottom Row: Copyright and Legal Links -->
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <!-- Left: Copyright -->
+                <div class="mb-4 md:mb-0">
+                    <p class="text-xs text-gray-500">
+                        Copyright © 2025 ADQVEST CAPITAL ADVISORS PVT LTD.
+                    </p>
+                </div>
+
+                <!-- Right: Legal Links -->
+                <div class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
+                    <a href="https://thurro.com/privacy-policy/"
+                        class="text-xs text-gray-500 hover:text-white transition-colors">
+                        PRIVACY POLICY
+                    </a>
+                    <a href="https://thurro.com/terms-conditions/"
+                        class="text-xs text-gray-500 hover:text-white transition-colors">
+                        TERMS AND CONDITIONS
+                    </a>
+                    <a href="https://thurro.com/contact-us/"
+                        class="text-xs text-gray-500 hover:text-white transition-colors">
+                        CONTACT
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to create a clean line divider
+            function createLineDivider() {
+                const containers = document.querySelectorAll('.line-divider-container');
+                containers.forEach(container => {
+                    const divider = document.createElement('div');
+                    divider.className = 'line-divider';
+                    const inner = document.createElement('div');
+                    inner.className = 'line-divider-inner';
+                    divider.appendChild(inner);
+                    container.appendChild(divider);
+                });
+            }
+
+            // Initialize line dividers
+            createLineDivider();
+
+            // Desktop dropdown functionality for Products
+            const productsDropdownBtn = document.getElementById('products-dropdown-btn');
+            const productsDropdown = document.getElementById('products-dropdown');
+            const productsChevron = document.getElementById('dropdown-chevron');
+            
+            if (productsDropdownBtn && productsDropdown) {
+                productsDropdownBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Toggle dropdown visibility
+                    if (productsDropdown.classList.contains('opacity-0')) {
+                        productsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
+                        productsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                        productsChevron.classList.add('rotate-180');
+                    } else {
+                        productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                        productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        productsChevron.classList.remove('rotate-180');
+                    }
+                });
+            }
+            
+            // Desktop dropdown functionality for Solutions
+            const solutionsDropdownBtn = document.getElementById('solutions-dropdown-btn');
+            const solutionsDropdown = document.getElementById('solutions-dropdown');
+            const solutionsChevron = document.getElementById('solutions-dropdown-chevron');
+            
+            if (solutionsDropdownBtn && solutionsDropdown) {
+                solutionsDropdownBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Toggle dropdown visibility
+                    if (solutionsDropdown.classList.contains('opacity-0')) {
+                        solutionsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
+                        solutionsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                        solutionsChevron.classList.add('rotate-180');
+                    } else {
+                        solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                        solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        solutionsChevron.classList.remove('rotate-180');
+                    }
+                });
+            }
+            
+            // Close dropdowns when clicking elsewhere
+            document.addEventListener('click', function(e) {
+                // Close products dropdown
+                if (productsDropdownBtn && productsDropdown && !productsDropdownBtn.contains(e.target) && !productsDropdown.contains(e.target)) {
+                    productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                    productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    productsChevron.classList.remove('rotate-180');
+                }
+                
+                // Close solutions dropdown
+                if (solutionsDropdownBtn && solutionsDropdown && !solutionsDropdownBtn.contains(e.target) && !solutionsDropdown.contains(e.target)) {
+                    solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                    solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    solutionsChevron.classList.remove('rotate-180');
+                }
+            });
+            
+            // Mobile menu functionality
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && closeMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.remove('-translate-x-full');
+                    document.body.classList.add('overflow-hidden');
+                });
+                
+                closeMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.add('-translate-x-full');
+                    document.body.classList.remove('overflow-hidden');
+                });
+            }
+            
+            // Mobile products dropdown
+            const mobileProductsBtn = document.getElementById('mobile-products-btn');
+            const mobileProductsMenu = document.getElementById('mobile-products-menu');
+            const mobileProductsChevron = document.getElementById('mobile-products-chevron');
+            
+            if (mobileProductsBtn && mobileProductsMenu) {
+                mobileProductsBtn.addEventListener('click', function() {
+                    mobileProductsMenu.classList.toggle('hidden');
+                    mobileProductsChevron.classList.toggle('rotate-180');
+                });
+            }
+            
+            // Mobile solutions dropdown
+            const mobileSolutionsBtn = document.getElementById('mobile-solutions-btn');
+            const mobileSolutionsMenu = document.getElementById('mobile-solutions-menu');
+            const mobileSolutionsChevron = document.getElementById('mobile-solutions-chevron');
+            
+            if (mobileSolutionsBtn && mobileSolutionsMenu) {
+                mobileSolutionsBtn.addEventListener('click', function() {
+                    mobileSolutionsMenu.classList.toggle('hidden');
+                    mobileSolutionsChevron.classList.toggle('rotate-180');
+                });
+            }
+            
+            // Header shadow on scroll
+            window.addEventListener('scroll', function() {
+                const header = document.getElementById('header');
+                if (window.scrollY > 10) {
+                    header.classList.add('shadow-md');
+                } else {
+                    header.classList.remove('shadow-md');
+                }
+            });
+
+            // Solutions tab functionality
+            const solutionTabs = document.querySelectorAll('.solution-tab');
+            const solutionContents = document.querySelectorAll('.solution-content');
+            
+            solutionTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    solutionTabs.forEach(t => {
+                        t.classList.remove('bg-black', 'text-white');
+                        t.classList.add('border', 'border-black', 'border-opacity-20');
+                    });
+                    
+                    // Add active class to clicked tab
+                    tab.classList.add('bg-black', 'text-white');
+                    tab.classList.remove('border', 'border-black', 'border-opacity-20');
+                    
+                    // Hide all content
+                    solutionContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // Show corresponding content
+                    const targetId = tab.id.replace('-btn', '-content');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+
+            // Solution category navigation
+            const solutionLinks = document.querySelectorAll('a[href^="#"]');
+            solutionLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        e.preventDefault();
+                        
+                        // Hide all solution sections
+                        const allSections = document.querySelectorAll('section[id]');
+                        allSections.forEach(section => {
+                            if (section.id.includes('management') || 
+                                section.id.includes('services') || 
+                                section.id.includes('corporate') || 
+                                section.id.includes('regulatory')) {
+                                section.classList.add('hidden');
+                            }
+                        });
+                        
+                        // Show target section
+                        targetSection.classList.remove('hidden');
+                        
+                        // Smooth scroll to top
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (mobileMenu && !mobileMenu.classList.contains('-translate-x-full')) {
+                            mobileMenu.classList.add('-translate-x-full');
+                            document.body.classList.remove('overflow-hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
