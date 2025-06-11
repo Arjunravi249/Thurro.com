@@ -527,7 +527,7 @@
     </div>
 </section>
 
-    <div class="line-divider-container"></div>
+    
 
     <!-- Workflow Section -->
     <section class="py-16 md:py-20 bg-ft-pink">
@@ -634,8 +634,8 @@
         </div>
     </section>
 
-    <!-- Line Divider -->
-    <div class="line-divider-container"></div>
+    
+    
 
     <!-- Data Intelligence Hub Section -->
     <section class="py-16 md:py-24 bg-ft-pink">
@@ -801,7 +801,7 @@
         </div>
     </section>
 
-    <div class="line-divider-container"></div>
+    
 
     <!-- Products Section -->
     <!-- Updated Products Section with New Copy -->
@@ -939,8 +939,8 @@
         </div>
     </section>
 
-    <!-- Line Divider -->
-    <div class="line-divider-container"></div>
+    
+    
 
     <!-- Customize Section -->
     <section class="py-12 md:py-16 bg-ft-pink">
@@ -1002,7 +1002,7 @@
         </div>
     </section>
 
-    <div class="line-divider-container"></div>
+    
 
     <!-- Solutions Section -->
     <section id="solutions" class="py-16 md:py-20 bg-ft-pink">
@@ -1040,8 +1040,8 @@
         </div>
     </section>
 
-    <!-- Line Divider -->
-    <div class="line-divider-container"></div>
+    
+    
 
     <!-- Testimonials Section with Tailwind - MODIFIED TO REMOVE COLORS AND BORDERS -->
     <section class="pt-12 pb-16 md:pt-16 md:pb-20 relative">
@@ -1142,8 +1142,8 @@
         </div>
     </section>
 
-    <!-- Line Divider -->
-    <div class="line-divider-container"></div>
+    
+    
 
     <!-- Newsletter Section - Improved without colors or borders -->
     <section id="resources" class="py-12 md:py-16">
@@ -1173,8 +1173,8 @@
         </div>
     </section>
 
-    <!-- Line Divider -->
-    <div class="line-divider-container"></div>
+    
+    
 
     <!-- About Us Section - KEPT BASIC STRUCTURE BUT REMOVED BG COLOR -->
     <section id="about" class="py-16 md:py-20">
@@ -1282,21 +1282,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Function to create a clean line divider
-            function createLineDivider() {
-                const containers = document.querySelectorAll('.line-divider-container');
-                containers.forEach(container => {
-                    const divider = document.createElement('div');
-                    divider.className = 'line-divider';
-                    const inner = document.createElement('div');
-                    inner.className = 'line-divider-inner';
-                    divider.appendChild(inner);
-                    container.appendChild(divider);
-                });
-            }
-
-            // Initialize line dividers
-            createLineDivider();
 
             // Mobile menu functionality
             const mobileMenuButton = document.getElementById('mobile-menu-button');

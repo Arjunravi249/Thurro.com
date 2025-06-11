@@ -433,8 +433,8 @@
     </div>
 </section>
 
-<!-- Line Divider -->
-<div class="line-divider-container"></div>
+
+
 
 <!-- Core Services Section -->
 <section class="py-16 md:py-20 bg-ft-pink">
@@ -487,8 +487,8 @@
     </div>
 </section>
 
-<!-- Line Divider -->
-<div class="line-divider-container"></div>
+
+
 
 <!-- Success Story Section -->
 <section class="py-16 md:py-20 bg-ft-pink">
@@ -527,8 +527,8 @@
     </div>
 </section>
 
-<!-- Line Divider -->
-<div class="line-divider-container"></div>
+
+
 
 <!-- Customisation Possibilities Section -->
 <section class="py-16 md:py-20 bg-ft-pink">
@@ -1110,22 +1110,6 @@
                 header.classList.remove('shadow-md');
             }
         });
-
-        // Function to create a clean line divider
-        function createLineDivider() {
-            const containers = document.querySelectorAll('.line-divider-container');
-            containers.forEach(container => {
-                const divider = document.createElement('div');
-                divider.className = 'line-divider';
-                const inner = document.createElement('div');
-                inner.className = 'line-divider-inner';
-                divider.appendChild(inner);
-                container.appendChild(divider);
-            });
-        }
-
-        // Initialize line dividers
-        createLineDivider();
 
         // Mobile menu functionality
         if (mobileMenuButton && closeMenuButton && mobileMenu) {

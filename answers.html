@@ -405,8 +405,8 @@
     </div>
 </section>
 
-<!-- Line Divider -->
-<div class="line-divider-container"></div>
+
+
 
 <!-- Research Edge Section -->
 <section class="py-16 md:py-20 bg-ft-pink">
@@ -490,8 +490,8 @@
     </div>
 </section>
 
-<!-- Line Divider -->
-<div class="line-divider-container"></div>
+
+
 
 <!-- Key Features Section with Button Navigation -->
 <section class="py-16 md:py-20 bg-ft-pink">
@@ -651,8 +651,8 @@
     </div>
 </section>
 
-<!-- Line Divider -->
-<div class="line-divider-container"></div>
+
+
 
 <!-- FAQ Section -->
 <section class="py-16 md:py-20 bg-ft-pink">
@@ -754,8 +754,8 @@
     </div>
 </section>
 
-<!-- Line Divider -->
-<div class="line-divider-container"></div>
+
+
 
 <!-- CTA Section -->
 <section class="py-16 md:py-20 bg-black text-ft-cream text-center">
@@ -900,7 +900,7 @@
                     solutionsChevron.classList.remove('rotate-180');
                 }
             });
-            
+
         // Mobile menu functionality
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const closeMenuButton = document.getElementById('close-menu-button');
@@ -957,22 +957,7 @@
 
     // JavaScript for the feature tabs functionality
     document.addEventListener('DOMContentLoaded', function() {
-        // Function to create a clean line divider
-        function createLineDivider() {
-            const containers = document.querySelectorAll('.line-divider-container');
-            containers.forEach(container => {
-                const divider = document.createElement('div');
-                divider.className = 'line-divider';
-                const inner = document.createElement('div');
-                inner.className = 'line-divider-inner';
-                divider.appendChild(inner);
-                container.appendChild(divider);
-            });
-        }
-
-        // Initialize line dividers
-        createLineDivider();
-
+        
         // Feature tabs functionality
         const featureBtns = document.querySelectorAll('.feature-btn');
         const featureContents = document.querySelectorAll('.feature-content');
