@@ -152,6 +152,50 @@
         .faq-item.active .faq-answer {
             max-height: 500px;
         }
+
+        /* Solution tabs styles */
+    .solution-tab {
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .solution-tab.active {
+        background-color: #000;
+        color: #FFF1E5;
+    }
+
+    .solution-tab:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%) scale(0);
+        width: 30%;
+        height: 3px;
+        background-color: #000;
+        transition: transform 0.3s ease;
+    }
+
+    .solution-tab.active:after {
+        transform: translateX(-50%) scale(1);
+    }
+
+    .solution-content {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.5s ease;
+        display: none;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .solution-content.active {
+        opacity: 1;
+        transform: translateY(0);
+        display: block;
+        height: auto;
+        overflow: visible;
+    }
     </style>
 </head>
 
@@ -413,16 +457,13 @@
         </div>
     </section>
 
-    <!-- Key Benefits Section -->
+    <!-- Benefits Section -->
     <section class="py-16 md:py-20 bg-ft-pink">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                    Key Benefits
+                    Benefits
                 </h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                    Gain crucial insights before the market with our advanced predictive analytics
-                </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -478,9 +519,6 @@
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">Exceptional Accuracy</h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                    Approximately 70% of NowCast outputs fall within +/-2% of actual results
-                </p>
             </div>
             
             <div class="max-w-3xl mx-auto bg-ft-pink rounded-lg p-8 shadow-sm border border-black border-opacity-10">
@@ -532,82 +570,199 @@
         </div>
     </section>
 
-    <!-- Powerful Features Section -->
-    <section class="py-16 md:py-20 bg-ft-pink">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                    Powerful Features
-                </h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                    Advanced technology that delivers reliable predictions when you need them most
-                </p>
+    <!-- Key Features Section with Button Navigation -->
+<section class="py-16 md:py-20 bg-ft-pink">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Key features
+            </h2>
+        </div>
+        
+        <!-- Feature Categories -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button id="coverage-btn" class="solution-tab px-6 py-3 bg-black text-white rounded-lg font-medium transition-all duration-200 text-base">Coverage</button>
+            <button id="metrics-btn" class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Metrics</button>
+            <button id="models-btn" class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Models</button>
+            <button id="learning-btn" class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Learning</button>
+        </div>
+        
+        <!-- Feature Content -->
+        <div class="bg-ft-cream rounded-lg p-8 md:p-10 shadow-sm">
+            <!-- Coverage Content -->
+            <div id="coverage-content" class="solution-content active">
+                <h3 class="text-2xl font-bold mb-6">Coverage</h3>
+                <p class="text-lg mb-6">Our current NowCast covers revenues for 17 companies and food and beverage inflation, with rapid expansion planned to 50 companies and a wider range of economic indicators.</p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>17 companies currently with rapid expansion to 50+</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Spanning multiple sectors including retail, food & beverage, banking, and automotive</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Macroeconomic indicators including food & beverage inflation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Custom coverage available for enterprise clients</span>
+                    </li>
+                </ul>
+                
+                <div class="bg-ft-pink rounded-lg p-6 border border-black border-opacity-5">
+                    <p class="text-lg font-medium mb-2">Companies Currently Covered Include:</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <span>Jubilant FoodWorks</span>
+                        <span>Asian Paints</span>
+                        <span>Titan Company</span>
+                        <span>Westlife Foodworld</span>
+                        <span>Trent</span>
+                        <span>HDFC Bank</span>
+                    </div>
+                </div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Coverage -->
-                <div class="feature-card bg-ft-cream rounded-lg overflow-hidden shadow-sm border border-black border-opacity-10">
-                    <div class="p-8">
-                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-center">Coverage</h3>
-                        <p class="text-gray-700 text-center">Our current NowCast covers revenues for 17 companies and food and beverage inflation, with rapid expansion planned to 50 companies and a wider range of economic indicators</p>
-                    </div>
-                </div>
+            <!-- Metrics Content -->
+            <div id="metrics-content" class="solution-content">
+                <h3 class="text-2xl font-bold mb-6">Metrics</h3>
+                <p class="text-lg mb-6">We pinpoint unique datasets from alternative sources that capture the key operating metrics fundamental to accurate NowCasts of company performance.</p>
                 
-                <!-- Metrics -->
-                <div class="feature-card bg-ft-cream rounded-lg overflow-hidden shadow-sm border border-black border-opacity-10">
-                    <div class="p-8">
-                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-center">Metrics</h3>
-                        <p class="text-gray-700 text-center">We pinpoint unique datasets from alternative sources that capture the key operating metrics fundamental to accurate NowCasts</p>
-                    </div>
-                </div>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Real-time foot traffic analysis using anonymized location data</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>App download statistics and digital engagement metrics</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Product pricing trends and promotional activity monitoring</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Employment data and hiring patterns across regions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Social media sentiment and brand engagement analysis</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Models Content -->
+            <div id="models-content" class="solution-content">
+                <h3 class="text-2xl font-bold mb-6">Models</h3>
+                <p class="text-lg mb-6">Custom econometric models enable Thurro to identify the most impactful input variables and craft best-fit equations for close estimates of NowCast variables.</p>
                 
-                <!-- Models -->
-                <div class="feature-card bg-ft-cream rounded-lg overflow-hidden shadow-sm border border-black border-opacity-10">
-                    <div class="p-8">
-                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-center">Models</h3>
-                        <p class="text-gray-700 text-center">Custom econometric models enable Thurro to identify the most impactful input variables and craft best-fit equations for close estimates of NowCast variables</p>
-                    </div>
-                </div>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Company-specific models tailored to each business's unique drivers</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Multi-variable regression with advanced statistical validation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Seasonality adjustments and anomaly detection capabilities</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Dynamic weighting of input variables based on historical accuracy</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Confidence intervals provided with all predictions</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Learning Content -->
+            <div id="learning-content" class="solution-content">
+                <h3 class="text-2xl font-bold mb-6">Learning</h3>
+                <p class="text-lg mb-6">Our models are continuously refined through both machine and human learning to ensure maximum accuracy and relevance.</p>
                 
-                <!-- Learning -->
-                <div class="feature-card bg-ft-cream rounded-lg overflow-hidden shadow-sm border border-black border-opacity-10 md:col-span-3">
-                    <div class="p-8">
-                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-center">Learning</h3>
-                        <p class="text-gray-700 text-center max-w-3xl mx-auto">Our models are continuously refined through both machine and human learning. The machine automatically adjusts coefficients as new data arrives, while human experts frequently review the overall model to ensure optimal performance</p>
-                    </div>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Automatic coefficient adjustments as new data arrives</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Quarterly model reviews by financial and data science experts</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Performance validation against actual company reports</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Continuous exploration of new data sources and indicators</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Model improvement history tracked and transparent to clients</span>
+                    </li>
+                </ul>
+                
+                <div class="bg-ft-pink rounded-lg p-6 border border-black border-opacity-5">
+                    <p class="text-lg font-medium mb-2">Accuracy Improvements:</p>
+                    <p>Our models show continuous improvement with each reporting cycle. Models with 12+ months of history achieve 70% of predictions within +/-2% of actual results.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Current Coverage Section -->
     <section class="py-16 md:py-20 bg-ft-cream">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">Current Coverage</h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                    Thurro NowCast currently covers these companies and indicators, with expansion to 50+ entities planned
-                </p>
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
@@ -689,7 +844,6 @@
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Everything you need to know about Thurro NowCast</p>
             </div>
             
             <div class="max-w-3xl mx-auto">
@@ -1020,5 +1174,36 @@
             });
         });
     </script>
+    <!-- Add this JavaScript to the end of your file or in a script tag before </body> -->
+<script>
+    // Solutions tab functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const solutionTabs = document.querySelectorAll('.solution-tab');
+        const solutionContents = document.querySelectorAll('.solution-content');
+        
+        solutionTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                solutionTabs.forEach(t => {
+                    t.classList.remove('bg-black', 'text-white');
+                    t.classList.add('border', 'border-black', 'border-opacity-20');
+                });
+                
+                // Add active class to clicked tab
+                tab.classList.add('bg-black', 'text-white');
+                tab.classList.remove('border', 'border-black', 'border-opacity-20');
+                
+                // Hide all content
+                solutionContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show corresponding content
+                const targetId = tab.id.replace('-btn', '-content');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    });
+</script>
 </body>
 </html>

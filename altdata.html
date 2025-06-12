@@ -547,73 +547,184 @@
         </div>
     </section>
 
-    <!-- Key Features Section -->
-    <section class="py-16 md:py-20 bg-ft-pink">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                    Key features
-                </h2>
+    <!-- Key Features Section with Button Navigation -->
+<section class="py-16 md:py-20 bg-ft-pink">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Key features</h2>
+        
+        <!-- Feature Navigation Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button id="search-btn" class="feature-btn px-6 py-3 bg-black text-white rounded-lg font-medium transition-all duration-200 text-base">Search</button>
+            <button id="watchlists-btn" class="feature-btn px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Watchlists</button>
+            <button id="boards-btn" class="feature-btn px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Boards</button>
+            <button id="reports-btn" class="feature-btn px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Reports</button>
+            <button id="analytics-btn" class="feature-btn px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Analytics</button>
+        </div>
+        
+        <!-- Feature Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left: Feature Description -->
+            <div class="feature-content" id="search-content">
+                <h3 class="text-2xl font-bold mb-6">Search</h3>
+                <p class="text-lg mb-6">Instantly find relevant metrics, companies, or sectors with powerful filtering capabilities to zero in on what matters most to your analysis.</p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Natural language search capabilities</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Advanced filtering by sector, time period, and data type</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Smart recommendations based on search history</span>
+                    </li>
+                </ul>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <!-- Search -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 flex flex-col">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            <div class="feature-content hidden" id="watchlists-content">
+                <h3 class="text-2xl font-bold mb-6">Watchlists</h3>
+                <p class="text-lg mb-6">Create personalized monitoring dashboards by pinning specific charts to track key business metrics that matter most to your analysis or strategy.</p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Search</h3>
-                    <p class="text-gray-700 text-center">Instantly find relevant metrics, companies, or sectors with powerful filtering capabilities to zero in on what matters most.</p>
+                        <span>Customizable dashboards for quick metric monitoring</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Real-time updates when new data becomes available</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Threshold-based alerts for critical changes</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="feature-content hidden" id="boards-content">
+                <h3 class="text-2xl font-bold mb-6">Boards</h3>
+                <p class="text-lg mb-6">Build and organize your own collections of metrics for tailored business and market segment monitoring across various datasets and visualization types.</p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Flexible arrangement of multiple visualizations</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Team sharing and collaborative editing</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Interactive annotations and comments</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="feature-content hidden" id="reports-content">
+                <h3 class="text-2xl font-bold mb-6">Reports</h3>
+                <p class="text-lg mb-6">Generate detailed reports with downloadable charts and data points in multiple formats for further analysis, presentations, or stakeholder communications.</p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Export in CSV, PDF, and PNG formats</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Scheduled report generation and delivery</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Custom templates with your branding</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="feature-content hidden" id="analytics-content">
+                <h3 class="text-2xl font-bold mb-6">Analytics</h3>
+                <p class="text-lg mb-6">Built-in advanced analytics allow you to leverage trend analysis and chart merge capabilities directly within the platform for comprehensive understanding and deeper insights.</p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Automated trend detection and anomaly highlighting</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Comparative analysis across multiple metrics</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Advanced visualization options including correlations and heatmaps</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Right: Feature Videos/Images -->
+            <div class="rounded-lg shadow-lg border border-black border-opacity-10 overflow-hidden">
+                <!-- Search Feature Image -->
+                <div class="feature-image" id="search-image">
+                    <img src="./asserts/Feature/search-feature.jpg" alt="AltData Search Feature" class="w-full h-auto">
                 </div>
                 
-                <!-- Watchlists -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 flex flex-col">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Watchlists</h3>
-                    <p class="text-gray-700 text-center">Create personalised monitoring dashboards by pinning specific charts to track key business metrics.</p>
+                <!-- Watchlists Feature Image -->
+                <div class="feature-image hidden" id="watchlists-image">
+                    <img src="./asserts/Feature/watchlists-feature.jpg" alt="AltData Watchlists Feature" class="w-full h-auto">
                 </div>
                 
-                <!-- Boards -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 flex flex-col">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Boards</h3>
-                    <p class="text-gray-700 text-center">Build and organise your own collections of metrics for tailored business and market segment monitoring.</p>
+                <!-- Boards Feature Image -->
+                <div class="feature-image hidden" id="boards-image">
+                    <img src="./asserts/Feature/boards-feature.jpg" alt="AltData Boards Feature" class="w-full h-auto">
                 </div>
                 
-                <!-- Reports -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 flex flex-col">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Reports</h3>
-                    <p class="text-gray-700 text-center">Generate detailed reports with downloadable charts and data points in multiple formats for further analysis.</p>
+                <!-- Reports Feature Image -->
+                <div class="feature-image hidden" id="reports-image">
+                    <img src="./asserts/Feature/reports-feature.jpg" alt="AltData Reports Feature" class="w-full h-auto">
                 </div>
                 
-                <!-- Analytics -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 flex flex-col">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Analytics</h3>
-                    <p class="text-gray-700 text-center">Built-in advanced analytics allow you to leverage trend analysis and chart merge capabilities directly within the platform for comprehensive understanding.</p>
+                <!-- Analytics Feature Image -->
+                <div class="feature-image hidden" id="analytics-image">
+                    <img src="./asserts/Feature/analytics-feature.jpg" alt="AltData Analytics Feature" class="w-full h-auto">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
    <!-- Analysis Types Section -->
     <section class="py-16 md:py-20 bg-ft-pink">
@@ -622,9 +733,6 @@
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">
                     Types of analyses supported
                 </h2>
-                <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-                    Thurro AltData provides various analytical frameworks to help you gain deeper insights from alternative data sources
-                </p>
             </div>
             
             <!-- Analysis Grid -->
@@ -819,7 +927,6 @@
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Everything you need to know about Thurro AltData</p>
             </div>
             
             <div class="max-w-3xl mx-auto">
@@ -1167,5 +1274,37 @@
             });
         });
     </script>
+    <!-- Add this JavaScript to the end of your file or in a script tag before </body> -->
+<script>
+    // Feature tabs functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const featureBtns = document.querySelectorAll('.feature-btn');
+        const featureContents = document.querySelectorAll('.feature-content');
+        const featureImages = document.querySelectorAll('.feature-image');
+        
+        featureBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Reset all buttons
+                featureBtns.forEach(b => {
+                    b.classList.remove('bg-black', 'text-white');
+                    b.classList.add('border', 'border-black', 'border-opacity-20');
+                });
+                
+                // Activate clicked button
+                btn.classList.add('bg-black', 'text-white');
+                btn.classList.remove('border', 'border-black', 'border-opacity-20');
+                
+                // Hide all content and images
+                featureContents.forEach(content => content.classList.add('hidden'));
+                featureImages.forEach(image => image.classList.add('hidden'));
+                
+                // Show relevant content and image
+                const featureId = btn.id.replace('-btn', '');
+                document.getElementById(`${featureId}-content`).classList.remove('hidden');
+                document.getElementById(`${featureId}-image`).classList.remove('hidden');
+            });
+        });
+    });
+</script>
 </body>
 </html>
