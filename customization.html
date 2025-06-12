@@ -176,6 +176,29 @@
                 grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
             }
         }
+
+        /* FAQ item styling */
+        .faq-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-toggle {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
     </style>
 </head>
 
@@ -244,7 +267,7 @@
                                 </a>
                                 
                                 <!-- Customization -->
-                                <a href="customization.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5">
+                                <a href="customization.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5 bg-ft-pink-darker">
                                     <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
                                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M12 20h9"></path>
@@ -388,7 +411,7 @@
                             <a href="answers.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro Answers</a>
                             <a href="altdata.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro AltData</a>
                             <a href="nowcast.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro NowCast</a>
-                            <a href="customization.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Customization</a>
+                            <a href="customization.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-30 transition-colors">Customization</a>
                             <a href="data.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Institutional intelligence</a>
                         </div>
                     </div>
@@ -499,9 +522,8 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             
             <!-- Card 1 -->
-            <div class="bg-ft-cream rounded-xl shadow-md overflow-hidden border border-black border-opacity-20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-2.5 bg-black rounded-t-xl"></div>
-                <div class="px-4 py-3 border-b border-black border-opacity-20">
+            <div class="bg-ft-cream rounded-xl shadow-lg overflow-hidden border-t-3 border-black transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <div class="px-4 py-3 border-t rounded-t-xl border-black">
                     <h3 class="font-semibold text-black/90 text-sm">Immediate AI responses</h3>
                 </div>
                 <div class="p-3">
@@ -510,9 +532,9 @@
             </div>
             
             <!-- Card 2 -->
-            <div class="bg-ft-cream rounded-xl shadow-md overflow-hidden border border-black border-opacity-20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-2.5 bg-black rounded-t-xl"></div>
-                <div class="px-4 py-3 border-b border-black border-opacity-20">
+            <div class="bg-ft-cream rounded-xl shadow-lg overflow-hidden border-t-3 border-black transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                
+                <div class="px-4 py-3 border-t rounded-t-xl border-black">
                     <h3 class="font-semibold text-black/90 text-sm">Customization of reports</h3>
                 </div>
                 <div class="p-3">
@@ -521,9 +543,9 @@
             </div>
             
             <!-- Card 3 -->
-            <div class="bg-ft-cream rounded-xl shadow-md overflow-hidden border border-black border-opacity-20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-2.5 bg-black rounded-t-xl"></div>
-                <div class="px-4 py-3 border-b border-black border-opacity-20">
+            <div class="bg-ft-cream rounded-xl shadow-lg overflow-hidden border-t-3 border-black transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                
+                <div class="px-4 py-3 border-t rounded-t-xl border-black">
                     <h3 class="font-semibold text-black/90 text-sm">White labelling</h3>
                 </div>
                 <div class="p-3">
@@ -532,9 +554,9 @@
             </div>
             
             <!-- Card 4 -->
-            <div class="bg-ft-cream rounded-xl shadow-md overflow-hidden border border-black border-opacity-20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-2.5 bg-black rounded-t-xl"></div>
-                <div class="px-4 py-3 border-b border-black border-opacity-20">
+            <div class="bg-ft-cream rounded-xl shadow-lg overflow-hidden border-t-3 border-black transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                
+                <div class="px-4 py-3 border-t rounded-t-xl border-black">
                     <h3 class="font-semibold text-black/90 text-sm">Proprietary data bundles</h3>
                 </div>
                 <div class="p-3">
@@ -543,9 +565,9 @@
             </div>
             
             <!-- Card 5 -->
-            <div class="bg-ft-cream rounded-xl shadow-md overflow-hidden border border-black border-opacity-20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-2.5 bg-black rounded-t-xl"></div>
-                <div class="px-4 py-3 border-b border-black border-opacity-20">
+            <div class="bg-ft-cream rounded-xl shadow-lg overflow-hidden border-t-3 border-black transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                
+                <div class="px-4 py-3 border-t rounded-t-xl border-black">
                     <h3 class="font-semibold text-black/90 text-sm">Adding media sources</h3>
                 </div>
                 <div class="p-3">
@@ -554,9 +576,9 @@
             </div>
             
             <!-- Card 6 -->
-            <div class="bg-ft-cream rounded-xl shadow-md overflow-hidden border border-black border-opacity-20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-2.5 bg-black rounded-t-xl"></div>
-                <div class="px-4 py-3 border-b border-black border-opacity-20">
+            <div class="bg-ft-cream rounded-xl shadow-lg overflow-hidden border-t-3 border-black transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                
+                <div class="px-4 py-3 border-t rounded-t-xl border-black">
                     <h3 class="font-semibold text-black/90 text-sm">Thurro AI integration</h3>
                 </div>
                 <div class="p-3">
@@ -565,9 +587,9 @@
             </div>
             
             <!-- Card 7 -->
-            <div class="bg-ft-cream rounded-xl shadow-md overflow-hidden border border-black border-opacity-20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-2.5 bg-black rounded-t-xl"></div>
-                <div class="px-4 py-3 border-b border-black border-opacity-20">
+            <div class="bg-ft-cream rounded-xl shadow-lg overflow-hidden border-t-3 border-black transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                
+                <div class="px-4 py-3 border-t rounded-t-xl border-black">
                     <h3 class="font-semibold text-black/90 text-sm">Custom reports</h3>
                 </div>
                 <div class="p-3">
@@ -576,9 +598,9 @@
             </div>
             
             <!-- Card 8 -->
-            <div class="bg-ft-cream rounded-xl shadow-md overflow-hidden border border-black border-opacity-20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-2.5 bg-black rounded-t-xl"></div>
-                <div class="px-4 py-3 border-b border-black border-opacity-20">
+            <div class="bg-ft-cream rounded-xl shadow-lg overflow-hidden border-t-3 border-black transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                
+                <div class="px-4 py-3 border-t rounded-t-xl border-black">
                     <h3 class="font-semibold text-black/90 text-sm">NowCast</h3>
                 </div>
                 <div class="p-3">
@@ -587,9 +609,9 @@
             </div>
             
             <!-- Card 9 -->
-            <div class="bg-ft-cream rounded-xl shadow-md overflow-hidden border border-black border-opacity-20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-2.5 bg-black rounded-t-xl"></div>
-                <div class="px-4 py-3 border-b border-black border-opacity-20">
+            <div class="bg-ft-cream rounded-xl shadow-lg overflow-hidden border-t-3 border-black transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                
+                <div class="px-4 py-3 border-t rounded-t-xl border-black">
                     <h3 class="font-semibold text-black/90 text-sm">NowCast deepdive</h3>
                 </div>
                 <div class="p-3">
@@ -598,9 +620,9 @@
             </div>
             
             <!-- Card 10 -->
-            <div class="bg-ft-cream rounded-xl shadow-md overflow-hidden border border-black border-opacity-20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-2.5 bg-black rounded-t-xl"></div>
-                <div class="px-4 py-3 border-b border-black border-opacity-20">
+            <div class="bg-ft-cream rounded-xl shadow-lg overflow-hidden border-t-3 border-black transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                
+                <div class="px-4 py-3 border-t rounded-t-xl border-black">
                     <h3 class="font-semibold text-black/90 text-sm">Watermarked reports</h3>
                 </div>
                 <div class="p-3">
@@ -609,9 +631,9 @@
             </div>
             
             <!-- Card 11 -->
-            <div class="bg-ft-cream rounded-xl shadow-md overflow-hidden border border-black border-opacity-20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-2.5 bg-black rounded-t-xl"></div>
-                <div class="px-4 py-3 border-b border-black border-opacity-20">
+            <div class="bg-ft-cream rounded-xl shadow-lg overflow-hidden border-t-3 border-black transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                
+                <div class="px-4 py-3 border-t rounded-t-xl border-black">
                     <h3 class="font-semibold text-black/90 text-sm">API access</h3>
                 </div>
                 <div class="p-3">
@@ -620,9 +642,9 @@
             </div>
             
             <!-- Card 12 -->
-            <div class="bg-ft-cream rounded-xl shadow-md overflow-hidden border border-black border-opacity-20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-2.5 bg-black rounded-t-xl"></div>
-                <div class="px-4 py-3 border-b border-black border-opacity-20">
+            <div class="bg-ft-cream rounded-xl shadow-lg overflow-hidden border-t-3 border-black transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                
+                <div class="px-4 py-3 border-t rounded-t-xl border-black">
                     <h3 class="font-semibold text-black/90 text-sm">Other ideas</h3>
                 </div>
                 <div class="p-3">
@@ -633,34 +655,127 @@
     </div>
 </section>
 
-<style>
-    /* Custom animations for hover effects */
-    @keyframes cardHover {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-5px); }
-    }
-    
-    /* Ensure cards have consistent height */
-    @media (min-width: 640px) {
-        .grid > div {
-            display: flex;
-            flex-direction: column;
-        }
+<!-- FAQ Section -->
+<section class="py-16 md:py-20 bg-ft-pink">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto">Everything you need to know about Thurro's customisation services</p>
+        </div>
         
-        .grid > div > div:last-child {
-            flex-grow: 1;
-        }
-    }
-    
-    /* Alternating card header styles */
-    .grid > div:nth-child(odd) .bg-black\/90 {
-        background-color: rgba(240, 225, 211, 0.9);
-    }
-    
-    .grid > div:nth-child(even) .bg-black\/80 {
-        background-color: rgba(240, 225, 211, 0.8);
-    }
-</style>
+        <div class="max-w-3xl mx-auto">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">How do I get started with Thurro's customisation services?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Contact our expert team to discuss your specific intelligence needs. We'll work with you to identify the best combination of custom datasets, reports, and API feeds for your business objectives. You can begin by clicking 'Start your custom journey' below to schedule a consultation, or contact our team directly via email.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">What are custom datasets?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Custom datasets are specially curated and structured data collections tailored to your specific research and analysis needs. Our expert team collaborates with you to identify, gather, and organise data that aligns perfectly with your requirements. These can include proprietary financial metrics, industry-specific indicators, or any specialized data points crucial to your business intelligence.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">Can I access proprietary data through custom datasets?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Yes, Thurro offers paid and proprietary data bundles for datasets where we have exclusive access, providing you with unique intelligence advantages. These proprietary datasets cover various sectors and metrics not easily available elsewhere, giving you deeper insights into market trends and competitive positioning.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">What types of custom reports can you create?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">We can design various types of reports including district-level indicators on maps, portfolio analyses, competitor public data reports, immediate AI responses to market events, and any other format that provides the specific insights you require. All reports can be tailored to your organization's presentation style and analytical needs.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">Can reports be automated for regular delivery?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Absolutely. We can automate the delivery of custom reports directly to your inbox, ensuring you receive timely, tailored insights without missing critical information. Set up daily, weekly, or monthly delivery schedules, or trigger reports based on specific market events or thresholds.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">What is a custom API feed?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">A custom API feed provides real-time data tailored to your business needs through seamless API integration. This allows you to access Thurro's intelligence directly within your existing systems and applications, enabling automated workflows and integrated analytics without switching between platforms.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 7 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">What branding or white labeling options are available?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">We can customize the URL of our AI platform to reflect your client portal alongside Thurro branding, creating a seamless experience for your users. Through our white labeling and custom watermarking options, you can present Thurro intelligence as part of your own branded offerings. Reports can also be fully customized with your organization's prompts, fonts, tables, charts, and branding, and downloaded with your watermark and without reference to Thurro.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 8 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">Can Thurro AI be integrated with our existing internal data?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Yes, we offer the option to layer Thurro AI capabilities on top of your institutional data, allowing you to extract deeper insights from your proprietary information. This integration preserves data security while enhancing analytical capabilities through our advanced AI models.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 9 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">What specialized NowCast options are available?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">We can create specific NowCast models tailored to your industry or focus areas, providing real-time predictive analytics for the metrics that matter most to your business. Additionally, we offer NowCast deepdive services to help you understand the methodology behind our predictive models and how they can be optimized for your specific use cases.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 10 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">How is pricing determined for custom services?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Pricing varies based on the complexity and scope of customisation required. Factors include the types of customization needed, data volume, refresh frequency, and integration complexity. Contact our team for a detailed quote based on your specific needs and to discuss flexible pricing options that align with your budget.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- CTA Section with Updated Content -->
 <section id="custom-journey" class="py-16 md:py-20 bg-black text-ft-cream text-center">
@@ -826,12 +941,24 @@
         // Mobile products dropdown
         const mobileProductsBtn = document.getElementById('mobile-products-btn');
         const mobileProductsMenu = document.getElementById('mobile-products-menu');
-        const mobileChevron = document.getElementById('mobile-chevron');
+        const mobileProductsChevron = document.getElementById('mobile-products-chevron');
         
         if (mobileProductsBtn && mobileProductsMenu) {
             mobileProductsBtn.addEventListener('click', function() {
                 mobileProductsMenu.classList.toggle('hidden');
-                mobileChevron.classList.toggle('rotate-180');
+                mobileProductsChevron.classList.toggle('rotate-180');
+            });
+        }
+        
+        // Mobile solutions dropdown
+        const mobileSolutionsBtn = document.getElementById('mobile-solutions-btn');
+        const mobileSolutionsMenu = document.getElementById('mobile-solutions-menu');
+        const mobileSolutionsChevron = document.getElementById('mobile-solutions-chevron');
+        
+        if (mobileSolutionsBtn && mobileSolutionsMenu) {
+            mobileSolutionsBtn.addEventListener('click', function() {
+                mobileSolutionsMenu.classList.toggle('hidden');
+                mobileSolutionsChevron.classList.toggle('rotate-180');
             });
         }
         
@@ -844,41 +971,6 @@
                 header.classList.remove('shadow-md');
             }
         });
-
-        // Mobile menu functionality
-        if (mobileMenuButton && closeMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.remove('-translate-x-full');
-                document.body.style.overflow = 'hidden';
-            });
-
-            closeMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.add('-translate-x-full');
-                document.body.style.overflow = '';
-            });
-
-            // Close mobile menu when clicking on navigation links
-            const mobileNavLinks = mobileMenu.querySelectorAll('a[href^="#"]');
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('-translate-x-full');
-                    document.body.style.overflow = '';
-                });
-            });
-        }
-
-        // Header shadow on scroll
-        const header = document.querySelector('header');
-        function toggleHeaderShadow() {
-            if (window.scrollY > 10) {
-                header.classList.add('shadow-on-scroll');
-            } else {
-                header.classList.remove('shadow-on-scroll');
-            }
-        }
-
-        window.addEventListener('scroll', toggleHeaderShadow);
-        toggleHeaderShadow();
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -895,20 +987,39 @@
         });
 
         // Card hover animations for Customisation cards
-        const customCards = document.querySelectorAll('.rounded-lg.p-5');
+        const customCards = document.querySelectorAll('.rounded-xl.shadow-lg');
         if (customCards.length > 0) {
             customCards.forEach(card => {
                 card.addEventListener('mouseenter', function() {
-                    this.classList.add('transform', 'shadow-md');
+                    this.classList.add('transform', 'shadow-xl');
                     this.style.transform = 'translateY(-8px)';
                 });
                 
                 card.addEventListener('mouseleave', function() {
-                    this.classList.remove('shadow-md');
+                    this.classList.remove('shadow-xl');
                     this.style.transform = 'translateY(0)';
                 });
             });
         }
+
+        // FAQ functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other FAQs
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current FAQ
+                item.classList.toggle('active');
+            });
+        });
 
         // Initialize any videos that may be present
         const videos = document.querySelectorAll('video');
@@ -926,24 +1037,34 @@
             });
         }
 
-        // Mobile category accordions (for Customisation categories on mobile)
-        const categoryHeaders = document.querySelectorAll('.bg-black.text-ft-cream.px-4.py-2');
-        if (categoryHeaders.length > 0) {
-            categoryHeaders.forEach(header => {
-                header.addEventListener('click', function() {
-                    const targetGrid = this.nextElementSibling;
-                    if (targetGrid) {
-                        if (targetGrid.style.display === 'none') {
-                            targetGrid.style.display = 'grid';
-                            this.classList.add('active');
-                        } else {
-                            targetGrid.style.display = 'none';
-                            this.classList.remove('active');
-                        }
-                    }
-                });
+        // Scroll animation for elements
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.bg-ft-cream.rounded-lg.p-8');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight;
+                
+                if (elementPosition < screenPosition - 100) {
+                    element.classList.add('animate-fade-in');
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
             });
-        }
+        };
+        
+        // Set initial state for animation elements
+        document.querySelectorAll('.bg-ft-cream.rounded-lg.p-8').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'all 0.6s ease-out';
+        });
+        
+        // Run animation on scroll
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Run animation on initial load
+        animateOnScroll();
     });
 </script>
 </body>
