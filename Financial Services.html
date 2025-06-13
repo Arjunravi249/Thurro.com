@@ -4,32 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solutions | Thurro</title>
+    <title>Financial Services | Thurro</title>
 
     <!-- Meta Tags for SEO -->
     <meta name="description"
-        content="Thurro's AI-powered solutions for investment management, financial services, corporations, and government agencies. Get real-time, data-backed intelligence from 800+ sources.">
+        content="Thurro's AI-powered solutions for financial services. Get real-time, data-backed intelligence from 800+ sources for better financial decisions.">
     <meta name="keywords"
-        content="financial intelligence, investment management solutions, financial services AI, corporate intelligence, regulatory data, market insights, data analytics">
+        content="financial services, banking intelligence, investment research, market insights, wealth management, data analytics">
     <meta name="author" content="Thurro">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
 
     <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Solutions | Thurro">
+    <meta property="og:title" content="Financial Services | Thurro">
     <meta property="og:description"
-        content="Tailored intelligence solutions for investment management, financial services, consultants, corporations, and government agencies.">
-    <meta property="og:url" content="https://thurro.com/solutions">
+        content="AI-powered structured intelligence for the Indian financial ecosystem.">
+    <meta property="og:url" content="https://thurro.com/financial-services">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Thurro">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Solutions | Thurro">
+    <meta name="twitter:title" content="Financial Services | Thurro">
     <meta name="twitter:description"
-        content="Tailored intelligence solutions for investment management, financial services, consultants, corporations, and government agencies.">
+        content="AI-powered structured intelligence for the Indian financial ecosystem.">
     <meta name="twitter:site" content="@thurro">
     <meta name="twitter:creator" content="@thurro">
 
@@ -189,6 +189,44 @@
         .delay-400 {
             animation-delay: 0.4s;
         }
+
+        /* Solution card hover effect */
+        .solution-card {
+            transition: all 0.3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Solutions tabs styles */
+        .solution-tab {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .solution-tab.active {
+            background-color: #000;
+            color: #FFF1E5;
+        }
+
+        .solution-content {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.5s ease;
+            display: none;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .solution-content.active {
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+            height: auto;
+            overflow: visible;
+        }
     </style>
 </head>
 
@@ -299,7 +337,7 @@
                             <!-- Solutions Dropdown Menu -->
                             <div id="solutions-dropdown" class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-ft-cream rounded-lg shadow-lg opacity-0 invisible transition-all duration-300 -translate-y-4 z-50 overflow-hidden border border-black border-opacity-5">
                                 <!-- Investment Management -->
-                                <a href="Investment Management.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5 bg-ft-pink-darker">
+                                <a href="Investment Management.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5">
                                     <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
                                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
@@ -312,7 +350,7 @@
                                 </a>
                                 
                                 <!-- Financial Services -->
-                                <a href="Financial Services.html" class="flex items-center p-4 border-b border-black border-opacity-5 hover:bg-ft-pink-darker transition-colors duration-200">
+                                <a href="Financial Services.html" class="flex items-center p-4 border-b border-black border-opacity-5 bg-ft-pink-darker">
                                     <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
                                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
@@ -341,7 +379,7 @@
                                 </a>
                                 
                                 <!-- Government & Regulatory -->
-                                <a href="government-regulatory.html" class="flex items-center p-4 bg-ft-pink-darker">
+                                <a href="government-regulatory.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200">
                                     <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
                                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -415,10 +453,10 @@
                             </svg>
                         </button>
                         <div id="mobile-solutions-menu" class="hidden mt-2 ml-4 space-y-3">
-                            <a href="Investment Management.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-30 transition-colors">Investment Management</a>
-                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Financial Services (Coming soon)</span>
-                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Consultants & Corporate (Coming soon)</span>
-                            <span class="block py-2 pl-3 border-l-2 border-black border-opacity-10 opacity-60 cursor-not-allowed">Government & Regulatory (Coming soon)</span>
+                            <a href="Investment Management.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Investment Management</a>
+                            <a href="Financial Services.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-30 transition-colors">Financial Services</a>
+                            <a href="Consultants Corporate.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Consultants & Corporate</a>
+                            <a href="government-regulatory.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Government & Regulatory</a>
                         </div>
                     </div>
                     
@@ -436,30 +474,104 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-<section class="bg-ft-pink text-black py-16 md:py-24">
-    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-5xl mx-auto">
-            <p class="text-lg md:text-xl font-normal mb-4">Investment Management</p>
-            
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-normal mb-8">From blind spots to bold investment moves</h1>
-            
-            <p class="text-lg md:text-xl lg:text-2xl mb-14">
-                Thurro delivers verified, real-time intelligence for India-focused investors
-            </p>
-            
-            <a href="#demo" class="inline-block px-8 py-4 bg-black text-ft-cream rounded-md font-medium hover:bg-gray-800 transition-all duration-200">Request a Demo</a>
-        </div>
-    </div>
-</section>
+        <section class="bg-ft-pink text-black py-16 md:py-24">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-5xl mx-auto">
+                    <p class="text-lg md:text-xl font-normal mb-4">Financial Services</p>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-normal mb-8">Your AI-powered research assistant for the Indian financial ecosystem</h1>
+                    
+                    <p class="text-lg md:text-xl lg:text-2xl mb-14">
+                        From filings to forecasts, Thurro connects the dots across India's financial landscape—so you can move faster, see clearer, and act earlier.
+                    </p>
+                    
+                    <a href="#demo" class="inline-block px-8 py-4 bg-black text-ft-cream rounded-md font-medium hover:bg-gray-800 transition-all duration-200">Request a Demo</a>
+                </div>
+            </div>
+        </section>
 
-        
-        
-
-        <!-- AI-powered Platform Section -->
+        <!-- Why Thurro Section -->
         <section class="py-16 md:py-20 bg-ft-pink">
             <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">AI-powered intelligence platform</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Why Thurro is Your Indispensable Financial Edge</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Research Time -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                        <div class="mb-6 flex items-center justify-center">
+                            <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-black">Slash research time by up to 90%</h3>
+                        <p class="text-black text-lg">Access verifiable, finance-native AI that understands Indian market nuances.</p>
+                    </div>
+                    
+                    <!-- Market Shifts -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                        <div class="mb-6 flex items-center justify-center">
+                            <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-black">Predict market shifts weeks ahead</h3>
+                        <p class="text-black text-lg">Thurro NowCast provides predictive intelligence 15-90 days ahead with 70% accuracy.</p>
+                    </div>
+                    
+                    <!-- Deep Insights -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                        <div class="mb-6 flex items-center justify-center">
+                            <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-black">Deep, data-backed insights</h3>
+                        <p class="text-black text-lg">Extract crucial information from filings and 800+ alternative data sources, not just web summaries.</p>
+                    </div>
+                    
+                    <!-- Secure Environment -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                        <div class="mb-6 flex items-center justify-center">
+                            <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-black">Secure and confidential</h3>
+                        <p class="text-black text-lg">Enterprise-grade security ensures your research and strategic insights remain protected.</p>
+                    </div>
+                    
+                    <!-- Customizable Platform -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                        <div class="mb-6 flex items-center justify-center">
+                            <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-black">Fully customizable</h3>
+                        <p class="text-black text-lg">Plug-and-play or fully customized from APIs to private data integration for your specific needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Section -->
+        <section class="py-16 md:py-20 bg-ft-pink">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Financial intelligence platform</h2>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -473,9 +585,9 @@
                             </div>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-black text-center">Thurro Answers</h3>
-                        <p class="text-black text-lg text-center mb-6">Ask questions, get instant data-backed responses from millions of documents</p>
+                        <p class="text-black text-lg text-center mb-6">Instant answers to complex financial questions with AI-powered analysis.</p>
                         <div class="mt-auto text-center">
-                            <a href="answers.html" class="inline-block px-6 py-3 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Start free trial</a>
+                            <a href="answers.html" class="inline-block px-6 py-3 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Learn more</a>
                         </div>
                     </div>
                     
@@ -490,9 +602,9 @@
                             </div>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-black text-center">Thurro AltData</h3>
-                        <p class="text-black text-lg text-center mb-6">Pre-built visualizations from 800+ alternative data sources</p>
+                        <p class="text-black text-lg text-center mb-6">Market edge through 800+ alternative data sources and unique insights.</p>
                         <div class="mt-auto text-center">
-                            <a href="altdata.html" class="inline-block px-6 py-3 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Start free trial</a>
+                            <a href="altdata.html" class="inline-block px-6 py-3 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Learn more</a>
                         </div>
                     </div>
                     
@@ -506,7 +618,7 @@
                             </div>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-black text-center">Thurro NowCast</h3>
-                        <p class="text-black text-lg text-center mb-6">Revenue forecasts 15-90 days before official reporting with 70% accuracy</p>
+                        <p class="text-black text-lg text-center mb-6">Predictive intelligence 15-90 days ahead with 70% accuracy.</p>
                         <div class="mt-auto text-center">
                             <a href="nowcast.html" class="inline-block px-6 py-3 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Learn more</a>
                         </div>
@@ -530,183 +642,173 @@
             </div>
         </section>
 
-        
-        
-
-        <!-- Solutions for Investment Management Section -->
+        <!-- Solutions for Financial Services Section -->
         <section class="py-16 md:py-20 bg-ft-pink">
             <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Solutions for investment management</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Solutions for financial services</h2>
                 </div>
                 
                 <!-- Solution Categories -->
                 <div class="flex flex-wrap justify-center gap-4 mb-12">
-                    <button id="endowment-btn" class="solution-tab px-6 py-3 bg-black text-white rounded-lg font-medium transition-all duration-200 text-base">Endowment funds</button>
-                    <button id="public-market-btn" class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Public market fund managers</button>
-                    <button id="private-equity-btn" class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Private equity firms</button>
-                    <button id="venture-capital-btn" class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Venture Capital</button>
+                    <button id="banks-btn" class="solution-tab px-6 py-3 bg-black text-white rounded-lg font-medium transition-all duration-200 text-base">Banks</button>
+                    <button id="financial-media-btn" class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Financial Media</button>
+                    <button id="brokerage-btn" class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Sell-side Brokerage</button>
+                    <button id="wealth-management-btn" class="solution-tab px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Wealth Management</button>
                 </div>
                 
                 <!-- Solution Content -->
                 <div class="bg-ft-cream rounded-lg p-8 md:p-10 shadow-sm">
-                    <!-- Endowment Funds Content -->
-                    <div id="endowment-content" class="solution-content active">
-                        <h3 class="text-2xl font-bold mb-6">Endowment funds</h3>
+                    <!-- Banks Content -->
+                    <div id="banks-content" class="solution-content active">
+                        <h3 class="text-2xl font-bold mb-6">Banks</h3>
                         <ul class="space-y-4 mb-8">
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Predict macro shifts & sector risks with alternative data tracking 800+ unconventional indicators</span>
+                                <span>Gain a live pulse of India's real economy</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Get early warnings on inflation & slowdowns via NowCast models</span>
+                                <span>Identify and pre-empt risks before they impact your book</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Build conviction with custom analysis of district-level trends, real estate, or education indicators</span>
+                                <span>Enhance credit decisions & optimize lending strategies</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Strengthen ESG analytics using cross-referenced sustainability data</span>
+                                <span>Streamline compliance with automated regulatory insights</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Monitor and assess risks across diverse holdings through operational metrics</span>
+                                <span>Monitor portfolio risks and assess credit quality by location</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Turn regulatory noise into strategic foresight</span>
                             </li>
                         </ul>
                     </div>
                     
-                    <!-- Public Market Fund Managers Content -->
-                    <div id="public-market-content" class="solution-content">
-                        <h3 class="text-2xl font-bold mb-6">Public market fund managers</h3>
-                        <p class="text-lg font-semibold mb-4">Alpha lives in the details—and the timing</p>
+                    <!-- Financial Media Content -->
+                    <div id="financial-media-content" class="solution-content">
+                        <h3 class="text-2xl font-bold mb-6">Financial Media</h3>
                         <ul class="space-y-4 mb-8">
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Gain unparalleled informational advantage in Indian equities</span>
+                                <span>Break news faster with instant, verified intelligence</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Eliminate research drudgery with AI-powered, cited insights</span>
+                                <span>Generate data-driven narratives and unique story angles</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Pre-empt earnings surprises & beat consensus by weeks</span>
+                                <span>Get accurate tables, insights, and story hooks in seconds</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Access real-time data, predictive NowCasts, and alternate data</span>
+                                <span>Access real-time company performance, trends, and market data</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Construct high-performing portfolios & execute timely trades</span>
+                                <span>Access ready to publish visualizations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Deliver richer analysis and captivate your audience</span>
                             </li>
                         </ul>
                     </div>
                     
-                    <!-- Private Equity Firms Content -->
-                    <div id="private-equity-content" class="solution-content">
-                        <h3 class="text-2xl font-bold mb-6">Private equity firms</h3>
+                    <!-- Sell-side Brokerage Content -->
+                    <div id="brokerage-content" class="solution-content">
+                        <h3 class="text-2xl font-bold mb-6">Sell-side Brokerage</h3>
                         <ul class="space-y-4 mb-8">
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Unmatched depth for private investment identification & monitoring</span>
+                                <span>Compare metrics across listed peers instantly</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>360-degree view of targets via vast alternate data & registrations</span>
+                                <span>Summarize investor calls or sector reports without manual effort</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Conduct deeper due diligence and uncover hidden value</span>
+                                <span>Use alternate data to power reports with uncommon metrics</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Identify demand signals and gain deal sourcing edge</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                <span>Monitor portfolio companies with real-time operational insights</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                <span>Exit strategy optimization based on market trends and valuation metrics</span>
+                                <span>Blend client data with Thurro's ecosystem for hyper-personalized sector briefs</span>
                             </li>
                         </ul>
                     </div>
                     
-                    <!-- Venture Capital Content -->
-                    <div id="venture-capital-content" class="solution-content">
-                        <h3 class="text-2xl font-bold mb-6">Venture Capital</h3>
+                    <!-- Wealth Management Content -->
+                    <div id="wealth-management-content" class="solution-content">
+                        <h3 class="text-2xl font-bold mb-6">Wealth Management</h3>
                         <ul class="space-y-4 mb-8">
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Navigate India's startup ecosystem with clarity</span>
+                                <span>Benchmark funds or stocks across growth, ROE, and valuation metrics</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Identify promising ventures & assess true market fit</span>
+                                <span>Decode macro trends in client-ready language</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Spot disruption and emerging trends before they go public</span>
+                                <span>Compare metrics, summarize calls, and track live KPIs instantly</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Access real-world indicators: app engagement, hiring velocity, pricing</span>
+                                <span>Get early signals on client holdings</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Gain an edge in competitive intelligence monitoring</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="h-6 w-6 text-black mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                <span>Comprehensive economic environment analysis for opportunity mapping</span>
+                                <span>Portfolio analytics with alternative data</span>
                             </li>
                         </ul>
                     </div>
@@ -714,47 +816,80 @@
             </div>
         </section>
 
-        
-        
-
-        <!-- CTA Section -->
+        <!-- Regulatory and Compliance Section -->
         <section class="py-16 md:py-20 bg-ft-pink">
             <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-8">Ready to transform your investment intelligence?</h2>
-                    <p class="text-xl mb-10">Choose your path:</p>
-                    <div class="flex flex-wrap justify-center gap-6">
-                        <a href="https://ai.thurro.com" class="px-10 py-4 rounded-md border border-black border-opacity-20 font-medium hover:bg-ft-pink-darker transition-all duration-200">Start free trial</a>
-                        <a href="demo.html" class="px-10 py-4 rounded-md bg-black text-ft-cream font-medium hover:bg-gray-800 transition-all duration-200">Book a demo</a>
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Regulatory and compliance</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Security Standards -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-black">Security standards</h3>
+                        </div>
+                        <p class="text-black text-lg">OWASP standards with enterprise encryption</p>
+                    </div>
+                    
+                    <!-- Data Compliance -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-black">Data compliance</h3>
+                        </div>
+                        <p class="text-black text-lg">MNPI/UPSI-free public data only</p>
+                    </div>
+                    
+                    <!-- Audit Trails -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-black">Audit trails</h3>
+                        </div>
+                        <p class="text-black text-lg">Complete compliance tracking</p>
+                    </div>
+                    
+                    <!-- Client Segregation -->
+                    <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-black">Client segregation</h3>
+                        </div>
+                        <p class="text-black text-lg">Isolated environments</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Placeholder sections for other solutions categories -->
-        <section id="financial-services" class="py-16 md:py-20 bg-ft-pink hidden">
-            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-4xl mx-auto">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Financial services</h2>
-                    <p class="text-xl mb-8">Content for financial services solutions will be added here.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="consultants-corporate" class="py-16 md:py-20 bg-ft-pink hidden">
-            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-4xl mx-auto">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Consultants and corporate</h2>
-                    <p class="text-xl mb-8">Content for consultants and corporate solutions will be added here.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="government-regulatory" class="py-16 md:py-20 bg-ft-pink hidden">
-            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-4xl mx-auto">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Government and regulatory bodies</h2>
-                    <p class="text-xl mb-8">Content for government and regulatory solutions will be added here.</p>
+        <!-- CTA Section -->
+        <section class="py-16 md:py-20 bg-black text-white text-center">
+            <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Transform your financial services</h2>
+                <p class="text-xl max-w-3xl mx-auto mb-10 opacity-90 leading-relaxed">
+                    Ready to accelerate your financial intelligence capabilities?
+                </p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="demo.html" class="px-10 py-4 rounded-md bg-ft-cream text-black font-medium hover:bg-ft-pink transition-all duration-200">Book a demo</a>
+                    <a href="contact.html" class="px-10 py-4 rounded-md border border-ft-cream border-opacity-50 text-ft-cream font-medium hover:bg-ft-cream hover:bg-opacity-10 transition-all duration-200">Start free trial</a>
+                    <a href="contact.html" class="px-10 py-4 rounded-md border border-ft-cream border-opacity-50 text-ft-cream font-medium hover:bg-ft-cream hover:bg-opacity-10 transition-all duration-200">Contact sales</a>
                 </div>
             </div>
         </section>
@@ -830,186 +965,163 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-
-            // Desktop dropdown functionality for Products
-            const productsDropdownBtn = document.getElementById('products-dropdown-btn');
-            const productsDropdown = document.getElementById('products-dropdown');
-            const productsChevron = document.getElementById('dropdown-chevron');
+        // Main Navigation and UI Scripts
+document.addEventListener('DOMContentLoaded', function() {
+    // Desktop dropdown functionality for Products
+    const productsDropdownBtn = document.getElementById('products-dropdown-btn');
+    const productsDropdown = document.getElementById('products-dropdown');
+    const productsChevron = document.getElementById('dropdown-chevron');
+    
+    if (productsDropdownBtn && productsDropdown) {
+        productsDropdownBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             
-            if (productsDropdownBtn && productsDropdown) {
-                productsDropdownBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    
-                    // Toggle dropdown visibility
-                    if (productsDropdown.classList.contains('opacity-0')) {
-                        productsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
-                        productsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
-                        productsChevron.classList.add('rotate-180');
-                    } else {
-                        productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
-                        productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                        productsChevron.classList.remove('rotate-180');
-                    }
-                });
+            // Toggle dropdown visibility
+            if (productsDropdown.classList.contains('opacity-0')) {
+                productsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
+                productsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                productsChevron.classList.add('rotate-180');
+            } else {
+                productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                productsChevron.classList.remove('rotate-180');
             }
-            
-            // Desktop dropdown functionality for Solutions
-            const solutionsDropdownBtn = document.getElementById('solutions-dropdown-btn');
-            const solutionsDropdown = document.getElementById('solutions-dropdown');
-            const solutionsChevron = document.getElementById('solutions-dropdown-chevron');
-            
-            if (solutionsDropdownBtn && solutionsDropdown) {
-                solutionsDropdownBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    
-                    // Toggle dropdown visibility
-                    if (solutionsDropdown.classList.contains('opacity-0')) {
-                        solutionsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
-                        solutionsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
-                        solutionsChevron.classList.add('rotate-180');
-                    } else {
-                        solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
-                        solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                        solutionsChevron.classList.remove('rotate-180');
-                    }
-                });
-            }
-            
-            // Close dropdowns when clicking elsewhere
-            document.addEventListener('click', function(e) {
-                // Close products dropdown
-                if (productsDropdownBtn && productsDropdown && !productsDropdownBtn.contains(e.target) && !productsDropdown.contains(e.target)) {
-                    productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
-                    productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                    productsChevron.classList.remove('rotate-180');
-                }
-                
-                // Close solutions dropdown
-                if (solutionsDropdownBtn && solutionsDropdown && !solutionsDropdownBtn.contains(e.target) && !solutionsDropdown.contains(e.target)) {
-                    solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
-                    solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                    solutionsChevron.classList.remove('rotate-180');
-                }
-            });
-            
-            // Mobile menu functionality
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const closeMenuButton = document.getElementById('close-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (mobileMenuButton && closeMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.remove('-translate-x-full');
-                    document.body.classList.add('overflow-hidden');
-                });
-                
-                closeMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.add('-translate-x-full');
-                    document.body.classList.remove('overflow-hidden');
-                });
-            }
-            
-            // Mobile products dropdown
-            const mobileProductsBtn = document.getElementById('mobile-products-btn');
-            const mobileProductsMenu = document.getElementById('mobile-products-menu');
-            const mobileProductsChevron = document.getElementById('mobile-products-chevron');
-            
-            if (mobileProductsBtn && mobileProductsMenu) {
-                mobileProductsBtn.addEventListener('click', function() {
-                    mobileProductsMenu.classList.toggle('hidden');
-                    mobileProductsChevron.classList.toggle('rotate-180');
-                });
-            }
-            
-            // Mobile solutions dropdown
-            const mobileSolutionsBtn = document.getElementById('mobile-solutions-btn');
-            const mobileSolutionsMenu = document.getElementById('mobile-solutions-menu');
-            const mobileSolutionsChevron = document.getElementById('mobile-solutions-chevron');
-            
-            if (mobileSolutionsBtn && mobileSolutionsMenu) {
-                mobileSolutionsBtn.addEventListener('click', function() {
-                    mobileSolutionsMenu.classList.toggle('hidden');
-                    mobileSolutionsChevron.classList.toggle('rotate-180');
-                });
-            }
-            
-            // Header shadow on scroll
-            window.addEventListener('scroll', function() {
-                const header = document.getElementById('header');
-                if (window.scrollY > 10) {
-                    header.classList.add('shadow-md');
-                } else {
-                    header.classList.remove('shadow-md');
-                }
-            });
-
-            // Solutions tab functionality
-            const solutionTabs = document.querySelectorAll('.solution-tab');
-            const solutionContents = document.querySelectorAll('.solution-content');
-            
-            solutionTabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    // Remove active class from all tabs
-                    solutionTabs.forEach(t => {
-                        t.classList.remove('bg-black', 'text-white');
-                        t.classList.add('border', 'border-black', 'border-opacity-20');
-                    });
-                    
-                    // Add active class to clicked tab
-                    tab.classList.add('bg-black', 'text-white');
-                    tab.classList.remove('border', 'border-black', 'border-opacity-20');
-                    
-                    // Hide all content
-                    solutionContents.forEach(content => {
-                        content.classList.remove('active');
-                    });
-                    
-                    // Show corresponding content
-                    const targetId = tab.id.replace('-btn', '-content');
-                    document.getElementById(targetId).classList.add('active');
-                });
-            });
-
-            // Solution category navigation
-            const solutionLinks = document.querySelectorAll('a[href^="#"]');
-            solutionLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetSection = document.getElementById(targetId);
-                    
-                    if (targetSection) {
-                        e.preventDefault();
-                        
-                        // Hide all solution sections
-                        const allSections = document.querySelectorAll('section[id]');
-                        allSections.forEach(section => {
-                            if (section.id.includes('management') || 
-                                section.id.includes('services') || 
-                                section.id.includes('corporate') || 
-                                section.id.includes('regulatory')) {
-                                section.classList.add('hidden');
-                            }
-                        });
-                        
-                        // Show target section
-                        targetSection.classList.remove('hidden');
-                        
-                        // Smooth scroll to top
-                        window.scrollTo({
-                            top: 0,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
-                        if (mobileMenu && !mobileMenu.classList.contains('-translate-x-full')) {
-                            mobileMenu.classList.add('-translate-x-full');
-                            document.body.classList.remove('overflow-hidden');
-                        }
-                    }
-                });
-            });
         });
+    }
+    
+    // Desktop dropdown functionality for Solutions
+    const solutionsDropdownBtn = document.getElementById('solutions-dropdown-btn');
+    const solutionsDropdown = document.getElementById('solutions-dropdown');
+    const solutionsChevron = document.getElementById('solutions-dropdown-chevron');
+    
+    if (solutionsDropdownBtn && solutionsDropdown) {
+        solutionsDropdownBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            
+            // Toggle dropdown visibility
+            if (solutionsDropdown.classList.contains('opacity-0')) {
+                solutionsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
+                solutionsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                solutionsChevron.classList.add('rotate-180');
+            } else {
+                solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                solutionsChevron.classList.remove('rotate-180');
+            }
+        });
+    }
+    
+    // Close dropdowns when clicking elsewhere
+    document.addEventListener('click', function(e) {
+        // Close products dropdown
+        if (productsDropdownBtn && productsDropdown && !productsDropdownBtn.contains(e.target) && !productsDropdown.contains(e.target)) {
+            productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+            productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+            productsChevron.classList.remove('rotate-180');
+        }
+        
+        // Close solutions dropdown
+        if (solutionsDropdownBtn && solutionsDropdown && !solutionsDropdownBtn.contains(e.target) && !solutionsDropdown.contains(e.target)) {
+            solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+            solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+            solutionsChevron.classList.remove('rotate-180');
+        }
+    });
+    
+    // Mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const closeMenuButton = document.getElementById('close-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuButton && closeMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.remove('-translate-x-full');
+            document.body.classList.add('overflow-hidden');
+        });
+        
+        closeMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.add('-translate-x-full');
+            document.body.classList.remove('overflow-hidden');
+        });
+    }
+    
+    // Mobile products dropdown
+    const mobileProductsBtn = document.getElementById('mobile-products-btn');
+    const mobileProductsMenu = document.getElementById('mobile-products-menu');
+    const mobileProductsChevron = document.getElementById('mobile-products-chevron');
+    
+    if (mobileProductsBtn && mobileProductsMenu) {
+        mobileProductsBtn.addEventListener('click', function() {
+            mobileProductsMenu.classList.toggle('hidden');
+            mobileProductsChevron.classList.toggle('rotate-180');
+        });
+    }
+    
+    // Mobile solutions dropdown
+    const mobileSolutionsBtn = document.getElementById('mobile-solutions-btn');
+    const mobileSolutionsMenu = document.getElementById('mobile-solutions-menu');
+    const mobileSolutionsChevron = document.getElementById('mobile-solutions-chevron');
+    
+    if (mobileSolutionsBtn && mobileSolutionsMenu) {
+        mobileSolutionsBtn.addEventListener('click', function() {
+            mobileSolutionsMenu.classList.toggle('hidden');
+            mobileSolutionsChevron.classList.toggle('rotate-180');
+        });
+    }
+    
+    // Header shadow on scroll
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (window.scrollY > 10) {
+            header.classList.add('shadow-md');
+        } else {
+            header.classList.remove('shadow-md');
+        }
+    });
+
+    // Solutions tab functionality
+    const solutionTabs = document.querySelectorAll('.solution-tab');
+    const solutionContents = document.querySelectorAll('.solution-content');
+    
+    solutionTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs
+            solutionTabs.forEach(t => {
+                t.classList.remove('bg-black', 'text-white');
+                t.classList.add('border', 'border-black', 'border-opacity-20');
+            });
+            
+            // Add active class to clicked tab
+            tab.classList.add('bg-black', 'text-white');
+            tab.classList.remove('border', 'border-black', 'border-opacity-20');
+            
+            // Hide all content
+            solutionContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show corresponding content
+            const targetId = tab.id.replace('-btn', '-content');
+            document.getElementById(targetId).classList.add('active');
+        });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
     </script>
+    </main>
+
 </body>
 </html>
