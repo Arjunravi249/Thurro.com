@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ================================
+         PAGE-SPECIFIC META TAGS
+         (Update these for each page)
+         ================================ -->
+    <title>Page Title | Thurro</title>
+    <meta name="description" content="Page-specific description here">
+    <meta name="keywords" content="page-specific, keywords, here">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Page Title | Thurro">
+    <meta property="og:description" content="Page-specific description here">
+    <meta property="og:image" content="./asserts/thurro-og-image.jpg">
+    <meta property="og:url" content="https://thurro.com/page-url">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Thurro">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Page Title | Thurro">
+    <meta name="twitter:description" content="Page-specific description here">
+    <meta name="twitter:site" content="@thurro">
+    <meta name="twitter:creator" content="@thurro">
+
+    <!-- ================================
+         FAVICON AND APP ICONS
+         ================================ -->
+    <link rel="icon" type="image/x-icon" href="./asserts/favicon.ico">
+    <link rel="icon" type="image/png" href="./asserts/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./asserts/apple-touch-icon.png">
+
+    <!-- ================================
+         PRECONNECT FOR PERFORMANCE
+         ================================ -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ================================
+         EXTERNAL FONTS
+         ================================ -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ================================
+         TAILWIND CSS
+         ================================ -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- ================================
+         SHARED CONFIGURATION & STYLES
+         (DO NOT MODIFY - THESE ARE SHARED)
+         ================================ -->
+    <script src="./js/config.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <!-- ================================
+         PAGE-SPECIFIC STYLES (OPTIONAL)
+         ================================ -->
+    <!-- <link rel="stylesheet" href="./css/page-specific.css"> -->
+</head>
+
+<body>
+    <!-- ================================
+         HEADER SECTION
+         ================================ -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-ft-pink border-b border-black border-opacity-10 transition-shadow duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center">
+                        <img class="h-8 w-auto" src="./asserts/thurro-logo.png" alt="Thurro">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium transition-colors duration-200">
+                            Products
+                            <svg class="ml-1 h-4 w-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Products Dropdown Menu -->
+                        <div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="py-2">
+                                <a href="answers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Thurro Answers</a>
+                                <a href="altdata.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Thurro AltData</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Thurro NowCast</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium transition-colors duration-200">
+                            Solutions
+                            <svg class="ml-1 h-4 w-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Solutions Dropdown Menu -->
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="py-2">
+                                <a href="Investment Management.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Investment Management</a>
+                                <a href="Institutional intelligence.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Institutional Intelligence</a>
+                                <a href="Consultants Corporate.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Consultants & Corporate</a>
+                                <a href="government-regulatory.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Government & Regulatory</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="aboutus.html" class="text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium transition-colors duration-200">About</a>
+                    <a href="#contact" class="text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium transition-colors duration-200">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex">
+                    <a href="#contact" class="bg-black text-white px-6 py-2 text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors duration-200">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-gray-900 hover:text-gray-700 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden mobile-menu bg-ft-pink border-t border-black border-opacity-10">
+            <div class="px-4 py-4 space-y-2">
+                <!-- Products Mobile Menu -->
+                <div>
+                    <button id="mobile-products-btn" class="flex items-center justify-between w-full text-left text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium">
+                        Products
+                        <svg id="mobile-chevron" class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="mobile-products-menu" class="hidden pl-6 space-y-2">
+                        <a href="answers.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900">Thurro Answers</a>
+                        <a href="altdata.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900">Thurro AltData</a>
+                        <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900">Thurro NowCast</a>
+                    </div>
+                </div>
+                
+                <!-- Solutions Mobile Menu -->
+                <div>
+                    <button id="mobile-solutions-btn" class="flex items-center justify-between w-full text-left text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium">
+                        Solutions
+                        <svg id="mobile-solutions-chevron" class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="mobile-solutions-menu" class="hidden pl-6 space-y-2">
+                        <a href="Investment Management.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900">Investment Management</a>
+                        <a href="Institutional intelligence.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900">Institutional Intelligence</a>
+                        <a href="Consultants Corporate.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900">Consultants & Corporate</a>
+                        <a href="government-regulatory.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900">Government & Regulatory</a>
+                    </div>
+                </div>
+                
+                <a href="aboutus.html" class="block px-3 py-2 text-sm text-gray-900 hover:text-gray-700">About</a>
+                <a href="#contact" class="block px-3 py-2 text-sm text-gray-900 hover:text-gray-700">Contact</a>
+                
+                <!-- Mobile CTA -->
+                <div class="pt-4">
+                    <a href="#contact" class="block w-full text-center bg-black text-white px-6 py-2 text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors duration-200">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================================
+         MAIN CONTENT
+         ================================ -->
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-20 py-16 bg-ft-pink">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center fade-in">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                        Your Page Title Here
+                    </h1>
+                    <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+                        Your compelling page description goes here. This template shows how to use the optimized structure.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#contact" class="bg-black text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-gray-800 transition-colors duration-200">
+                            Primary CTA
+                        </a>
+                        <a href="#learn-more" class="border border-black text-black px-8 py-3 text-lg font-medium rounded-lg hover:bg-black hover:text-white transition-colors duration-200">
+                            Secondary CTA
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Tabs Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Key Features
+                    </h2>
+                    <p class="text-xl text-gray-700">
+                        Explore our powerful capabilities
+                    </p>
+                </div>
+
+                <!-- Feature Tabs -->
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <button id="feature1-btn" class="feature-btn bg-black text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 active">
+                        Advanced Analytics
+                    </button>
+                    <button id="feature2-btn" class="feature-btn border border-black border-opacity-20 px-6 py-3 rounded-lg font-medium transition-all duration-300">
+                        Real-time Data
+                    </button>
+                    <button id="feature3-btn" class="feature-btn border border-black border-opacity-20 px-6 py-3 rounded-lg font-medium transition-all duration-300">
+                        AI-Powered Insights
+                    </button>
+                </div>
+
+                <!-- Feature Content -->
+                <div class="relative">
+                    <div id="feature1-content" class="feature-content">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4">Advanced Analytics</h3>
+                                <p class="text-gray-700 mb-6">
+                                    Powerful analytics tools that help you understand your data better and make informed decisions.
+                                </p>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Deep data analysis
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Custom dashboards
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Predictive modeling
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="feature1-image" class="feature-image">
+                                <div class="bg-ft-cream rounded-lg p-8 text-center">
+                                    <svg class="h-32 w-32 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                    <p class="mt-4 text-gray-600">Analytics Dashboard Preview</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="feature2-content" class="feature-content hidden">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4">Real-time Data</h3>
+                                <p class="text-gray-700 mb-6">
+                                    Access to live data streams and real-time updates to stay ahead of market changes.
+                                </p>
+                            </div>
+                            <div id="feature2-image" class="feature-image hidden">
+                                <div class="bg-ft-cream rounded-lg p-8 text-center">
+                                    <svg class="h-32 w-32 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                    <p class="mt-4 text-gray-600">Real-time Data Stream</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="feature3-content" class="feature-content hidden">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4">AI-Powered Insights</h3>
+                                <p class="text-gray-700 mb-6">
+                                    Leverage artificial intelligence to uncover hidden patterns and generate actionable insights.
+                                </p>
+                            </div>
+                            <div id="feature3-image" class="feature-image hidden">
+                                <div class="bg-ft-cream rounded-lg p-8 text-center">
+                                    <svg class="h-32 w-32 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                    </svg>
+                                    <p class="mt-4 text-gray-600">AI Insights Engine</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <section class="py-16 bg-ft-cream">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Why Choose Us
+                    </h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg p-8 shadow-sm border border-black border-opacity-10 card-hover">
+                        <div class="w-14 h-14 bg-ft-pink rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Lightning Fast</h3>
+                        <p class="text-gray-700">Get results in seconds, not hours. Our optimized platform delivers speed without compromising accuracy.</p>
+                    </div>
+
+                    <div class="bg-white rounded-lg p-8 shadow-sm border border-black border-opacity-10 card-hover">
+                        <div class="w-14 h-14 bg-ft-pink rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Highly Accurate</h3>
+                        <p class="text-gray-700">Trust in our proven algorithms and data verification processes for consistently reliable results.</p>
+                    </div>
+
+                    <div class="bg-white rounded-lg p-8 shadow-sm border border-black border-opacity-10 card-hover">
+                        <div class="w-14 h-14 bg-ft-pink rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Secure & Compliant</h3>
+                        <p class="text-gray-700">Enterprise-grade security with full compliance to industry standards and regulations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-black text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        Ready to Get Started?
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                        Contact us today to learn more about how we can help transform your business.
+                    </p>
+                    <a href="mailto:contact@thurro.com" class="bg-white text-black px-8 py-3 text-lg font-medium rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================================
+         FOOTER
+         ================================ -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img class="h-8 w-auto mb-4" src="./asserts/thurro-logo-white.png" alt="Thurro">
+                    <p class="text-gray-400">
+                        AI-powered financial intelligence platform with access to 800+ data sources.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="answers.html" class="text-gray-400 hover:text-white transition-colors">Thurro Answers</a></li>
+                        <li><a href="altdata.html" class="text-gray-400 hover:text-white transition-colors">Thurro AltData</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Thurro NowCast</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="Investment Management.html" class="text-gray-400 hover:text-white transition-colors">Investment Management</a></li>
+                        <li><a href="government-regulatory.html" class="text-gray-400 hover:text-white transition-colors">Government & Regulatory</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Thurro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================================
+         SHARED JAVASCRIPT
+         (DO NOT MODIFY - THIS IS SHARED)
+         ================================ -->
+    <script src="./js/scripts.js"></script>
+    
+    <!-- ================================
+         PAGE-SPECIFIC JAVASCRIPT (OPTIONAL)
+         ================================ -->
+    <!-- <script src="./js/page-specific.js"></script> -->
+</body>
+</html>
