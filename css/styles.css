@@ -314,181 +314,6 @@ html {
 }
 
 /* ================================
-   ALTDATA PAGE SPECIFIC STYLES
-   ================================ */
-
-/* Analysis types grid */
-.analysis-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-}
-
-@media (max-width: 1200px) {
-    .analysis-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .analysis-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .analysis-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.analysis-item {
-    background-color: #FFF8F0;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.analysis-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border-color: rgba(0, 0, 0, 0.2);
-}
-
-.analysis-header {
-    background-color: #f9f4ee;
-    padding: 1.25rem;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.analysis-icon {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FFF1E5;
-    border-radius: 0.5rem;
-    margin-right: 1rem;
-    transition: all 0.3s ease;
-}
-
-.analysis-item:hover .analysis-icon {
-    background-color: #f0e1d3;
-    transform: scale(1.1);
-}
-
-.analysis-title {
-    font-weight: 600;
-    font-size: 1.125rem;
-    color: #1F2937;
-}
-
-.analysis-body {
-    padding: 1.25rem;
-}
-
-.analysis-desc {
-    color: #6B7280;
-    font-size: 0.9375rem;
-    line-height: 1.5;
-}
-
-/* ================================
-   ANSWERS PAGE SPECIFIC STYLES
-   ================================ */
-
-/* Gradient background for hero */
-.hero-gradient {
-    background: linear-gradient(135deg, #000000 0%, #333333 100%);
-}
-
-/* Feature video container improvements */
-.feature-image video {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Enhanced hover effects for answers page - specific to cards, not dropdowns */
-.bg-ft-cream.card-hover:hover {
-    background-color: var(--ft-pink-darker);
-}
-
-/* Smooth transitions for all interactive elements */
-.transition-all {
-    transition: all 0.3s ease;
-}
-
-/* For notebook browser section */
-.notebook-card {
-    transition: all 0.3s ease;
-}
-
-.notebook-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Improved visual hierarchy for answers page */
-.text-ft-positive {
-    color: var(--ft-positive);
-}
-
-.text-ft-negative {
-    color: var(--ft-negative);
-}
-
-/* Checkmark icon styling for feature lists */
-.feature-content svg {
-    flex-shrink: 0;
-    margin-top: 2px;
-}
-
-/* FAQ specific enhancements */
-.faq-question:hover {
-    background-color: rgba(0, 0, 0, 0.02);
-}
-
-.faq-toggle {
-    color: #666;
-    font-weight: 300;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.faq-item.active .faq-toggle {
-    color: #000;
-}
-
-/* FAQ item styling */
-.faq-item {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.faq-toggle {
-    transition: transform 0.3s ease;
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-}
-
-.faq-item.active .faq-toggle {
-    transform: rotate(45deg);
-}
-
-.faq-item.active .faq-answer {
-    max-height: 500px;
-}
-
-/* ================================
    RESPONSIVE DESIGN
    ================================ */
 
@@ -680,4 +505,27 @@ html {
         border-top: 18px solid #333333;
         z-index: 3;
     }
+}
+
+/* FAQ item styling */
+.faq-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.faq-toggle {
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
 }

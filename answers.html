@@ -43,17 +43,110 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Configuration -->
-    <script src="js/config.js"></script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- External CSS File -->
-    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ft-pink': '#FFF1E5',
+                        'ft-pink-darker': '#f0e1d3',
+                        'ft-cream': '#FFF8F0',
+                        'ft-positive': '#3C763D',
+                        'ft-negative': '#A52A2A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFF1E5;
+            scroll-behavior: smooth;
+        }
+
+        /* Clean line divider styles */
+        .line-divider {
+            padding: 8px 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .line-divider-inner {
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #000 20%, #000 80%, transparent);
+            opacity: 0.3;
+        }
+
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Header shadow transition */
+        .header-shadow {
+            transition: box-shadow 0.3s ease;
+        }
+
+        .shadow-on-scroll {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Scroll offset for anchor links */
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        /* Gradient background for hero */
+        .hero-gradient {
+            background: linear-gradient(135deg, #000000 0%, #333333 100%);
+        }
+
+        /* For notebook browser section */
+        .notebook-card {
+            transition: all 0.3s ease;
+        }
+
+        .notebook-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* FAQ item styling */
+        .faq-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-toggle {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+    </style>
 </head>
 
 <body class="bg-ft-pink text-black">
@@ -81,7 +174,7 @@
                             <!-- Dropdown Menu -->
                             <div id="products-dropdown" class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-ft-cream rounded-lg shadow-lg opacity-0 invisible transition-all duration-300 -translate-y-4 z-50 overflow-hidden border border-black border-opacity-5">
                                 <!-- Thurro Answers -->
-                                <a href="answers.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5 bg-ft-pink-darker">
+                                <a href="answers.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5">
                                     <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
                                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
@@ -163,7 +256,7 @@
                             <!-- Solutions Dropdown Menu -->
                             <div id="solutions-dropdown" class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-ft-cream rounded-lg shadow-lg opacity-0 invisible transition-all duration-300 -translate-y-4 z-50 overflow-hidden border border-black border-opacity-5">
                                 <!-- Investment Management -->
-                                <a href="Investment Management.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5">
+                                <a href="Investment Management.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200 border-b border-black border-opacity-5 bg-ft-pink-darker">
                                     <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
                                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
@@ -205,7 +298,7 @@
                                 </a>
                                 
                                 <!-- Government & Regulatory -->
-                                <a href="government-regulatory.html" class="flex items-center p-4 hover:bg-ft-pink-darker transition-colors duration-200">
+                                <a href="government-regulatory.html" class="flex items-center p-4 bg-ft-pink-darker">
                                     <div class="flex items-center justify-center w-10 h-10 bg-ft-pink rounded-md flex-shrink-0 mr-3">
                                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -220,7 +313,7 @@
                             </div>
                         </div>
                         
-                        <a href="#insights" class="font-medium hover:text-gray-600 transition-colors duration-200">Insights</a>
+                        <a href="#resources" class="font-medium hover:text-gray-600 transition-colors duration-200">Resources</a>
                         <a href="#about" class="font-medium hover:text-gray-600 transition-colors duration-200">About Us</a>
                     </div>
                     
@@ -262,7 +355,7 @@
                             </svg>
                         </button>
                         <div id="mobile-products-menu" class="hidden mt-2 ml-4 space-y-3">
-                            <a href="answers.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-30 transition-colors">Thurro Answers</a>
+                            <a href="answers.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro Answers</a>
                             <a href="altdata.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro AltData</a>
                             <a href="nowcast.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Thurro NowCast</a>
                             <a href="Customisation.html" class="block py-2 pl-3 border-l-2 border-black border-opacity-10 hover:border-opacity-30 transition-colors">Customisation</a>
@@ -286,7 +379,7 @@
                         </div>
                     </div>
                     
-                    <a href="#insights" class="py-3 font-medium text-lg">Insights</a>
+                    <a href="#resources" class="py-3 font-medium text-lg">Resources</a>
                     <a href="#about" class="py-3 font-medium text-lg">About Us</a>
                 </div>
                 <div class="mt-auto p-6 space-y-4">
@@ -297,505 +390,694 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-ft-pink text-black py-16 md:py-24">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-5xl mx-auto">
-                <p class="text-lg md:text-xl font-normal mb-4">Thurro Answers</p>
+
+<section class="bg-ft-pink text-black py-16 md:py-24">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-5xl mx-auto">
+            <p class="text-lg md:text-xl font-normal mb-4">Thurro Answers</p>
+            
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8">Real-time insights grounded in <br> regulatory data</h1>
+            
+            <p class="text-xl sm:text-2xl lg:text-3xl font-bold mb-14">
+                Ask complex questions and get precise, source-backed answers
+            </p>
+            
+            <a href="#demo" class="inline-block px-8 py-4 bg-black text-ft-cream rounded-md font-medium hover:bg-gray-800 transition-all duration-200">Start free trial</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Research Edge Section -->
+<section class="py-16 md:py-20 bg-ft-pink">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                The Research Edge
+            </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Unified Intelligence -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Unified intelligence</h3>
+                <p class="text-gray-700">Query our vast DataLakehouse of curated documents and datasets alongside your own files.</p>
+            </div>
+            
+            <!-- Source Verification -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Source verification</h3>
+                <p class="text-gray-700">Every answer comes with direct links to source documents, ensuring transparency and enabling deeper investigation.</p>
+            </div>
+            
+            <!-- Save Time -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Save time</h3>
+                <p class="text-gray-700">Eliminate manual searching—get crucial insights delivered directly and efficiently.</p>
+            </div>
+            
+            <!-- Deep Analysis -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Deep analysis</h3>
+                <p class="text-gray-700">Leverage sophisticated data exploration capabilities for precise answers and advanced insights.</p>
+            </div>
+            
+            <!-- Connected Insights -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Connected insights</h3>
+                <p class="text-gray-700">Discover hidden connections across companies, sectors, and time periods with advanced relationship mapping.</p>
+            </div>
+            
+            <!-- Context-Aware Analysis -->
+            <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 hover:translate-y-[-8px] hover:shadow-lg transition-all duration-300">
+                <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Context-aware analysis</h3>
+                <p class="text-gray-700">AI that understands financial context and provides insights tailored to your specific research needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Key Features Section with Button Navigation -->
+<section class="py-16 md:py-20 bg-ft-pink">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Key features</h2>
+        
+        <!-- Feature Navigation Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button id="notebooks-btn" class="feature-btn px-6 py-3 bg-black text-white rounded-lg font-medium transition-all duration-200 text-base">Notebooks</button>
+            <button id="tasks-btn" class="feature-btn px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Tasks</button>
+            <button id="realtime-btn" class="feature-btn px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Refresh</button>
+            <button id="sharing-btn" class="feature-btn px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Sharing</button>
+        </div>
+        
+        <!-- Feature Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left: Feature Description -->
+            <div class="feature-content" id="notebooks-content">
+                <h3 class="text-2xl font-bold mb-6">Notebooks</h3>
+                <p class="text-lg mb-6">Every question creates a shareable Notebook—a dedicated thread for exploring topics in depth. Use suggested questions after each answer to dig deeper and uncover hidden connections.</p>
                 
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8">Real-time insights grounded in <br> regulatory data</h1>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Create dedicated research threads for any topic</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Follow suggested questions to explore deeper</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Save and organize your research for future reference</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="feature-content hidden" id="tasks-content">
+                <h3 class="text-2xl font-bold mb-6">Tasks</h3>
+                <p class="text-lg mb-6">Run deep research across multiple companies or themes with a single click. Define your research parameters once, and Tasks automatically generates structured reports—transforming hours of manual research into streamlined, repeatable workflows.</p>
                 
-                <p class="text-xl sm:text-2xl lg:text-3xl font-bold mb-14">
-                    Ask complex questions and get precise, source-backed answers
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Automate complex research workflows</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Generate structured reports across multiple companies</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Transform hours of manual research into minutes</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="feature-content hidden" id="realtime-content">
+                <h3 class="text-2xl font-bold mb-6">Real-time data refresh</h3>
+                <p class="text-lg mb-6">One-click updates keep your analysis current with the latest filings, earnings calls, and market data while preserving historical context.</p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Keep analysis current with latest filings</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Preserve historical context while updating</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Never miss critical new information</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="feature-content hidden" id="sharing-content">
+                <h3 class="text-2xl font-bold mb-6">Sharing</h3>
+                <p class="text-lg mb-6">Generate shareable links for any Notebook. Recipients with Thurro accounts can view and create editable copies in their workspace to continue the analysis. Share insights across teams while maintaining independent workspaces.</p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Generate shareable links for any research</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Team members can create editable copies</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Maintain independent workspaces while collaborating</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Right: Feature Videos -->
+            <div class="rounded-lg shadow-lg border border-black overflow-hidden">
+                <!-- Notebook Feature Video -->
+                <div class="feature-image" id="notebooks-image">
+                    <video class="w-full h-full" autoplay loop muted playsinline>
+                        <source src="./asserts/Video/new notebook.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <!-- Tasks Feature Video -->
+                <div class="feature-image hidden" id="tasks-image">
+                    <video class="w-full h-auto" autoplay loop muted playsinline>
+                        <source src="./asserts/Video/tasks.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <!-- Real-time Data Feature Video -->
+                <div class="feature-image hidden" id="realtime-image">
+                    <video class="w-full h-auto" autoplay loop muted playsinline>
+                        <source src="./asserts/Video/realtime.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <!-- Sharing Feature Video -->
+                <div class="feature-image hidden" id="sharing-image">
+                    <video class="w-full h-auto" autoplay loop muted playsinline>
+                        <source src="./asserts/Video/sharing.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Thurro Answers in Action Section -->
+<section class="py-16 md:py-20 bg-ft-pink">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Thurro Answers in action</h2>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-ft-cream rounded-xl p-8 md:p-10 shadow-sm">
+                <p class="text-lg md:text-xl mb-6 leading-relaxed">See how professionals across sectors use Thurro to solve complex research problems — faster, deeper, and with full traceability.</p>
+                
+                <p class="text-lg mb-8 leading-relaxed">From financial analysis to competitive intelligence, market shifts to strategic planning — Thurro is built for real use cases, not generic demos.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                    <!-- Example Notebook 1 -->
+                    <div class="bg-ft-pink rounded-lg p-6 shadow-sm border border-black border-opacity-5 hover:translate-y-[-5px] hover:shadow-md transition-all duration-300">
+                        <div class="flex items-center justify-center w-12 h-12 bg-white rounded-md mb-4 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-center">Financial Analysis</h3>
+                        <p class="text-sm text-center">Earnings breakdown with competing narratives and real-time updates</p>
+                    </div>
+                    
+                    <!-- Example Notebook 2 -->
+                    <div class="bg-ft-pink rounded-lg p-6 shadow-sm border border-black border-opacity-5 hover:translate-y-[-5px] hover:shadow-md transition-all duration-300">
+                        <div class="flex items-center justify-center w-12 h-12 bg-white rounded-md mb-4 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-center">Market Trends</h3>
+                        <p class="text-sm text-center">Sector-wide analysis with predictive indicators and competitive positioning</p>
+                    </div>
+                    
+                    <!-- Example Notebook 3 -->
+                    <div class="bg-ft-pink rounded-lg p-6 shadow-sm border border-black border-opacity-5 hover:translate-y-[-5px] hover:shadow-md transition-all duration-300">
+                        <div class="flex items-center justify-center w-12 h-12 bg-white rounded-md mb-4 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-center">Strategic Planning</h3>
+                        <p class="text-sm text-center">Competitive intelligence with cross-referenced sourcing and validation</p>
+                    </div>
+                </div>
+                
+                <p class="text-lg text-center mb-8">Browse real Notebooks and explore the research behind the results.</p>
+                
+                <div class="text-center">
+                    <a href="#notebooks-library" class="inline-block px-8 py-4 bg-black text-ft-cream rounded-md font-medium hover:bg-gray-800 transition-all duration-200">
+                        Explore Notebooks library
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-16 md:py-20 bg-ft-pink">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+        </div>
+        
+        <div class="max-w-3xl mx-auto">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">What types of questions can I ask Thurro Answers?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">You can ask complex, open-ended questions about Indian companies, markets, and regulatory matters. Examples include financial performance analysis, competitive benchmarking, regulatory compliance questions, market trend analysis, and strategic research queries. Our AI understands context and provides detailed, source-backed responses.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">How accurate and reliable are the answers?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Thurro Answers maintains 95% accuracy by grounding all responses in verified regulatory filings, official company documents, and curated datasets. Every answer includes direct source links, allowing you to verify information and dive deeper into the original documents.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">What data sources does Thurro Answers access?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Our platform accesses 800+ data sources including regulatory filings, annual reports, earnings transcripts, market data, alternative datasets, and real-time news. We focus on India's deepest repository of corporate and financial data, all UPSI/MNPI-free and continuously updated.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">How do Notebooks work?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Every question automatically creates a Notebook—a dedicated research thread. You can follow suggested questions to explore topics deeper, add your own queries, and build comprehensive research narratives. Notebooks are shareable and allow collaborative research with full version history.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">What are Tasks and how do they save time?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Tasks automate repetitive research workflows. Define your research parameters once, and Tasks will automatically generate structured reports across multiple companies or themes. This transforms hours of manual research into streamlined, repeatable processes perfect for regular market monitoring or comparative analysis.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">Is my research data secure and private?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Yes, absolutely. We use advanced encryption and maintain strict data privacy standards. Your research queries, Notebooks, and insights remain private to your account. We operate an UPSI/MNPI-free environment and ensure all data handling meets financial industry compliance requirements.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 7 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">Can I integrate Thurro Answers with my existing workflow?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Yes, Thurro Answers is designed for seamless integration. You can export findings with full source attribution, share Notebooks with team members, and access our platform alongside your existing research tools. We also offer API access for custom integrations with enterprise workflows.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 8 -->
+            <div class="faq-item">
+                <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">How often is the data updated?</h3>
+                    <span class="faq-toggle text-2xl font-light">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="pb-6 text-gray-700">Our data is continuously updated in real-time. New regulatory filings, earnings announcements, and market data are processed and indexed as they become available. You can refresh any analysis with one click to incorporate the latest information while preserving historical context.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- CTA Section -->
+<section class="py-16 md:py-20 bg-black text-ft-cream text-center">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-8 tracking-tight">Ready to transform your research?</h2>
+        <p class="text-xl max-w-3xl mx-auto mb-10 opacity-90 leading-relaxed">Experience how you can seamlessly integrate our insights into your existing workflows. Empower your team with data-driven decision-making</p>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="https://ai.thurro.com" class="px-10 py-4 rounded-md bg-ft-cream text-black font-medium hover:bg-ft-pink transition-all duration-200">Start free trial</a>
+            <a href="demo.html" class="px-10 py-4 rounded-md border border-ft-cream border-opacity-50 text-ft-cream font-medium hover:bg-ft-cream hover:bg-opacity-10 transition-all duration-200">Book a demo</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-gray-300 py-6">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Top Row: Logo, Made with Love, Social Icons -->
+        <div class="flex flex-col md:flex-row items-center justify-between mb-6">
+            <!-- Left: Logo -->
+            <div class="mb-6 md:mb-0">
+                <img src="./asserts/Logo/Thurro_logo_bg_white.png" alt="Thurro Logo" class="h-8">
+            </div>
+
+            <!-- Right: Social Icons -->
+            <div class="flex items-center space-x-4">
+                <a href="linkedin.html" class="text-gray-400 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                        </path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="youtube.html" class="text-gray-400 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                        <path d="M10 9l5 3-5 3V9z"></path>
+                    </svg>
+                </a>
+                <a href="https://x.com" class="text-gray-400 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 1200 1227"
+                        fill="currentColor">
+                        <path
+                            d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Horizontal Line -->
+        <hr class="border-gray-800 mb-6">
+
+        <!-- Bottom Row: Copyright and Legal Links -->
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <!-- Left: Copyright -->
+            <div class="mb-4 md:mb-0">
+                <p class="text-xs text-gray-500">
+                    Copyright © 2025 ADQVEST CAPITAL ADVISORS PVT LTD.
                 </p>
-                
-                <a href="https://ai.thurro.com" class="inline-block px-8 py-4 bg-black text-ft-cream rounded-md font-medium hover:bg-gray-800 transition-all duration-200">Start free trial</a>
+            </div>
+
+            <!-- Right: Legal Links -->
+            <div class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
+                <a href="https://thurro.com/privacy-policy/"
+                    class="text-xs text-gray-500 hover:text-white transition-colors">
+                    PRIVACY POLICY
+                </a>
+                <a href="https://thurro.com/terms-conditions/"
+                    class="text-xs text-gray-500 hover:text-white transition-colors">
+                    TERMS AND CONDITIONS
+                </a>
+                <a href="https://thurro.com/contact-us/"
+                    class="text-xs text-gray-500 hover:text-white transition-colors">
+                    CONTACT
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <!-- Research Edge Section -->
-    <section class="py-16 md:py-20 bg-ft-pink">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                    The Research Edge
-                </h2>
-            </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Desktop dropdown functionality for Products
+            const productsDropdownBtn = document.getElementById('products-dropdown-btn');
+            const productsDropdown = document.getElementById('products-dropdown');
+            const productsChevron = document.getElementById('dropdown-chevron');
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Unified Intelligence -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 card-hover">
-                    <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Unified intelligence</h3>
-                    <p class="text-gray-700">Query our vast DataLakehouse of curated documents and datasets alongside your own files.</p>
-                </div>
-                
-                <!-- Source Verification -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 card-hover">
-                    <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Source verification</h3>
-                    <p class="text-gray-700">Every answer comes with direct links to source documents, ensuring transparency and enabling deeper investigation.</p>
-                </div>
-                
-                <!-- Save Time -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 card-hover">
-                    <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Save time</h3>
-                    <p class="text-gray-700">Eliminate manual searching—get crucial insights delivered directly and efficiently.</p>
-                </div>
-                
-                <!-- Deep Analysis -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 card-hover">
-                    <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Deep analysis</h3>
-                    <p class="text-gray-700">Leverage sophisticated data exploration capabilities for precise answers and advanced insights.</p>
-                </div>
-                
-                <!-- Connected Insights -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 card-hover">
-                    <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Connected insights</h3>
-                    <p class="text-gray-700">Discover hidden connections across companies, sectors, and time periods with advanced relationship mapping.</p>
-                </div>
-                
-                <!-- Context-Aware Analysis -->
-                <div class="bg-ft-cream rounded-lg p-8 shadow-sm border border-black border-opacity-10 card-hover">
-                    <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Context-aware analysis</h3>
-                    <p class="text-gray-700">AI that understands financial context and provides insights tailored to your specific research needs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Features Section with Button Navigation -->
-    <section class="py-16 md:py-20 bg-ft-pink">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Key features</h2>
+            if (productsDropdownBtn && productsDropdown) {
+                productsDropdownBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Toggle dropdown visibility
+                    if (productsDropdown.classList.contains('opacity-0')) {
+                        productsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
+                        productsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                        productsChevron.classList.add('rotate-180');
+                    } else {
+                        productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                        productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        productsChevron.classList.remove('rotate-180');
+                    }
+                });
+            }
             
-            <!-- Feature Navigation Buttons -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <button id="notebooks-btn" class="feature-btn px-6 py-3 bg-black text-white rounded-lg font-medium transition-all duration-200 text-base active">Notebooks</button>
-                <button id="tasks-btn" class="feature-btn px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Tasks</button>
-                <button id="realtime-btn" class="feature-btn px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Refresh</button>
-                <button id="sharing-btn" class="feature-btn px-6 py-3 border border-black border-opacity-20 rounded-lg font-medium hover:bg-ft-pink-darker transition-all duration-200 text-base">Sharing</button>
-            </div>
+            // Desktop dropdown functionality for Solutions
+            const solutionsDropdownBtn = document.getElementById('solutions-dropdown-btn');
+            const solutionsDropdown = document.getElementById('solutions-dropdown');
+            const solutionsChevron = document.getElementById('solutions-dropdown-chevron');
             
-            <!-- Feature Content -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Left: Feature Description -->
-                <div class="feature-content" id="notebooks-content">
-                    <h3 class="text-2xl font-bold mb-6">Notebooks</h3>
-                    <p class="text-lg mb-6">Every question creates a shareable Notebook—a dedicated thread for exploring topics in depth. Use suggested questions after each answer to dig deeper and uncover hidden connections.</p>
+            if (solutionsDropdownBtn && solutionsDropdown) {
+                solutionsDropdownBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
                     
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Create dedicated research threads for any topic</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Follow suggested questions to explore deeper</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Save and organize your research for future reference</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="feature-content hidden" id="tasks-content">
-                    <h3 class="text-2xl font-bold mb-6">Tasks</h3>
-                    <p class="text-lg mb-6">Run deep research across multiple companies or themes with a single click. Define your research parameters once, and Tasks automatically generates structured reports—transforming hours of manual research into streamlined, repeatable workflows.</p>
-                    
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Automate complex research workflows</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Generate structured reports across multiple companies</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Transform hours of manual research into minutes</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="feature-content hidden" id="realtime-content">
-                    <h3 class="text-2xl font-bold mb-6">Real-time data refresh</h3>
-                    <p class="text-lg mb-6">One-click updates keep your analysis current with the latest filings, earnings calls, and market data while preserving historical context.</p>
-                    
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Keep analysis current with latest filings</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Preserve historical context while updating</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Never miss critical new information</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="feature-content hidden" id="sharing-content">
-                    <h3 class="text-2xl font-bold mb-6">Sharing</h3>
-                    <p class="text-lg mb-6">Generate shareable links for any Notebook. Recipients with Thurro accounts can view and create editable copies in their workspace to continue the analysis. Share insights across teams while maintaining independent workspaces.</p>
-                    
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Generate shareable links for any research</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Team members can create editable copies</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-ft-positive mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Maintain independent workspaces while collaborating</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Right: Feature Videos -->
-                <div class="rounded-lg shadow-lg border border-black overflow-hidden">
-                    <!-- Notebook Feature Video -->
-                    <div class="feature-image" id="notebooks-image">
-                        <video class="w-full h-full" autoplay loop muted playsinline>
-                            <source src="./asserts/Video/new notebook.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    
-                    <!-- Tasks Feature Video -->
-                    <div class="feature-image hidden" id="tasks-image">
-                        <video class="w-full h-auto" autoplay loop muted playsinline>
-                            <source src="./asserts/Video/tasks.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    
-                    <!-- Real-time Data Feature Video -->
-                    <div class="feature-image hidden" id="realtime-image">
-                        <video class="w-full h-auto" autoplay loop muted playsinline>
-                            <source src="./asserts/Video/realtime.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    
-                    <!-- Sharing Feature Video -->
-                    <div class="feature-image hidden" id="sharing-image">
-                        <video class="w-full h-auto" autoplay loop muted playsinline>
-                            <source src="./asserts/Video/sharing.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Thurro Answers in Action Section -->
-    <section class="py-16 md:py-20 bg-ft-pink">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Thurro Answers in action</h2>
-            </div>
+                    // Toggle dropdown visibility
+                    if (solutionsDropdown.classList.contains('opacity-0')) {
+                        solutionsDropdown.classList.remove('opacity-0', 'invisible', '-translate-y-4');
+                        solutionsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                        solutionsChevron.classList.add('rotate-180');
+                    } else {
+                        solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                        solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        solutionsChevron.classList.remove('rotate-180');
+                    }
+                });
+            }
             
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-ft-cream rounded-xl p-8 md:p-10 shadow-sm">
-                    <p class="text-lg md:text-xl mb-6 leading-relaxed">See how professionals across sectors use Thurro to solve complex research problems — faster, deeper, and with full traceability.</p>
-                    
-                    <p class="text-lg mb-8 leading-relaxed">From financial analysis to competitive intelligence, market shifts to strategic planning — Thurro is built for real use cases, not generic demos.</p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                        <!-- Example Notebook 1 -->
-                        <div class="bg-ft-pink rounded-lg p-6 shadow-sm border border-black border-opacity-5 notebook-card">
-                            <div class="flex items-center justify-center w-12 h-12 bg-white rounded-md mb-4 mx-auto">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-semibold mb-2 text-center">Financial Analysis</h3>
-                            <p class="text-sm text-center">Earnings breakdown with competing narratives and real-time updates</p>
-                        </div>
-                        
-                        <!-- Example Notebook 2 -->
-                        <div class="bg-ft-pink rounded-lg p-6 shadow-sm border border-black border-opacity-5 notebook-card">
-                            <div class="flex items-center justify-center w-12 h-12 bg-white rounded-md mb-4 mx-auto">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-semibold mb-2 text-center">Market Trends</h3>
-                            <p class="text-sm text-center">Sector-wide analysis with predictive indicators and competitive positioning</p>
-                        </div>
-                        
-                        <!-- Example Notebook 3 -->
-                        <div class="bg-ft-pink rounded-lg p-6 shadow-sm border border-black border-opacity-5 notebook-card">
-                            <div class="flex items-center justify-center w-12 h-12 bg-white rounded-md mb-4 mx-auto">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-semibold mb-2 text-center">Strategic Planning</h3>
-                            <p class="text-sm text-center">Competitive intelligence with cross-referenced sourcing and validation</p>
-                        </div>
-                    </div>
-                    
-                    <p class="text-lg text-center mb-8">Browse real Notebooks and explore the research behind the results.</p>
-                    
-                    <div class="text-center">
-                        <a href="#notebooks-library" class="inline-block px-8 py-4 bg-black text-ft-cream rounded-md font-medium hover:bg-gray-800 transition-all duration-200">
-                            Explore Notebooks library
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            // Close dropdowns when clicking elsewhere
+            document.addEventListener('click', function(e) {
+                // Close products dropdown
+                if (productsDropdownBtn && productsDropdown && !productsDropdownBtn.contains(e.target) && !productsDropdown.contains(e.target)) {
+                    productsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                    productsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    productsChevron.classList.remove('rotate-180');
+                }
+                
+                // Close solutions dropdown
+                if (solutionsDropdownBtn && solutionsDropdown && !solutionsDropdownBtn.contains(e.target) && !solutionsDropdown.contains(e.target)) {
+                    solutionsDropdown.classList.add('opacity-0', 'invisible', '-translate-y-4');
+                    solutionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    solutionsChevron.classList.remove('rotate-180');
+                }
+            });
 
-    <!-- FAQ Section -->
-    <section class="py-16 md:py-20 bg-ft-pink">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-            </div>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && closeMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('-translate-x-full');
+                document.body.classList.add('overflow-hidden');
+            });
             
-            <div class="max-w-3xl mx-auto">
-                <!-- FAQ Item 1 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">What types of questions can I ask Thurro Answers?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">You can ask complex, open-ended questions about Indian companies, markets, and regulatory matters. Examples include financial performance analysis, competitive benchmarking, regulatory compliance questions, market trend analysis, and strategic research queries. Our AI understands context and provides detailed, source-backed responses.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ Item 2 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">How accurate and reliable are the answers?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Thurro Answers maintains 95% accuracy by grounding all responses in verified regulatory filings, official company documents, and curated datasets. Every answer includes direct source links, allowing you to verify information and dive deeper into the original documents.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ Item 3 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">What data sources does Thurro Answers access?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Our platform accesses 800+ data sources including regulatory filings, annual reports, earnings transcripts, market data, alternative datasets, and real-time news. We focus on India's deepest repository of corporate and financial data, all UPSI/MNPI-free and continuously updated.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ Item 4 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">How do Notebooks work?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Every question automatically creates a Notebook—a dedicated research thread. You can follow suggested questions to explore topics deeper, add your own queries, and build comprehensive research narratives. Notebooks are shareable and allow collaborative research with full version history.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ Item 5 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">What are Tasks and how do they save time?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Tasks automate repetitive research workflows. Define your research parameters once, and Tasks will automatically generate structured reports across multiple companies or themes. This transforms hours of manual research into streamlined, repeatable processes perfect for regular market monitoring or comparative analysis.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ Item 6 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">Is my research data secure and private?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Yes, absolutely. We use advanced encryption and maintain strict data privacy standards. Your research queries, Notebooks, and insights remain private to your account. We operate an UPSI/MNPI-free environment and ensure all data handling meets financial industry compliance requirements.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ Item 7 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">Can I integrate Thurro Answers with my existing workflow?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Yes, Thurro Answers is designed for seamless integration. You can export findings with full source attribution, share Notebooks with team members, and access our platform alongside your existing research tools. We also offer API access for custom integrations with enterprise workflows.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ Item 8 -->
-                <div class="faq-item">
-                    <div class="faq-question cursor-pointer py-4 flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">How often is the data updated?</h3>
-                        <span class="faq-toggle text-2xl font-light">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="pb-6 text-gray-700">Our data is continuously updated in real-time. New regulatory filings, earnings announcements, and market data are processed and indexed as they become available. You can refresh any analysis with one click to incorporate the latest information while preserving historical context.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            closeMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.add('-translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
+        }
+        
+        // Mobile products dropdown
+        const mobileProductsBtn = document.getElementById('mobile-products-btn');
+        const mobileProductsMenu = document.getElementById('mobile-products-menu');
+        const mobileChevron = document.getElementById('mobile-chevron');
+        
+        if (mobileProductsBtn && mobileProductsMenu) {
+            mobileProductsBtn.addEventListener('click', function() {
+                mobileProductsMenu.classList.toggle('hidden');
+                mobileChevron.classList.toggle('rotate-180');
+            });
+        }
+        
+        // Header shadow on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
 
-    <!-- CTA Section -->
-    <section class="py-16 md:py-20 bg-black text-ft-cream text-center">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl sm:text-5xl font-bold mb-8 tracking-tight">Ready to transform your research?</h2>
-            <p class="text-xl max-w-3xl mx-auto mb-10 opacity-90 leading-relaxed">Experience how you can seamlessly integrate our insights into your existing workflows. Empower your team with data-driven decision-making</p>
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="https://ai.thurro.com" class="px-10 py-4 rounded-md bg-ft-cream text-black font-medium hover:bg-ft-pink transition-all duration-200">Start free trial</a>
-                <a href="demo.html" class="px-10 py-4 rounded-md border border-ft-cream border-opacity-50 text-ft-cream font-medium hover:bg-ft-cream hover:bg-opacity-10 transition-all duration-200">Book a demo</a>
-            </div>
-        </div>
-    </section>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
 
-    <!-- Footer -->
-    <footer class="bg-black text-gray-300 py-6">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <!-- Top Row: Logo, Made with Love, Social Icons -->
-            <div class="flex flex-col md:flex-row items-center justify-between mb-6">
-                <!-- Left: Logo -->
-                <div class="mb-6 md:mb-0">
-                    <img src="./asserts/Logo/Thurro_logo_bg_white.png" alt="Thurro Logo" class="h-8">
-                </div>
-
-                <!-- Right: Social Icons -->
-                <div class="flex items-center space-x-4">
-                    <a href="linkedin.html" class="text-gray-400 hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
-                    <a href="youtube.html" class="text-gray-400 hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
-                            <path d="M10 9l5 3-5 3V9z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://x.com" class="text-gray-400 hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 1200 1227"
-                            fill="currentColor">
-                            <path
-                                d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Horizontal Line -->
-            <hr class="border-gray-800 mb-6">
-
-            <!-- Bottom Row: Copyright and Legal Links -->
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <!-- Left: Copyright -->
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xs text-gray-500">
-                        Copyright © 2025 ADQVEST CAPITAL ADVISORS PVT LTD.
-                    </p>
-                </div>
-
-                <!-- Right: Legal Links -->
-                <div class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
-                    <a href="https://thurro.com/privacy-policy/"
-                        class="text-xs text-gray-500 hover:text-white transition-colors">
-                        PRIVACY POLICY
-                    </a>
-                    <a href="https://thurro.com/terms-conditions/"
-                        class="text-xs text-gray-500 hover:text-white transition-colors">
-                        TERMS AND CONDITIONS
-                    </a>
-                    <a href="https://thurro.com/contact-us/"
-                        class="text-xs text-gray-500 hover:text-white transition-colors">
-                        CONTACT
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- External JavaScript File -->
-    <script src="js/scripts.js"></script>
+    // JavaScript for the feature tabs functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // Feature tabs functionality
+        const featureBtns = document.querySelectorAll('.feature-btn');
+        const featureContents = document.querySelectorAll('.feature-content');
+        const featureImages = document.querySelectorAll('.feature-image');
+        
+        featureBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Reset all buttons
+                featureBtns.forEach(b => {
+                    b.classList.remove('bg-black', 'text-white');
+                    b.classList.add('border', 'border-black', 'border-opacity-20');
+                });
+                
+                // Activate clicked button
+                btn.classList.add('bg-black', 'text-white');
+                btn.classList.remove('border', 'border-black', 'border-opacity-20');
+                
+                // Hide all content and images
+                featureContents.forEach(content => content.classList.add('hidden'));
+                featureImages.forEach(image => image.classList.add('hidden'));
+                
+                // Show relevant content and image
+                const featureId = btn.id.replace('-btn', '');
+                document.getElementById(`${featureId}-content`).classList.remove('hidden');
+                document.getElementById(`${featureId}-image`).classList.remove('hidden');
+            });
+        });
+        
+        // FAQ functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other FAQs
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current FAQ
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Initialize videos
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            // Try to play videos automatically
+            video.play().catch(function(error) {
+                console.error('Video autoplay failed:', error);
+                
+                // If autoplay fails, try again when user interacts with the page
+                document.addEventListener('click', function() {
+                    video.play().catch(() => {});
+                }, { once: true });
+            });
+        });
+    });
+</script>
 </body>
 </html>
