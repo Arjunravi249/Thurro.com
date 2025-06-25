@@ -41,6 +41,9 @@ class ThurroWebsite {
             this.initializeAnimations();
             this.initializeDropdowns();
             this.initializeVideoPlayback();
+            this.initializeFAQ();
+            this.initializeAnswersSpecific();
+            this.initializeAltDataSpecific();
             
             console.log('Thurro Website initialized successfully');
         } catch (error) {
@@ -244,8 +247,30 @@ class ThurroWebsite {
 
                 // If autoplay fails, try playing again when user interacts with the page
                 document.body.addEventListener('click', function () {
-                    video.play();
+                    video.play().catch(() => {});
                 }, { once: true });
+            });
+        });
+        
+        // Initialize feature videos for answers page
+        this.initializeFeatureVideos();
+    }
+
+    /**
+     * Initialize feature videos for answers page
+     */
+    initializeFeatureVideos() {
+        const featureVideos = document.querySelectorAll('.feature-image video');
+        
+        featureVideos.forEach(video => {
+            // Ensure videos loop and are muted
+            video.loop = true;
+            video.muted = true;
+            video.playsInline = true;
+            
+            // Try to play
+            video.play().catch(error => {
+                console.warn('Feature video autoplay failed:', error);
             });
         });
     }
@@ -379,7 +404,14 @@ class ThurroWebsite {
                 const image = document.getElementById(`${featureId}-image`);
                 
                 if (content) content.classList.remove('hidden');
-                if (image) image.classList.remove('hidden');
+                if (image) {
+                    image.classList.remove('hidden');
+                    // Ensure video plays when tab is activated
+                    const video = image.querySelector('video');
+                    if (video) {
+                        video.play().catch(() => {});
+                    }
+                }
             });
         });
     }
@@ -557,6 +589,160 @@ class ThurroWebsite {
                 card.style.transform = 'translateY(0)';
                 card.style.boxShadow = '';
             });
+        });
+    }
+
+    /**
+     * ================================
+     * ALTDATA PAGE SPECIFIC FUNCTIONALITY
+     * ================================
+     */
+    initializeAltDataSpecific() {
+        // Only run on altdata page
+        if (!document.querySelector('.analysis-grid') && !document.querySelector('.analysis-item')) {
+            return;
+        }
+
+        // Initialize analysis items animations
+        this.initializeAnalysisItems();
+        
+        // Ensure first feature tab is active on load (search tab)
+        this.setDefaultAltDataFeatureTab();
+    }
+
+    /**
+     * Initialize analysis items with staggered animations
+     */
+    initializeAnalysisItems() {
+        const analysisItems = document.querySelectorAll('.analysis-item');
+        
+        if (analysisItems.length === 0) return;
+        
+        analysisItems.forEach((item, index) => {
+            // Start with items invisible (already set in CSS)
+            
+            // Animate in with delay based on index
+            setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }, 100 + index * 80);
+
+            // Enhanced hover effects (already handled by CSS :hover, but adding JS for complex interactions)
+            item.addEventListener('mouseenter', () => {
+                const icon = item.querySelector('.analysis-icon');
+                if (icon) {
+                    icon.style.backgroundColor = '#f0e1d3';
+                    icon.style.transform = 'scale(1.1)';
+                }
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                const icon = item.querySelector('.analysis-icon');
+                if (icon) {
+                    icon.style.backgroundColor = '#FFF1E5';
+                    icon.style.transform = 'scale(1)';
+                }
+            });
+        });
+    }
+
+    /**
+     * Set default active feature tab for AltData (search tab)
+     */
+    setDefaultAltDataFeatureTab() {
+        // Ensure search tab is active by default on altdata page
+        const searchBtn = document.getElementById('search-btn');
+        const searchContent = document.getElementById('search-content');
+        const searchImage = document.getElementById('search-image');
+        
+        if (searchBtn && searchContent && searchImage) {
+            // Set first tab as active
+            searchBtn.classList.add('bg-black', 'text-white', 'active');
+            searchBtn.classList.remove('border', 'border-black', 'border-opacity-20');
+            searchContent.classList.remove('hidden');
+            searchImage.classList.remove('hidden');
+        }
+    }
+
+    /**
+     * ================================
+     * ANSWERS PAGE SPECIFIC FUNCTIONALITY
+     * ================================
+     */
+    initializeAnswersSpecific() {
+        // Only run on answers page
+        if (!document.querySelector('.feature-btn') && !document.querySelector('.faq-item')) {
+            return;
+        }
+
+        // Initialize notebook card hover effects
+        this.initializeNotebookCards();
+        
+        // Ensure first feature tab is active on load
+        this.setDefaultFeatureTab();
+    }
+
+    /**
+     * Initialize notebook card hover effects
+     */
+    initializeNotebookCards() {
+        const notebookCards = document.querySelectorAll('.notebook-card');
+        
+        notebookCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    }
+
+    /**
+     * Set default active feature tab
+     */
+    setDefaultFeatureTab() {
+        // Ensure notebooks tab is active by default
+        const notebooksBtn = document.getElementById('notebooks-btn');
+        const notebooksContent = document.getElementById('notebooks-content');
+        const notebooksImage = document.getElementById('notebooks-image');
+        
+        if (notebooksBtn && notebooksContent && notebooksImage) {
+            // Set first tab as active
+            notebooksBtn.classList.add('bg-black', 'text-white', 'active');
+            notebooksBtn.classList.remove('border', 'border-black', 'border-opacity-20');
+            notebooksContent.classList.remove('hidden');
+            notebooksImage.classList.remove('hidden');
+        }
+    }
+
+    /**
+     * ================================
+     * FAQ FUNCTIONALITY
+     * ================================
+     */
+    initializeFAQ() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        if (faqItems.length === 0) return;
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            if (question) {
+                question.addEventListener('click', () => {
+                    // Close all other FAQs
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current FAQ
+                    item.classList.toggle('active');
+                });
+            }
         });
     }
 
